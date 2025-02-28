@@ -258,6 +258,7 @@ async function drawCat(
   if (pelt.reverse) {
     outCtx.scale(-1, 1);
     outCtx.drawImage(canvas, -outCanvas.width, 0);
+    outCtx.resetTransform();
   } else {
     outCtx.drawImage(canvas, 0, 0);
   }

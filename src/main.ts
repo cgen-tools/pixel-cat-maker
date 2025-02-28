@@ -46,6 +46,7 @@ const tortiePatternSelect = document.getElementById("tortie-pattern-select") as 
 
 const isTortieCheckbox = document.getElementById("tortie-checkbox") as HTMLInputElement;
 const shadingCheckbox = document.getElementById("shading-checkbox") as HTMLInputElement;
+const reverseCheckbox = document.getElementById("reverse-checkbox") as HTMLInputElement;
 
 function redrawCat() {
   const ctx = c.getContext("2d");
@@ -74,6 +75,7 @@ function redrawCat() {
   const accessory = accessorySelect.value === "" ? undefined : accessorySelect.value;
   const scar = scarSelect.value === "" ? [] : [scarSelect.value];
   const shading = shadingCheckbox.checked;
+  const reverse = reverseCheckbox.checked;
 
   // we have to keep the original name (which is peltName) for spritesName,
   // but we have to also tell "name" in Pelt that it's a tortie if it's a tortie
@@ -98,7 +100,7 @@ function redrawCat() {
     spritesName: nameToSpritesname[peltName],
     accessory: accessory,
     scars: scar,
-    reverse: false,
+    reverse: reverse,
 
     tortieBase: nameToSpritesname[peltName],
     pattern: tortieMask,
@@ -148,5 +150,6 @@ vitiligoSelect.addEventListener("change", () => redrawCat());
 accessorySelect.addEventListener("change", () => redrawCat());
 scarSelect.addEventListener("change", () => redrawCat());
 shadingCheckbox.addEventListener("change", () => redrawCat());
+reverseCheckbox.addEventListener("change", () => redrawCat());
 
 redrawCat();
