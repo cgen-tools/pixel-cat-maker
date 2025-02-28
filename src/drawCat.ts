@@ -18,7 +18,7 @@ function getSpritePosition(spriteName: string, spriteNumber: number) {
   const spriteYPosition = spriteNumbers[spriteNumber].y;
 
   return {
-    url: `./sprites/${spritesIndex[spriteKey].spritesheet}.png`,
+    url: `sprites/${spritesIndex[spriteKey].spritesheet}.png`,
     x: spritesIndex[spriteKey].xOffset + 50 * spriteXPosition,
     y: spritesIndex[spriteKey].yOffset + 50 * spriteYPosition,
   };
