@@ -1,0 +1,16 @@
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row label {
+  min-width: 130px;;
+}
+
+.form-row select {
+  width: 150px;;
+}
+
+.hidden {
+  display: none;
+}

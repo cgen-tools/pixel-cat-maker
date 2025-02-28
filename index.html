@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Cat Maker</title>
+  </head>
+  <body>
+    <img id="cat-sprite-img" style="image-rendering: pixelated; width: 150px">
+
+    <form>
+      <div class="form-row">
+        <label>Sprite</label>
+        <select id="sprite-no-select">
+          <option value="0">Kitten (0)</option>
+          <option value="1">Kitten (1)</option>
+          <option value="2">Kitten (2)</option>
+          <option value="3">Adolescent (3)</option>
+          <option value="4">Adolescent (4)</option>
+          <option value="5">Adolescent (5)</option>
+          <option value="6">Adult (6)</option>
+          <option value="7">Adult (7)</option>
+          <option value="8">Adult (8)</option>
+          <option value="9">Longhair Adult (9)</option>
+          <option value="10">Longhair Adult (10)</option>
+          <option value="11">Longhair Adult (11)</option>
+          <option value="12">Senior (12)</option>
+          <option value="13">Senior (13)</option>
+          <option value="14">Senior (14)</option>
+          <option value="15">Paralyzed Adult (15)</option>
+          <option value="16">Paralyzed Longhair Adult (16)</option>
+          <option value="17">Paralyzed Young (17)</option>
+          <option value="18">Sick Adult (18)</option>
+          <option value="19">Sick Young (19)</option>
+          <option value="20">Newborn (20)</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Pelt</label>
+        <select id="pelt-name-select">
+          <option>SingleColour</option>
+          <option>TwoColour</option>
+          <option>Tabby</option>
+          <option>Marbled</option>
+          <option>Rosette</option>
+          <option>Smoke</option>
+          <option>Ticked</option>
+          <option>Speckled</option>
+          <option>Bengal</option>
+          <option>Mackerel</option>
+          <option>Classic</option>
+          <option>Sokoke</option>
+          <option>Agouti</option>
+          <option>Singlestripe</option>
+          <option>Masked</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Colour</label>
+        <select id="colour-select">
+          <option>CREAM</option>
+          <option>PALEGINGER</option>
+          <option>GOLDEN</option>
+          <option>GINGER</option>
+          <option>DARKGINGER</option>
+          <option>SIENNA</option>
+          <option>GREY</option>
+          <option>DARKGREY</option>
+          <option>GHOST</option>
+          <option>BLACK</option>
+          <option>WHITE</option>
+          <option>PALEGREY</option>
+          <option>SILVER</option>
+          <option>LIGHTBROWN</option>
+          <option>LILAC</option>
+          <option>BROWN</option>
+          <option>GOLDEN-BROWN</option>
+          <option>DARKBROWN</option>
+          <option>CHOCOLATE</option>          
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Tortie?</label>
+        <input id="tortie-checkbox" type="checkbox">
+      </div>
+
+      <div class="form-row">
+        <label>Tortie Mask</label>
+        <select disabled id="tortie-mask-select">
+          <option>ONE</option>
+          <option>TWO</option>
+          <option>THREE</option>
+          <option>FOUR</option>
+          <option>REDTAIL</option>
+          <option>DELILAH</option>
+          <option>MINIMALONE</option>
+          <option>MINIMALTWO</option>
+          <option>MINIMALTHREE</option>
+          <option>MINIMALFOUR</option>
+          <option>HALF</option>
+          <option>OREO</option>
+          <option>SWOOP</option>
+          <option>MOTTLED</option>
+          <option>SIDEMASK</option>
+          <option>EYEDOT</option>
+          <option>BANDANA</option>
+          <option>PACMAN</option>
+          <option>STREAMSTRIKE</option>
+          <option>ORIOLE</option>
+          <option>CHIMERA</option>
+          <option>DAUB</option>
+          <option>EMBER</option>
+          <option>BLANKET</option>
+          <option>ROBIN</option>
+          <option>BRINDLE</option>
+          <option>PAIGE</option>
+          <option>ROSETAIL</option>
+          <option>SAFI</option>
+          <option>SMUDGED</option>
+          <option>DAPPLENIGHT</option>
+          <option>STREAK</option>
+          <option>MASK</option>
+          <option>CHEST</option>
+          <option>ARMTAIL</option>
+          <option>SMOKE</option>
+          <option>GRUMPYFACE</option>
+          <option>BRIE</option>
+          <option>BELOVED</option>
+          <option>BODY</option>
+          <option>SHILOH</option>
+          <option>FRECKLED</option>
+          <option>HEARTBEAT</option>          
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Tortie Pelt</label>
+        <select disabled id="tortie-pattern-select">
+          <option>SingleColour</option>
+          <option>TwoColour</option>
+          <option>Tabby</option>
+          <option>Marbled</option>
+          <option>Rosette</option>
+          <option>Smoke</option>
+          <option>Ticked</option>
+          <option>Speckled</option>
+          <option>Bengal</option>
+          <option>Mackerel</option>
+          <option>Classic</option>
+          <option>Sokoke</option>
+          <option>Agouti</option>
+          <option>Singlestripe</option>
+          <option>Masked</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Tortie Colour</label>
+        <select disabled id="tortie-colour-select">
+          <option>CREAM</option>
+          <option>PALEGINGER</option>
+          <option>GOLDEN</option>
+          <option>GINGER</option>
+          <option>DARKGINGER</option>
+          <option>SIENNA</option>
+          <option>GREY</option>
+          <option>DARKGREY</option>
+          <option>GHOST</option>
+          <option>BLACK</option>
+          <option>WHITE</option>
+          <option>PALEGREY</option>
+          <option>SILVER</option>
+          <option>LIGHTBROWN</option>
+          <option>LILAC</option>
+          <option>BROWN</option>
+          <option>GOLDEN-BROWN</option>
+          <option>DARKBROWN</option>
+          <option>CHOCOLATE</option>          
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Tint</label>
+        <select id="tint-select">
+          <option>none</option>          
+          <option>pink</option>
+          <option>gray</option>
+          <option>red</option>
+          <option>black</option>
+          <option>orange</option>
+          <option>yellow</option>
+          <option>purple</option>
+          <option>blue</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Eye Colour</label>
+        <select id="eye-colour-select">
+          <option>YELLOW</option>
+          <option>AMBER</option>
+          <option>HAZEL</option>
+          <option>PALEGREEN</option>
+          <option>GREEN</option>
+          <option>BLUE</option>
+          <option>DARKBLUE</option>
+          <option>GREY</option>
+          <option>CYAN</option>
+          <option>EMERALD</option>
+          <option>PALEBLUE</option>
+          <option>PALEYELLOW</option>
+          <option>GOLD</option>
+          <option>HEATHERBLUE</option>
+          <option>COPPER</option>
+          <option>SAGE</option>
+          <option>COBALT</option>
+          <option>SUNLITICE</option>
+          <option>GREENYELLOW</option>
+          <option>BRONZE</option>
+          <option>SILVER</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Eye Colour 2</label>
+        <select id="eye-colour2-select">
+          <option></option>
+          <option>YELLOW</option>
+          <option>AMBER</option>
+          <option>HAZEL</option>
+          <option>PALEGREEN</option>
+          <option>GREEN</option>
+          <option>BLUE</option>
+          <option>DARKBLUE</option>
+          <option>GREY</option>
+          <option>CYAN</option>
+          <option>EMERALD</option>
+          <option>PALEBLUE</option>
+          <option>PALEYELLOW</option>
+          <option>GOLD</option>
+          <option>HEATHERBLUE</option>
+          <option>COPPER</option>
+          <option>SAGE</option>
+          <option>COBALT</option>
+          <option>SUNLITICE</option>
+          <option>GREENYELLOW</option>
+          <option>BRONZE</option>
+          <option>SILVER</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Skin</label>
+        <select id="skin-colour-select">
+          <option>BLACK</option>
+          <option>PINK</option>
+          <option>DARKBROWN</option>
+          <option>BROWN</option>
+          <option>LIGHTBROWN</option>
+          <option>DARK</option>
+          <option>DARKGREY</option>
+          <option>GREY</option>
+          <option>DARKSALMON</option>
+          <option>SALMON</option>
+          <option>PEACH</option>
+          <option>DARKMARBLED</option>
+          <option>MARBLED</option>
+          <option>LIGHTMARBLED</option>
+          <option>DARKBLUE</option>
+          <option>BLUE</option>
+          <option>LIGHTBLUE</option>
+          <option>RED</option>          
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>White Patches</label>
+        <select id="white-patches-select">
+          <option></option>
+          <option>LITTLE</option>
+          <option>LIGHTTUXEDO</option>
+          <option>BUZZARDFANG</option>
+          <option>TIP</option>
+          <option>BLAZE</option>
+          <option>BIB</option>
+          <option>VEE</option>
+          <option>PAWS</option>
+          <option>BELLY</option>
+          <option>TAILTIP</option>
+          <option>TOES</option>
+          <option>BROKENBLAZE</option>
+          <option>LILTWO</option>
+          <option>SCOURGE</option>
+          <option>TOESTAIL</option>
+          <option>RAVENPAW</option>
+          <option>HONEY</option>
+          <option>LUNA</option>
+          <option>EXTRA</option>
+          <option>MUSTACHE</option>
+          <option>REVERSEHEART</option>
+          <option>SPARKLE</option>
+          <option>RIGHTEAR</option>
+          <option>LEFTEAR</option>
+          <option>ESTRELLA</option>
+          <option>REVERSEEYE</option>
+          <option>BACKSPOT</option>
+          <option>EYEBAGS</option>
+          <option>LOCKET</option>
+          <option>BLAZEMASK</option>
+          <option>TEARS</option>
+
+          <option>TUXEDO</option>
+          <option>FANCY</option>
+          <option>UNDERS</option>
+          <option>DAMIEN</option>
+          <option>SKUNK</option>
+          <option>MITAINE</option>
+          <option>SQUEAKS</option>
+          <option>STAR</option>
+          <option>WINGS</option>
+          <option>DIVA</option>
+          <option>SAVANNAH</option>
+          <option>FADESPOTS</option>
+          <option>BEARD</option>
+          <option>DAPPLEPAW</option>
+          <option>TOPCOVER</option>
+          <option>WOODPECKER</option>
+          <option>MISS</option>
+          <option>BOWTIE</option>
+          <option>VEST</option>
+          <option>FADEBELLY</option>
+          <option>DIGIT</option>
+          <option>FCTWO</option>
+          <option>FCONE</option>
+          <option>MIA</option>
+          <option>ROSINA</option>
+          <option>PRINCESS</option>
+          <option>DOUGIE</option>
+
+          <option>ANY</option>
+          <option>ANYTWO</option>
+          <option>BROKEN</option>
+          <option>FRECKLES</option>
+          <option>RINGTAIL</option>
+          <option>HALFFACE</option>
+          <option>PANTSTWO</option>
+          <option>GOATEE</option>
+          <option>PRINCE</option>
+          <option>FAROFA</option>
+          <option>MISTER</option>
+          <option>PANTS</option>
+          <option>REVERSEPANTS</option>
+          <option>HALFWHITE</option>
+          <option>APPALOOSA</option>
+          <option>PIEBALD</option>
+          <option>CURVED</option>
+          <option>GLASS</option>
+          <option>MASKMANTLE</option>
+          <option>MAO</option>
+          <option>PAINTED</option>
+          <option>SHIBAINU</option>
+          <option>OWL</option>
+          <option>BUB</option>
+          <option>SPARROW</option>
+          <option>TRIXIE</option>
+          <option>SAMMY</option>
+          <option>FRONT</option>
+          <option>BLOSSOMSTEP</option>
+          <option>BULLSEYE</option>
+          <option>FINN</option>
+          <option>SCAR</option>
+          <option>BUSTER</option>
+          <option>HAWKBLAZE</option>
+          <option>CAKE</option>
+
+          <option>VAN</option>
+          <option>ONEEAR</option>
+          <option>LIGHTSONG</option>
+          <option>TAIL</option>
+          <option>HEART</option>
+          <option>MOORISH</option>
+          <option>APRON</option>
+          <option>CAPSADDLE</option>
+          <option>CHESTSPECK</option>
+          <option>BLACKSTAR</option>
+          <option>PETAL</option>
+          <option>HEARTTWO</option>
+          <option>PEBBLESHINE</option>
+          <option>BOOTS</option>
+          <option>COW</option>
+          <option>COWTWO</option>
+          <option>LOVEBUG</option>
+          <option>SHOOTINGSTAR</option>
+          <option>EYESPOT</option>
+          <option>PEBBLE</option>
+          <option>TAILTWO</option>
+          <option>BUDDY</option>
+          <option>KROPKA</option>
+
+          <option>FULLWHITE</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Points</label>
+        <select id="points-select">
+          <option></option>
+          <option>COLOURPOINT</option>
+          <option>RAGDOLL</option>
+          <option>SEPIAPOINT</option>
+          <option>MINKPOINT</option>
+          <option>SEALPOINT</option>          
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>White Patches Tints</label>
+        <select id="white-patches-tint-select">
+          <option>none</option>          
+          <option>darkcream</option>
+          <option>cream</option>
+          <option>offwhite</option>
+          <option>gray</option>
+          <option>pink</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Vitiligo</label>
+        <select id="vitiligo-select">
+          <option></option>
+          <option>VITILIGO</option>
+          <option>VITILIGOTWO</option>
+          <option>MOON</option>
+          <option>PHANTOM</option>
+          <option>KARPATI</option>
+          <option>POWDER</option>
+          <option>BLEACHED</option>
+          <option>SMOKEY</option>          
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Accessory</label>
+        <select id="accessory-select">
+          <option></option>
+          <option>MAPLE LEAF</option>
+          <option>HOLLY</option>
+          <option>BLUE BERRIES</option>
+          <option>FORGET ME NOTS</option>
+          <option>RYE STALK</option>
+          <option>CATTAIL</option>
+          <option>POPPY</option>
+          <option>ORANGE POPPY</option>
+          <option>CYAN POPPY</option>
+          <option>WHITE POPPY</option>
+          <option>PINK POPPY</option>
+          <option>BLUEBELLS</option>
+          <option>LILY OF THE VALLEY</option>
+          <option>SNAPDRAGON</option>
+          <option>HERBS</option>
+          <option>PETALS</option>
+          <option>NETTLE</option>
+          <option>HEATHER</option>
+          <option>JUNIPER</option>
+          <option>RASPBERRY</option>
+          <option>LAVENDER</option>
+          <option>OAK LEAVES</option>
+          <option>CATMINT</option>
+          <option>MAPLE SEED</option>
+          <option>LAUREL</option>
+          <option>BULB WHITE</option>
+          <option>BULB YELLOW</option>
+          <option>BULB ORANGE</option>
+          <option>BULB PINK</option>
+          <option>BULB BLUE</option>
+          <option>CLOVER</option>
+          <option>DAISY</option>
+          <option>GORSE</option>
+          <option>BULB WHITE</option>
+          <option>BULB YELLOW</option>
+          <option>DRY HERBS</option>
+          <option>DRY CATMINT</option>
+          <option>DRY NETTLES</option>
+          <option>DRY LAURELS</option>
+          <option>RED FEATHERS</option>
+          <option>BLUE FEATHERS</option>
+          <option>JAY FEATHERS</option>
+          <option>GULL FEATHERS</option>
+          <option>SPARROW FEATHERS</option>
+          <option>MOTH WINGS</option>
+          <option>ROSY MOTH WINGS</option>
+          <option>MORPHO BUTTERFLY</option>
+          <option>MONARCH BUTTERFLY</option>
+          <option>CICADA WINGS</option>
+          <option>BLACK CICADA</option>
+          <option>CRIMSON</option>
+          <option>BLUE</option>
+          <option>YELLOW</option>
+          <option>CYAN</option>
+          <option>RED</option>
+          <option>LIME</option>
+          <option>GREEN</option>
+          <option>RAINBOW</option>
+          <option>BLACK</option>
+          <option>SPIKES</option>
+          <option>WHITE</option>
+          <option>PINK</option>
+          <option>PURPLE</option>
+          <option>MULTI</option>
+          <option>INDIGO</option>
+          <option>CRIMSONBELL</option>
+          <option>BLUEBELL</option>
+          <option>YELLOWBELL</option>
+          <option>CYANBELL</option>
+          <option>REDBELL</option>
+          <option>LIMEBELL</option>
+          <option>GREENBELL</option>
+          <option>RAINBOWBELL</option>
+          <option>BLACKBELL</option>
+          <option>SPIKESBELL</option>
+          <option>WHITEBELL</option>
+          <option>PINKBELL</option>
+          <option>PURPLEBELL</option>
+          <option>MULTIBELL</option>
+          <option>INDIGOBELL</option>
+          <option>CRIMSONBOW</option>
+          <option>BLUEBOW</option>
+          <option>YELLOWBOW</option>
+          <option>CYANBOW</option>
+          <option>REDBOW</option>
+          <option>LIMEBOW</option>
+          <option>GREENBOW</option>
+          <option>RAINBOWBOW</option>
+          <option>BLACKBOW</option>
+          <option>SPIKESBOW</option>
+          <option>WHITEBOW</option>
+          <option>PINKBOW</option>
+          <option>PURPLEBOW</option>
+          <option>MULTIBOW</option>
+          <option>INDIGOBOW</option>
+          <option>CRIMSONNYLON</option>
+          <option>BLUENYLON</option>
+          <option>YELLOWNYLON</option>
+          <option>CYANNYLON</option>
+          <option>REDNYLON</option>
+          <option>LIMENYLON</option>
+          <option>GREENNYLON</option>
+          <option>RAINBOWNYLON</option>
+          <option>BLACKNYLON</option>
+          <option>SPIKESNYLON</option>
+          <option>WHITENYLON</option>
+          <option>PINKNYLON</option>
+          <option>PURPLENYLON</option>
+          <option>MULTINYLON</option>
+          <option>INDIGONYLON</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Scar</label>
+        <select id="scar-select">
+          <option></option>
+          <option>ONE</option>
+          <option>TWO</option>
+          <option>THREE</option>
+          <option>TAILSCAR</option>
+          <option>SNOUT</option>
+          <option>CHEEK</option>
+          <option>SIDE</option>
+          <option>THROAT</option>
+          <option>TAILBASE</option>
+          <option>BELLY</option>
+          <option>LEGBITE</option>
+          <option>NECKBITE</option>
+          <option>FACE</option>
+          <option>MANLEG</option>
+          <option>BRIGHTHEART</option>
+          <option>MANTAIL</option>
+          <option>BRIDGE</option>
+          <option>RIGHTBLIND</option>
+          <option>LEFTBLIND</option>
+          <option>BOTHBLIND</option>
+          <option>BEAKCHEEK</option>
+          <option>BEAKLOWER</option>
+          <option>CATBITE</option>
+          <option>RATBITE</option>
+          <option>QUILLCHUNK</option>
+          <option>QUILLSCRATCH</option>
+          <option>HINDLEG</option>
+          <option>BACK</option>
+          <option>QUILLSIDE</option>
+          <option>SCRATCHSIDE</option>
+          <option>BEAKSIDE</option>
+          <option>CATBITETWO</option>
+          <option>FOUR</option>
+          <option>SNAKE</option>
+          <option>TOETRAP</option>
+          <option>BURNPAWS</option>
+          <option>BURNTAIL</option>
+          <option>BURNBELLY</option>
+          <option>BURNRUMP</option>
+          <option>FROSTFACE</option>
+          <option>FROSTTAIL</option>
+          <option>FROSTMITT</option>
+          <option>FROSTSOCK</option>
+          <option>TOE</option>
+          <option>SNAKETWO</option>          
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Shading</label>
+        <input id="shading-checkbox" type="checkbox">
+      </div>
+    </form>
+
+    <div>
+      <p>
+        Sprites are by the ClanGen team and are licensed
+        under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
+      </p>
+
+      <p>
+        Please credit <a href="https://sablesteel.itch.io/clan-gen-fan-edit">ClanGen</a>
+        when using these sprites. You do not have to credit this site.
+      </p>
+
+      <p>
+        <b>Do not use sprites created by this generator for commercial purposes.</b>
+      </p>
+    </div>
+    
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

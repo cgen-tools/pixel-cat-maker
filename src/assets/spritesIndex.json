@@ -1,0 +1,3372 @@
+{
+  "lines": {
+      "spritesheet": "lineart",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "shaders": {
+      "spritesheet": "shadersnewwhite",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "lighting": {
+      "spritesheet": "lightingnew",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "lineartdead": {
+      "spritesheet": "lineartdead",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "lineartdf": {
+      "spritesheet": "lineartdf",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "fademask0": {
+      "spritesheet": "fademask",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "fadestarclan0": {
+      "spritesheet": "fadestarclan",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "fadedf0": {
+      "spritesheet": "fadedarkforest",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "fademask1": {
+      "spritesheet": "fademask",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "fadestarclan1": {
+      "spritesheet": "fadestarclan",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "fadedf1": {
+      "spritesheet": "fadedarkforest",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "fademask2": {
+      "spritesheet": "fademask",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "fadestarclan2": {
+      "spritesheet": "fadestarclan",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "fadedf2": {
+      "spritesheet": "fadedarkforest",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "eyesYELLOW": {
+      "spritesheet": "eyes",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "eyes2YELLOW": {
+      "spritesheet": "eyes2",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "eyesAMBER": {
+      "spritesheet": "eyes",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "eyes2AMBER": {
+      "spritesheet": "eyes2",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "eyesHAZEL": {
+      "spritesheet": "eyes",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "eyes2HAZEL": {
+      "spritesheet": "eyes2",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "eyesPALEGREEN": {
+      "spritesheet": "eyes",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "eyes2PALEGREEN": {
+      "spritesheet": "eyes2",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "eyesGREEN": {
+      "spritesheet": "eyes",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "eyes2GREEN": {
+      "spritesheet": "eyes2",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "eyesBLUE": {
+      "spritesheet": "eyes",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "eyes2BLUE": {
+      "spritesheet": "eyes2",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "eyesDARKBLUE": {
+      "spritesheet": "eyes",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "eyes2DARKBLUE": {
+      "spritesheet": "eyes2",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "eyesGREY": {
+      "spritesheet": "eyes",
+      "xOffset": 1050.0,
+      "yOffset": 0.0
+  },
+  "eyes2GREY": {
+      "spritesheet": "eyes2",
+      "xOffset": 1050.0,
+      "yOffset": 0.0
+  },
+  "eyesCYAN": {
+      "spritesheet": "eyes",
+      "xOffset": 1200.0,
+      "yOffset": 0.0
+  },
+  "eyes2CYAN": {
+      "spritesheet": "eyes2",
+      "xOffset": 1200.0,
+      "yOffset": 0.0
+  },
+  "eyesEMERALD": {
+      "spritesheet": "eyes",
+      "xOffset": 1350.0,
+      "yOffset": 0.0
+  },
+  "eyes2EMERALD": {
+      "spritesheet": "eyes2",
+      "xOffset": 1350.0,
+      "yOffset": 0.0
+  },
+  "eyesHEATHERBLUE": {
+      "spritesheet": "eyes",
+      "xOffset": 1500.0,
+      "yOffset": 0.0
+  },
+  "eyes2HEATHERBLUE": {
+      "spritesheet": "eyes2",
+      "xOffset": 1500.0,
+      "yOffset": 0.0
+  },
+  "eyesSUNLITICE": {
+      "spritesheet": "eyes",
+      "xOffset": 1650.0,
+      "yOffset": 0.0
+  },
+  "eyes2SUNLITICE": {
+      "spritesheet": "eyes2",
+      "xOffset": 1650.0,
+      "yOffset": 0.0
+  },
+  "eyesCOPPER": {
+      "spritesheet": "eyes",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "eyes2COPPER": {
+      "spritesheet": "eyes2",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "eyesSAGE": {
+      "spritesheet": "eyes",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "eyes2SAGE": {
+      "spritesheet": "eyes2",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "eyesCOBALT": {
+      "spritesheet": "eyes",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "eyes2COBALT": {
+      "spritesheet": "eyes2",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "eyesPALEBLUE": {
+      "spritesheet": "eyes",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "eyes2PALEBLUE": {
+      "spritesheet": "eyes2",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "eyesBRONZE": {
+      "spritesheet": "eyes",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "eyes2BRONZE": {
+      "spritesheet": "eyes2",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "eyesSILVER": {
+      "spritesheet": "eyes",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "eyes2SILVER": {
+      "spritesheet": "eyes2",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "eyesPALEYELLOW": {
+      "spritesheet": "eyes",
+      "xOffset": 900.0,
+      "yOffset": 350.0
+  },
+  "eyes2PALEYELLOW": {
+      "spritesheet": "eyes2",
+      "xOffset": 900.0,
+      "yOffset": 350.0
+  },
+  "eyesGOLD": {
+      "spritesheet": "eyes",
+      "xOffset": 1050.0,
+      "yOffset": 350.0
+  },
+  "eyes2GOLD": {
+      "spritesheet": "eyes2",
+      "xOffset": 1050.0,
+      "yOffset": 350.0
+  },
+  "eyesGREENYELLOW": {
+      "spritesheet": "eyes",
+      "xOffset": 1200.0,
+      "yOffset": 350.0
+  },
+  "eyes2GREENYELLOW": {
+      "spritesheet": "eyes2",
+      "xOffset": 1200.0,
+      "yOffset": 350.0
+  },
+  "whiteFULLWHITE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "whiteANY": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "whiteTUXEDO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "whiteLITTLE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "whiteCOLOURPOINT": {
+      "spritesheet": "whitepatches",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "whiteVAN": {
+      "spritesheet": "whitepatches",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "whiteANYTWO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "whiteMOON": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1050.0,
+      "yOffset": 0.0
+  },
+  "whitePHANTOM": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1200.0,
+      "yOffset": 0.0
+  },
+  "whitePOWDER": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1350.0,
+      "yOffset": 0.0
+  },
+  "whiteBLEACHED": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1500.0,
+      "yOffset": 0.0
+  },
+  "whiteSAVANNAH": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1650.0,
+      "yOffset": 0.0
+  },
+  "whiteFADESPOTS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1800.0,
+      "yOffset": 0.0
+  },
+  "whitePEBBLESHINE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1950.0,
+      "yOffset": 0.0
+  },
+  "whiteEXTRA": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "whiteONEEAR": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "whiteBROKEN": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "whiteLIGHTTUXEDO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "whiteBUZZARDFANG": {
+      "spritesheet": "whitepatches",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "whiteRAGDOLL": {
+      "spritesheet": "whitepatches",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "whiteLIGHTSONG": {
+      "spritesheet": "whitepatches",
+      "xOffset": 900.0,
+      "yOffset": 350.0
+  },
+  "whiteVITILIGO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1050.0,
+      "yOffset": 350.0
+  },
+  "whiteBLACKSTAR": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1200.0,
+      "yOffset": 350.0
+  },
+  "whitePIEBALD": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1350.0,
+      "yOffset": 350.0
+  },
+  "whiteCURVED": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1500.0,
+      "yOffset": 350.0
+  },
+  "whitePETAL": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1650.0,
+      "yOffset": 350.0
+  },
+  "whiteSHIBAINU": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1800.0,
+      "yOffset": 350.0
+  },
+  "whiteOWL": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1950.0,
+      "yOffset": 350.0
+  },
+  "whiteTIP": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "whiteFANCY": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "whiteFRECKLES": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "whiteRINGTAIL": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "whiteHALFFACE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "whitePANTSTWO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "whiteGOATEE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 900.0,
+      "yOffset": 700.0
+  },
+  "whiteVITILIGOTWO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1050.0,
+      "yOffset": 700.0
+  },
+  "whitePAWS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1200.0,
+      "yOffset": 700.0
+  },
+  "whiteMITAINE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1350.0,
+      "yOffset": 700.0
+  },
+  "whiteBROKENBLAZE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1500.0,
+      "yOffset": 700.0
+  },
+  "whiteSCOURGE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1650.0,
+      "yOffset": 700.0
+  },
+  "whiteDIVA": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1800.0,
+      "yOffset": 700.0
+  },
+  "whiteBEARD": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1950.0,
+      "yOffset": 700.0
+  },
+  "whiteTAIL": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 1050.0
+  },
+  "whiteBLAZE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 1050.0
+  },
+  "whitePRINCE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 1050.0
+  },
+  "whiteBIB": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 1050.0
+  },
+  "whiteVEE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 600.0,
+      "yOffset": 1050.0
+  },
+  "whiteUNDERS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 750.0,
+      "yOffset": 1050.0
+  },
+  "whiteHONEY": {
+      "spritesheet": "whitepatches",
+      "xOffset": 900.0,
+      "yOffset": 1050.0
+  },
+  "whiteFAROFA": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1050.0,
+      "yOffset": 1050.0
+  },
+  "whiteDAMIEN": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1200.0,
+      "yOffset": 1050.0
+  },
+  "whiteMISTER": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1350.0,
+      "yOffset": 1050.0
+  },
+  "whiteBELLY": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1500.0,
+      "yOffset": 1050.0
+  },
+  "whiteTAILTIP": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1650.0,
+      "yOffset": 1050.0
+  },
+  "whiteTOES": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1800.0,
+      "yOffset": 1050.0
+  },
+  "whiteTOPCOVER": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1950.0,
+      "yOffset": 1050.0
+  },
+  "whiteAPRON": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 1400.0
+  },
+  "whiteCAPSADDLE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 1400.0
+  },
+  "whiteMASKMANTLE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 1400.0
+  },
+  "whiteSQUEAKS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 1400.0
+  },
+  "whiteSTAR": {
+      "spritesheet": "whitepatches",
+      "xOffset": 600.0,
+      "yOffset": 1400.0
+  },
+  "whiteTOESTAIL": {
+      "spritesheet": "whitepatches",
+      "xOffset": 750.0,
+      "yOffset": 1400.0
+  },
+  "whiteRAVENPAW": {
+      "spritesheet": "whitepatches",
+      "xOffset": 900.0,
+      "yOffset": 1400.0
+  },
+  "whitePANTS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1050.0,
+      "yOffset": 1400.0
+  },
+  "whiteREVERSEPANTS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1200.0,
+      "yOffset": 1400.0
+  },
+  "whiteSKUNK": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1350.0,
+      "yOffset": 1400.0
+  },
+  "whiteKARPATI": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1500.0,
+      "yOffset": 1400.0
+  },
+  "whiteHALFWHITE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1650.0,
+      "yOffset": 1400.0
+  },
+  "whiteAPPALOOSA": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1800.0,
+      "yOffset": 1400.0
+  },
+  "whiteDAPPLEPAW": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1950.0,
+      "yOffset": 1400.0
+  },
+  "whiteHEART": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 1750.0
+  },
+  "whiteLILTWO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 1750.0
+  },
+  "whiteGLASS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 1750.0
+  },
+  "whiteMOORISH": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 1750.0
+  },
+  "whiteSEPIAPOINT": {
+      "spritesheet": "whitepatches",
+      "xOffset": 600.0,
+      "yOffset": 1750.0
+  },
+  "whiteMINKPOINT": {
+      "spritesheet": "whitepatches",
+      "xOffset": 750.0,
+      "yOffset": 1750.0
+  },
+  "whiteSEALPOINT": {
+      "spritesheet": "whitepatches",
+      "xOffset": 900.0,
+      "yOffset": 1750.0
+  },
+  "whiteMAO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1050.0,
+      "yOffset": 1750.0
+  },
+  "whiteLUNA": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1200.0,
+      "yOffset": 1750.0
+  },
+  "whiteCHESTSPECK": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1350.0,
+      "yOffset": 1750.0
+  },
+  "whiteWINGS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1500.0,
+      "yOffset": 1750.0
+  },
+  "whitePAINTED": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1650.0,
+      "yOffset": 1750.0
+  },
+  "whiteHEARTTWO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1800.0,
+      "yOffset": 1750.0
+  },
+  "whiteWOODPECKER": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1950.0,
+      "yOffset": 1750.0
+  },
+  "whiteBOOTS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 2100.0
+  },
+  "whiteMISS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 2100.0
+  },
+  "whiteCOW": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 2100.0
+  },
+  "whiteCOWTWO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 2100.0
+  },
+  "whiteBUB": {
+      "spritesheet": "whitepatches",
+      "xOffset": 600.0,
+      "yOffset": 2100.0
+  },
+  "whiteBOWTIE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 750.0,
+      "yOffset": 2100.0
+  },
+  "whiteMUSTACHE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 900.0,
+      "yOffset": 2100.0
+  },
+  "whiteREVERSEHEART": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1050.0,
+      "yOffset": 2100.0
+  },
+  "whiteSPARROW": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1200.0,
+      "yOffset": 2100.0
+  },
+  "whiteVEST": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1350.0,
+      "yOffset": 2100.0
+  },
+  "whiteLOVEBUG": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1500.0,
+      "yOffset": 2100.0
+  },
+  "whiteTRIXIE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1650.0,
+      "yOffset": 2100.0
+  },
+  "whiteSAMMY": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1800.0,
+      "yOffset": 2100.0
+  },
+  "whiteSPARKLE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1950.0,
+      "yOffset": 2100.0
+  },
+  "whiteRIGHTEAR": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 2450.0
+  },
+  "whiteLEFTEAR": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 2450.0
+  },
+  "whiteESTRELLA": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 2450.0
+  },
+  "whiteSHOOTINGSTAR": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 2450.0
+  },
+  "whiteEYESPOT": {
+      "spritesheet": "whitepatches",
+      "xOffset": 600.0,
+      "yOffset": 2450.0
+  },
+  "whiteREVERSEEYE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 750.0,
+      "yOffset": 2450.0
+  },
+  "whiteFADEBELLY": {
+      "spritesheet": "whitepatches",
+      "xOffset": 900.0,
+      "yOffset": 2450.0
+  },
+  "whiteFRONT": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1050.0,
+      "yOffset": 2450.0
+  },
+  "whiteBLOSSOMSTEP": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1200.0,
+      "yOffset": 2450.0
+  },
+  "whitePEBBLE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1350.0,
+      "yOffset": 2450.0
+  },
+  "whiteTAILTWO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1500.0,
+      "yOffset": 2450.0
+  },
+  "whiteBUDDY": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1650.0,
+      "yOffset": 2450.0
+  },
+  "whiteBACKSPOT": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1800.0,
+      "yOffset": 2450.0
+  },
+  "whiteEYEBAGS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1950.0,
+      "yOffset": 2450.0
+  },
+  "whiteBULLSEYE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 2800.0
+  },
+  "whiteFINN": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 2800.0
+  },
+  "whiteDIGIT": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 2800.0
+  },
+  "whiteKROPKA": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 2800.0
+  },
+  "whiteFCTWO": {
+      "spritesheet": "whitepatches",
+      "xOffset": 600.0,
+      "yOffset": 2800.0
+  },
+  "whiteFCONE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 750.0,
+      "yOffset": 2800.0
+  },
+  "whiteMIA": {
+      "spritesheet": "whitepatches",
+      "xOffset": 900.0,
+      "yOffset": 2800.0
+  },
+  "whiteSCAR": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1050.0,
+      "yOffset": 2800.0
+  },
+  "whiteBUSTER": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1200.0,
+      "yOffset": 2800.0
+  },
+  "whiteSMOKEY": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1350.0,
+      "yOffset": 2800.0
+  },
+  "whiteHAWKBLAZE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1500.0,
+      "yOffset": 2800.0
+  },
+  "whiteCAKE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1650.0,
+      "yOffset": 2800.0
+  },
+  "whiteROSINA": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1800.0,
+      "yOffset": 2800.0
+  },
+  "whitePRINCESS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 1950.0,
+      "yOffset": 2800.0
+  },
+  "whiteLOCKET": {
+      "spritesheet": "whitepatches",
+      "xOffset": 0.0,
+      "yOffset": 3150.0
+  },
+  "whiteBLAZEMASK": {
+      "spritesheet": "whitepatches",
+      "xOffset": 150.0,
+      "yOffset": 3150.0
+  },
+  "whiteTEARS": {
+      "spritesheet": "whitepatches",
+      "xOffset": 300.0,
+      "yOffset": 3150.0
+  },
+  "whiteDOUGIE": {
+      "spritesheet": "whitepatches",
+      "xOffset": 450.0,
+      "yOffset": 3150.0
+  },
+  "singleWHITE": {
+      "spritesheet": "singlecolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "tabbyWHITE": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "marbledWHITE": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "rosetteWHITE": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "smokeWHITE": {
+      "spritesheet": "smokecolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "tickedWHITE": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "speckledWHITE": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "bengalWHITE": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "mackerelWHITE": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "classicWHITE": {
+      "spritesheet": "classiccolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "sokokeWHITE": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "agoutiWHITE": {
+      "spritesheet": "agouticolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "singlestripeWHITE": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "maskedWHITE": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "singlePALEGREY": {
+      "spritesheet": "singlecolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "tabbyPALEGREY": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "marbledPALEGREY": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "rosettePALEGREY": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "smokePALEGREY": {
+      "spritesheet": "smokecolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "tickedPALEGREY": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "speckledPALEGREY": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "bengalPALEGREY": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "mackerelPALEGREY": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "classicPALEGREY": {
+      "spritesheet": "classiccolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "sokokePALEGREY": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "agoutiPALEGREY": {
+      "spritesheet": "agouticolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "singlestripePALEGREY": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "maskedPALEGREY": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "singleSILVER": {
+      "spritesheet": "singlecolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "tabbySILVER": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "marbledSILVER": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "rosetteSILVER": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "smokeSILVER": {
+      "spritesheet": "smokecolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "tickedSILVER": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "speckledSILVER": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "bengalSILVER": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "mackerelSILVER": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "classicSILVER": {
+      "spritesheet": "classiccolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "sokokeSILVER": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "agoutiSILVER": {
+      "spritesheet": "agouticolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "singlestripeSILVER": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "maskedSILVER": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "singleGREY": {
+      "spritesheet": "singlecolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "tabbyGREY": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "marbledGREY": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "rosetteGREY": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "smokeGREY": {
+      "spritesheet": "smokecolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "tickedGREY": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "speckledGREY": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "bengalGREY": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "mackerelGREY": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "classicGREY": {
+      "spritesheet": "classiccolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "sokokeGREY": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "agoutiGREY": {
+      "spritesheet": "agouticolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "singlestripeGREY": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "maskedGREY": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "singleDARKGREY": {
+      "spritesheet": "singlecolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "tabbyDARKGREY": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "marbledDARKGREY": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "rosetteDARKGREY": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "smokeDARKGREY": {
+      "spritesheet": "smokecolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "tickedDARKGREY": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "speckledDARKGREY": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "bengalDARKGREY": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "mackerelDARKGREY": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "classicDARKGREY": {
+      "spritesheet": "classiccolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "sokokeDARKGREY": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "agoutiDARKGREY": {
+      "spritesheet": "agouticolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "singlestripeDARKGREY": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "maskedDARKGREY": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "singleGHOST": {
+      "spritesheet": "singlecolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "tabbyGHOST": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "marbledGHOST": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "rosetteGHOST": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "smokeGHOST": {
+      "spritesheet": "smokecolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "tickedGHOST": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "speckledGHOST": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "bengalGHOST": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "mackerelGHOST": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "classicGHOST": {
+      "spritesheet": "classiccolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "sokokeGHOST": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "agoutiGHOST": {
+      "spritesheet": "agouticolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "singlestripeGHOST": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "maskedGHOST": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "singleBLACK": {
+      "spritesheet": "singlecolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "tabbyBLACK": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "marbledBLACK": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "rosetteBLACK": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "smokeBLACK": {
+      "spritesheet": "smokecolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "tickedBLACK": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "speckledBLACK": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "bengalBLACK": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "mackerelBLACK": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "classicBLACK": {
+      "spritesheet": "classiccolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "sokokeBLACK": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "agoutiBLACK": {
+      "spritesheet": "agouticolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "singlestripeBLACK": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "maskedBLACK": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "singleCREAM": {
+      "spritesheet": "singlecolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "tabbyCREAM": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "marbledCREAM": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "rosetteCREAM": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "smokeCREAM": {
+      "spritesheet": "smokecolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "tickedCREAM": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "speckledCREAM": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "bengalCREAM": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "mackerelCREAM": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "classicCREAM": {
+      "spritesheet": "classiccolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "sokokeCREAM": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "agoutiCREAM": {
+      "spritesheet": "agouticolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "singlestripeCREAM": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "maskedCREAM": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "singlePALEGINGER": {
+      "spritesheet": "singlecolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "tabbyPALEGINGER": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "marbledPALEGINGER": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "rosettePALEGINGER": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "smokePALEGINGER": {
+      "spritesheet": "smokecolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "tickedPALEGINGER": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "speckledPALEGINGER": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "bengalPALEGINGER": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "mackerelPALEGINGER": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "classicPALEGINGER": {
+      "spritesheet": "classiccolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "sokokePALEGINGER": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "agoutiPALEGINGER": {
+      "spritesheet": "agouticolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "singlestripePALEGINGER": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "maskedPALEGINGER": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "singleGOLDEN": {
+      "spritesheet": "singlecolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "tabbyGOLDEN": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "marbledGOLDEN": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "rosetteGOLDEN": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "smokeGOLDEN": {
+      "spritesheet": "smokecolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "tickedGOLDEN": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "speckledGOLDEN": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "bengalGOLDEN": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "mackerelGOLDEN": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "classicGOLDEN": {
+      "spritesheet": "classiccolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "sokokeGOLDEN": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "agoutiGOLDEN": {
+      "spritesheet": "agouticolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "singlestripeGOLDEN": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "maskedGOLDEN": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "singleGINGER": {
+      "spritesheet": "singlecolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "tabbyGINGER": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "marbledGINGER": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "rosetteGINGER": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "smokeGINGER": {
+      "spritesheet": "smokecolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "tickedGINGER": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "speckledGINGER": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "bengalGINGER": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "mackerelGINGER": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "classicGINGER": {
+      "spritesheet": "classiccolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "sokokeGINGER": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "agoutiGINGER": {
+      "spritesheet": "agouticolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "singlestripeGINGER": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "maskedGINGER": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "singleDARKGINGER": {
+      "spritesheet": "singlecolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "tabbyDARKGINGER": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "marbledDARKGINGER": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "rosetteDARKGINGER": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "smokeDARKGINGER": {
+      "spritesheet": "smokecolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "tickedDARKGINGER": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "speckledDARKGINGER": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "bengalDARKGINGER": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "mackerelDARKGINGER": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "classicDARKGINGER": {
+      "spritesheet": "classiccolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "sokokeDARKGINGER": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "agoutiDARKGINGER": {
+      "spritesheet": "agouticolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "singlestripeDARKGINGER": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "maskedDARKGINGER": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "singleSIENNA": {
+      "spritesheet": "singlecolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "tabbySIENNA": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "marbledSIENNA": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "rosetteSIENNA": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "smokeSIENNA": {
+      "spritesheet": "smokecolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "tickedSIENNA": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "speckledSIENNA": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "bengalSIENNA": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "mackerelSIENNA": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "classicSIENNA": {
+      "spritesheet": "classiccolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "sokokeSIENNA": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "agoutiSIENNA": {
+      "spritesheet": "agouticolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "singlestripeSIENNA": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "maskedSIENNA": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "singleLIGHTBROWN": {
+      "spritesheet": "singlecolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "tabbyLIGHTBROWN": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "marbledLIGHTBROWN": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "rosetteLIGHTBROWN": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "smokeLIGHTBROWN": {
+      "spritesheet": "smokecolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "tickedLIGHTBROWN": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "speckledLIGHTBROWN": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "bengalLIGHTBROWN": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "mackerelLIGHTBROWN": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "classicLIGHTBROWN": {
+      "spritesheet": "classiccolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "sokokeLIGHTBROWN": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "agoutiLIGHTBROWN": {
+      "spritesheet": "agouticolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "singlestripeLIGHTBROWN": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "maskedLIGHTBROWN": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "singleLILAC": {
+      "spritesheet": "singlecolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "tabbyLILAC": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "marbledLILAC": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "rosetteLILAC": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "smokeLILAC": {
+      "spritesheet": "smokecolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "tickedLILAC": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "speckledLILAC": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "bengalLILAC": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "mackerelLILAC": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "classicLILAC": {
+      "spritesheet": "classiccolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "sokokeLILAC": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "agoutiLILAC": {
+      "spritesheet": "agouticolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "singlestripeLILAC": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "maskedLILAC": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "singleBROWN": {
+      "spritesheet": "singlecolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "tabbyBROWN": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "marbledBROWN": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "rosetteBROWN": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "smokeBROWN": {
+      "spritesheet": "smokecolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "tickedBROWN": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "speckledBROWN": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "bengalBROWN": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "mackerelBROWN": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "classicBROWN": {
+      "spritesheet": "classiccolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "sokokeBROWN": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "agoutiBROWN": {
+      "spritesheet": "agouticolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "singlestripeBROWN": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "maskedBROWN": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "singleGOLDEN-BROWN": {
+      "spritesheet": "singlecolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "tabbyGOLDEN-BROWN": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "marbledGOLDEN-BROWN": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "rosetteGOLDEN-BROWN": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "smokeGOLDEN-BROWN": {
+      "spritesheet": "smokecolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "tickedGOLDEN-BROWN": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "speckledGOLDEN-BROWN": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "bengalGOLDEN-BROWN": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "mackerelGOLDEN-BROWN": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "classicGOLDEN-BROWN": {
+      "spritesheet": "classiccolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "sokokeGOLDEN-BROWN": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "agoutiGOLDEN-BROWN": {
+      "spritesheet": "agouticolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "singlestripeGOLDEN-BROWN": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "maskedGOLDEN-BROWN": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "singleDARKBROWN": {
+      "spritesheet": "singlecolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "tabbyDARKBROWN": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "marbledDARKBROWN": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "rosetteDARKBROWN": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "smokeDARKBROWN": {
+      "spritesheet": "smokecolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "tickedDARKBROWN": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "speckledDARKBROWN": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "bengalDARKBROWN": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "mackerelDARKBROWN": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "classicDARKBROWN": {
+      "spritesheet": "classiccolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "sokokeDARKBROWN": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "agoutiDARKBROWN": {
+      "spritesheet": "agouticolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "singlestripeDARKBROWN": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "maskedDARKBROWN": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "singleCHOCOLATE": {
+      "spritesheet": "singlecolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "tabbyCHOCOLATE": {
+      "spritesheet": "tabbycolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "marbledCHOCOLATE": {
+      "spritesheet": "marbledcolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "rosetteCHOCOLATE": {
+      "spritesheet": "rosettecolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "smokeCHOCOLATE": {
+      "spritesheet": "smokecolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "tickedCHOCOLATE": {
+      "spritesheet": "tickedcolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "speckledCHOCOLATE": {
+      "spritesheet": "speckledcolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "bengalCHOCOLATE": {
+      "spritesheet": "bengalcolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "mackerelCHOCOLATE": {
+      "spritesheet": "mackerelcolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "classicCHOCOLATE": {
+      "spritesheet": "classiccolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "sokokeCHOCOLATE": {
+      "spritesheet": "sokokecolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "agoutiCHOCOLATE": {
+      "spritesheet": "agouticolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "singlestripeCHOCOLATE": {
+      "spritesheet": "singlestripecolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "maskedCHOCOLATE": {
+      "spritesheet": "maskedcolours",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskONE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskTWO": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskTHREE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskFOUR": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskREDTAIL": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskDELILAH": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskHALF": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskSTREAK": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1050.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskMASK": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1200.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskSMOKE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1350.0,
+      "yOffset": 0.0
+  },
+  "tortiemaskMINIMALONE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskMINIMALTWO": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskMINIMALTHREE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskMINIMALFOUR": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskOREO": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskSWOOP": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskCHIMERA": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 900.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskCHEST": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1050.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskARMTAIL": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1200.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskGRUMPYFACE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1350.0,
+      "yOffset": 350.0
+  },
+  "tortiemaskMOTTLED": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskSIDEMASK": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskEYEDOT": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskBANDANA": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskPACMAN": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskSTREAMSTRIKE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskSMUDGED": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 900.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskDAUB": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1050.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskEMBER": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1200.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskBRIE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1350.0,
+      "yOffset": 700.0
+  },
+  "tortiemaskORIOLE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 0.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskROBIN": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 150.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskBRINDLE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 300.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskPAIGE": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 450.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskROSETAIL": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 600.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskSAFI": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 750.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskDAPPLENIGHT": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 900.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskBLANKET": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1050.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskBELOVED": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1200.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskBODY": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 1350.0,
+      "yOffset": 1050.0
+  },
+  "tortiemaskSHILOH": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 0.0,
+      "yOffset": 1400.0
+  },
+  "tortiemaskFRECKLED": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 150.0,
+      "yOffset": 1400.0
+  },
+  "tortiemaskHEARTBEAT": {
+      "spritesheet": "tortiepatchesmasks",
+      "xOffset": 300.0,
+      "yOffset": 1400.0
+  },
+  "skinBLACK": {
+      "spritesheet": "skin",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "skinRED": {
+      "spritesheet": "skin",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "skinPINK": {
+      "spritesheet": "skin",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "skinDARKBROWN": {
+      "spritesheet": "skin",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "skinBROWN": {
+      "spritesheet": "skin",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "skinLIGHTBROWN": {
+      "spritesheet": "skin",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "skinDARK": {
+      "spritesheet": "skin",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "skinDARKGREY": {
+      "spritesheet": "skin",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "skinGREY": {
+      "spritesheet": "skin",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "skinDARKSALMON": {
+      "spritesheet": "skin",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "skinSALMON": {
+      "spritesheet": "skin",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "skinPEACH": {
+      "spritesheet": "skin",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "skinDARKMARBLED": {
+      "spritesheet": "skin",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "skinMARBLED": {
+      "spritesheet": "skin",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "skinLIGHTMARBLED": {
+      "spritesheet": "skin",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "skinDARKBLUE": {
+      "spritesheet": "skin",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "skinBLUE": {
+      "spritesheet": "skin",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "skinLIGHTBLUE": {
+      "spritesheet": "skin",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "scarsONE": {
+      "spritesheet": "scars",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "scarsTWO": {
+      "spritesheet": "scars",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "scarsTHREE": {
+      "spritesheet": "scars",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "scarsMANLEG": {
+      "spritesheet": "scars",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "scarsBRIGHTHEART": {
+      "spritesheet": "scars",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "scarsMANTAIL": {
+      "spritesheet": "scars",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "scarsBRIDGE": {
+      "spritesheet": "scars",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "scarsRIGHTBLIND": {
+      "spritesheet": "scars",
+      "xOffset": 1050.0,
+      "yOffset": 0.0
+  },
+  "scarsLEFTBLIND": {
+      "spritesheet": "scars",
+      "xOffset": 1200.0,
+      "yOffset": 0.0
+  },
+  "scarsBOTHBLIND": {
+      "spritesheet": "scars",
+      "xOffset": 1350.0,
+      "yOffset": 0.0
+  },
+  "scarsBURNPAWS": {
+      "spritesheet": "scars",
+      "xOffset": 1500.0,
+      "yOffset": 0.0
+  },
+  "scarsBURNTAIL": {
+      "spritesheet": "scars",
+      "xOffset": 1650.0,
+      "yOffset": 0.0
+  },
+  "scarsBURNBELLY": {
+      "spritesheet": "scars",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "scarsBEAKCHEEK": {
+      "spritesheet": "scars",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "scarsBEAKLOWER": {
+      "spritesheet": "scars",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "scarsBURNRUMP": {
+      "spritesheet": "scars",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "scarsCATBITE": {
+      "spritesheet": "scars",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "scarsRATBITE": {
+      "spritesheet": "scars",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "scarsFROSTFACE": {
+      "spritesheet": "scars",
+      "xOffset": 900.0,
+      "yOffset": 350.0
+  },
+  "scarsFROSTTAIL": {
+      "spritesheet": "scars",
+      "xOffset": 1050.0,
+      "yOffset": 350.0
+  },
+  "scarsFROSTMITT": {
+      "spritesheet": "scars",
+      "xOffset": 1200.0,
+      "yOffset": 350.0
+  },
+  "scarsFROSTSOCK": {
+      "spritesheet": "scars",
+      "xOffset": 1350.0,
+      "yOffset": 350.0
+  },
+  "scarsQUILLCHUNK": {
+      "spritesheet": "scars",
+      "xOffset": 1500.0,
+      "yOffset": 350.0
+  },
+  "scarsQUILLSCRATCH": {
+      "spritesheet": "scars",
+      "xOffset": 1650.0,
+      "yOffset": 350.0
+  },
+  "scarsTAILSCAR": {
+      "spritesheet": "scars",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "scarsSNOUT": {
+      "spritesheet": "scars",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "scarsCHEEK": {
+      "spritesheet": "scars",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "scarsSIDE": {
+      "spritesheet": "scars",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "scarsTHROAT": {
+      "spritesheet": "scars",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "scarsTAILBASE": {
+      "spritesheet": "scars",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "scarsBELLY": {
+      "spritesheet": "scars",
+      "xOffset": 900.0,
+      "yOffset": 700.0
+  },
+  "scarsTOETRAP": {
+      "spritesheet": "scars",
+      "xOffset": 1050.0,
+      "yOffset": 700.0
+  },
+  "scarsSNAKE": {
+      "spritesheet": "scars",
+      "xOffset": 1200.0,
+      "yOffset": 700.0
+  },
+  "scarsLEGBITE": {
+      "spritesheet": "scars",
+      "xOffset": 1350.0,
+      "yOffset": 700.0
+  },
+  "scarsNECKBITE": {
+      "spritesheet": "scars",
+      "xOffset": 1500.0,
+      "yOffset": 700.0
+  },
+  "scarsFACE": {
+      "spritesheet": "scars",
+      "xOffset": 1650.0,
+      "yOffset": 700.0
+  },
+  "scarsHINDLEG": {
+      "spritesheet": "scars",
+      "xOffset": 0.0,
+      "yOffset": 1050.0
+  },
+  "scarsBACK": {
+      "spritesheet": "scars",
+      "xOffset": 150.0,
+      "yOffset": 1050.0
+  },
+  "scarsQUILLSIDE": {
+      "spritesheet": "scars",
+      "xOffset": 300.0,
+      "yOffset": 1050.0
+  },
+  "scarsSCRATCHSIDE": {
+      "spritesheet": "scars",
+      "xOffset": 450.0,
+      "yOffset": 1050.0
+  },
+  "scarsTOE": {
+      "spritesheet": "scars",
+      "xOffset": 600.0,
+      "yOffset": 1050.0
+  },
+  "scarsBEAKSIDE": {
+      "spritesheet": "scars",
+      "xOffset": 750.0,
+      "yOffset": 1050.0
+  },
+  "scarsCATBITETWO": {
+      "spritesheet": "scars",
+      "xOffset": 900.0,
+      "yOffset": 1050.0
+  },
+  "scarsSNAKETWO": {
+      "spritesheet": "scars",
+      "xOffset": 1050.0,
+      "yOffset": 1050.0
+  },
+  "scarsFOUR": {
+      "spritesheet": "scars",
+      "xOffset": 1200.0,
+      "yOffset": 1050.0
+  },
+  "scarsLEFTEAR": {
+      "spritesheet": "missingscars",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "scarsRIGHTEAR": {
+      "spritesheet": "missingscars",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "scarsNOTAIL": {
+      "spritesheet": "missingscars",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "scarsNOLEFTEAR": {
+      "spritesheet": "missingscars",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "scarsNORIGHTEAR": {
+      "spritesheet": "missingscars",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "scarsNOEAR": {
+      "spritesheet": "missingscars",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "scarsHALFTAIL": {
+      "spritesheet": "missingscars",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "scarsNOPAW": {
+      "spritesheet": "missingscars",
+      "xOffset": 1050.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsMAPLE LEAF": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsHOLLY": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsBLUE BERRIES": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsFORGET ME NOTS": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsRYE STALK": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsCATTAIL": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsPOPPY": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsORANGE POPPY": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1050.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsCYAN POPPY": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1200.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsWHITE POPPY": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1350.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsPINK POPPY": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1500.0,
+      "yOffset": 0.0
+  },
+  "acc_herbsBLUEBELLS": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsLILY OF THE VALLEY": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsSNAPDRAGON": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsHERBS": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsPETALS": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsNETTLE": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 750.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsHEATHER": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 900.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsGORSE": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1050.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsJUNIPER": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1200.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsRASPBERRY": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1350.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsLAVENDER": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1500.0,
+      "yOffset": 350.0
+  },
+  "acc_herbsOAK LEAVES": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsCATMINT": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsMAPLE SEED": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsLAUREL": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsBULB WHITE": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 600.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsBULB YELLOW": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 750.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsBULB ORANGE": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 900.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsBULB PINK": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1050.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsBULB BLUE": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1200.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsCLOVER": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1350.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsDAISY": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 1500.0,
+      "yOffset": 700.0
+  },
+  "acc_herbsDRY HERBS": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 0.0,
+      "yOffset": 1050.0
+  },
+  "acc_herbsDRY CATMINT": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 150.0,
+      "yOffset": 1050.0
+  },
+  "acc_herbsDRY NETTLES": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 300.0,
+      "yOffset": 1050.0
+  },
+  "acc_herbsDRY LAURELS": {
+      "spritesheet": "medcatherbs",
+      "xOffset": 450.0,
+      "yOffset": 1050.0
+  },
+  "acc_wildRED FEATHERS": {
+      "spritesheet": "wild",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "acc_wildBLUE FEATHERS": {
+      "spritesheet": "wild",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "acc_wildJAY FEATHERS": {
+      "spritesheet": "wild",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "acc_wildGULL FEATHERS": {
+      "spritesheet": "wild",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "acc_wildSPARROW FEATHERS": {
+      "spritesheet": "wild",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "acc_wildMOTH WINGS": {
+      "spritesheet": "wild",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "acc_wildROSY MOTH WINGS": {
+      "spritesheet": "wild",
+      "xOffset": 900.0,
+      "yOffset": 0.0
+  },
+  "acc_wildMORPHO BUTTERFLY": {
+      "spritesheet": "wild",
+      "xOffset": 1050.0,
+      "yOffset": 0.0
+  },
+  "acc_wildMONARCH BUTTERFLY": {
+      "spritesheet": "wild",
+      "xOffset": 1200.0,
+      "yOffset": 0.0
+  },
+  "acc_wildCICADA WINGS": {
+      "spritesheet": "wild",
+      "xOffset": 1350.0,
+      "yOffset": 0.0
+  },
+  "acc_wildBLACK CICADA": {
+      "spritesheet": "wild",
+      "xOffset": 1500.0,
+      "yOffset": 0.0
+  },
+  "collarsCRIMSON": {
+      "spritesheet": "collars",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "collarsBLUE": {
+      "spritesheet": "collars",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "collarsYELLOW": {
+      "spritesheet": "collars",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "collarsCYAN": {
+      "spritesheet": "collars",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "collarsRED": {
+      "spritesheet": "collars",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "collarsLIME": {
+      "spritesheet": "collars",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "collarsGREEN": {
+      "spritesheet": "collars",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "collarsRAINBOW": {
+      "spritesheet": "collars",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "collarsBLACK": {
+      "spritesheet": "collars",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "collarsSPIKES": {
+      "spritesheet": "collars",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "collarsWHITE": {
+      "spritesheet": "collars",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "collarsPINK": {
+      "spritesheet": "collars",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "collarsPURPLE": {
+      "spritesheet": "collars",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "collarsMULTI": {
+      "spritesheet": "collars",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "collarsINDIGO": {
+      "spritesheet": "collars",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "collarsCRIMSONBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "collarsBLUEBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "collarsYELLOWBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "collarsCYANBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "collarsREDBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "collarsLIMEBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "collarsGREENBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "collarsRAINBOWBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "collarsBLACKBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "collarsSPIKESBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "collarsWHITEBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "collarsPINKBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "collarsPURPLEBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "collarsMULTIBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "collarsINDIGOBELL": {
+      "spritesheet": "bellcollars",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "collarsCRIMSONBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "collarsBLUEBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "collarsYELLOWBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "collarsCYANBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "collarsREDBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "collarsLIMEBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "collarsGREENBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "collarsRAINBOWBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "collarsBLACKBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "collarsSPIKESBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "collarsWHITEBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "collarsPINKBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "collarsPURPLEBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "collarsMULTIBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "collarsINDIGOBOW": {
+      "spritesheet": "bowcollars",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  },
+  "collarsCRIMSONNYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
+  "collarsBLUENYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 150.0,
+      "yOffset": 0.0
+  },
+  "collarsYELLOWNYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 300.0,
+      "yOffset": 0.0
+  },
+  "collarsCYANNYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 450.0,
+      "yOffset": 0.0
+  },
+  "collarsREDNYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 600.0,
+      "yOffset": 0.0
+  },
+  "collarsLIMENYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 750.0,
+      "yOffset": 0.0
+  },
+  "collarsGREENNYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 0.0,
+      "yOffset": 350.0
+  },
+  "collarsRAINBOWNYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 150.0,
+      "yOffset": 350.0
+  },
+  "collarsBLACKNYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 300.0,
+      "yOffset": 350.0
+  },
+  "collarsSPIKESNYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 450.0,
+      "yOffset": 350.0
+  },
+  "collarsWHITENYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 600.0,
+      "yOffset": 350.0
+  },
+  "collarsPINKNYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 0.0,
+      "yOffset": 700.0
+  },
+  "collarsPURPLENYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 150.0,
+      "yOffset": 700.0
+  },
+  "collarsMULTINYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 300.0,
+      "yOffset": 700.0
+  },
+  "collarsINDIGONYLON": {
+      "spritesheet": "nyloncollars",
+      "xOffset": 450.0,
+      "yOffset": 700.0
+  }
+}
