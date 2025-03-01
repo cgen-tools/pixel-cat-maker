@@ -44,6 +44,8 @@ const tortieMaskSelect = document.getElementById("tortie-mask-select") as HTMLSe
 const tortieColourSelect = document.getElementById("tortie-colour-select") as HTMLSelectElement;
 const tortiePatternSelect = document.getElementById("tortie-pattern-select") as HTMLSelectElement;
 
+const lineartSelect = document.getElementById("lineart-select") as HTMLSelectElement;
+
 const isTortieCheckbox = document.getElementById("tortie-checkbox") as HTMLInputElement;
 const shadingCheckbox = document.getElementById("shading-checkbox") as HTMLInputElement;
 const reverseCheckbox = document.getElementById("reverse-checkbox") as HTMLInputElement;
@@ -86,6 +88,19 @@ function redrawCat() {
     name = peltName;
   }
 
+  var isDead: boolean = false;
+  var isDf: boolean = false;
+  if (lineartSelect.value === "regular") {
+    isDead = false;
+    isDf = false;
+  } else if (lineartSelect.value === "dead") {
+    isDead = true;
+    isDf = false;
+  } else if (lineartSelect.value === "dark forest") {
+    isDead = true;
+    isDf = true;
+  }
+
   drawCat(c, {
     name: name,
     colour: colour,
@@ -108,8 +123,8 @@ function redrawCat() {
     tortieColour: tortieColour,
     },
     spriteNumber,
-    undefined,
-    undefined,
+    isDead,
+    isDf,
     shading,
   ).then(() => {
     return c.convertToBlob()
@@ -149,6 +164,7 @@ whitePatchesTintSelect.addEventListener("change", () => redrawCat());
 vitiligoSelect.addEventListener("change", () => redrawCat());
 accessorySelect.addEventListener("change", () => redrawCat());
 scarSelect.addEventListener("change", () => redrawCat());
+lineartSelect.addEventListener("change", () => redrawCat());
 shadingCheckbox.addEventListener("change", () => redrawCat());
 reverseCheckbox.addEventListener("change", () => redrawCat());
 
