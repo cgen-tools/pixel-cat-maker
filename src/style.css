@@ -1,14 +1,17 @@
+form {
+  max-width: 400px;
+}
+
 .form-row {
   display: flex;
-  gap: 10px;
 }
 
 .form-row label {
-  min-width: 130px;;
+  width: 45%;
 }
 
 .form-row select {
-  width: 150px;;
+  width: 45%;
 }
 
 .hidden {
