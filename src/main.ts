@@ -146,6 +146,25 @@ function redrawCat() {
   });
 }
 
+function randomizeSelected(select: HTMLSelectElement) {
+  const options: HTMLOptionsCollection = select.options;
+  options.selectedIndex = Math.floor(options.length * Math.random());
+}
+
+const randomButtons = document.getElementsByClassName("random-button") as HTMLCollectionOf<HTMLButtonElement>;
+for (const randomButton of randomButtons) {
+  randomButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const selectId = randomButton.dataset.selectId;
+    if (!selectId) {
+      return;
+    }
+    const select = document.getElementById(selectId) as HTMLSelectElement;
+    randomizeSelected(select);
+    redrawCat();
+  });
+}
+
 isTortieCheckbox.addEventListener("change", () => {
   if (isTortieCheckbox.checked) {
     tortieColourSelect.disabled = false;
