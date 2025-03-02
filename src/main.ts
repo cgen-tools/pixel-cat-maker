@@ -50,11 +50,15 @@ const isTortieCheckbox = document.getElementById("tortie-checkbox") as HTMLInput
 const shadingCheckbox = document.getElementById("shading-checkbox") as HTMLInputElement;
 const reverseCheckbox = document.getElementById("reverse-checkbox") as HTMLInputElement;
 
+const backgroundColourSelect = document.getElementById("bg-color-select") as HTMLSelectElement;
+
 function redrawCat() {
   const ctx = c.getContext("2d");
   if (ctx) {
     ctx.clearRect(0, 0, c.width, c.height);
   }
+
+  const backgroundColour = backgroundColourSelect.value;
 
   // pattern - represents mask
   const tortieMask = tortieMaskSelect.value;
@@ -127,7 +131,14 @@ function redrawCat() {
     isDf,
     shading,
   ).then(() => {
-    return c.convertToBlob()
+    const finalCanvas = new OffscreenCanvas(50, 50);
+    const finalCtx = finalCanvas.getContext("2d")!;
+
+    finalCtx.fillStyle = backgroundColour;
+    finalCtx.fillRect(0, 0, finalCanvas.width, finalCanvas.height);
+    finalCtx.drawImage(c, 0, 0);
+    
+    return finalCanvas.convertToBlob();
   }).then((blob) => {
     catSprite.src = URL.createObjectURL(blob);
   }).catch((err) => {
@@ -167,5 +178,7 @@ scarSelect.addEventListener("change", () => redrawCat());
 lineartSelect.addEventListener("change", () => redrawCat());
 shadingCheckbox.addEventListener("change", () => redrawCat());
 reverseCheckbox.addEventListener("change", () => redrawCat());
+
+backgroundColourSelect.addEventListener("change", () => redrawCat());
 
 redrawCat();
