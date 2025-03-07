@@ -53,7 +53,7 @@ async function drawTint(
   const compositeOperation = ctx.globalCompositeOperation;
   ctx.globalCompositeOperation = blendingMode;
 
-  const hexTint = `#${tint[0].toString(16)}${tint[1].toString(16)}${tint[2].toString(16)}`;
+  const cssTintColour = `rgb(${tint[0]} ${tint[1]} ${tint[2]})`
 
   const offscreen = new OffscreenCanvas(50, 50);
   const offscreenContext = offscreen.getContext("2d");
@@ -62,7 +62,7 @@ async function drawTint(
     const imageData = ctx.getImageData(0, 0, 50, 50);
     offscreenContext.putImageData(imageData, 0, 0);
     offscreenContext.globalCompositeOperation = "source-in";
-    offscreenContext.fillStyle = hexTint;
+    offscreenContext.fillStyle = cssTintColour;
     offscreenContext.fillRect(0, 0, 50, 50);
   }
   ctx.drawImage(offscreen, 0, 0);
@@ -160,8 +160,8 @@ async function drawCat(
     pelt.tint !== "none" &&
     Object.keys(tints.dilute_tint_colours).includes(pelt.tint)
   ) {
-    const tint = pelt.tint as keyof typeof tints.tint_colours;
-    await drawTint(tints.tint_colours[tint], "lighter", ctx);
+    const tint = pelt.tint as keyof typeof tints.dilute_tint_colours;
+    await drawTint(tints.dilute_tint_colours[tint], "lighter", ctx);
   }
 
   if (pelt.whitePatches !== undefined) {
