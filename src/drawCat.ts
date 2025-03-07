@@ -52,6 +52,8 @@ async function drawTint(
   }
   const cssTintColour = `rgb(${tint[0]} ${tint[1]} ${tint[2]})`
 
+  // we only want to tint non-transparent pixels
+  // so get version of the tint that's only over those pixels
   const imageData = ctx.getImageData(0, 0, 50, 50);
   const tintOverlay = new OffscreenCanvas(50, 50);
   const tintOverlayContext = tintOverlay.getContext("2d")!;
@@ -60,12 +62,16 @@ async function drawTint(
   tintOverlayContext.fillStyle = cssTintColour;
   tintOverlayContext.fillRect(0, 0, 50, 50);
 
+  // tinted version of the image required for the next step
   const tintedLayer = new OffscreenCanvas(50, 50);
   const tintedLayerContext = tintedLayer.getContext("2d")!;
   tintedLayerContext.putImageData(imageData, 0, 0);
   tintedLayerContext.globalCompositeOperation = blendingMode;
   tintedLayerContext.drawImage(tintOverlay, 0, 0);
 
+  // preserve the existing alpha channel
+  // this is necessary because otherwise semi-transparent pixels
+  // will get drawn twice
   const compositeOperation = ctx.globalCompositeOperation;
   ctx.globalCompositeOperation = "source-in";
   ctx.drawImage(tintedLayer, 0, 0);
