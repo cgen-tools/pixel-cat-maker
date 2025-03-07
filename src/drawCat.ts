@@ -50,23 +50,25 @@ async function drawTint(
   if (tint === null) {
     return;
   }
-  const compositeOperation = ctx.globalCompositeOperation;
-  ctx.globalCompositeOperation = blendingMode;
-
   const cssTintColour = `rgb(${tint[0]} ${tint[1]} ${tint[2]})`
 
-  const offscreen = new OffscreenCanvas(50, 50);
-  const offscreenContext = offscreen.getContext("2d");
+  const imageData = ctx.getImageData(0, 0, 50, 50);
+  const tintOverlay = new OffscreenCanvas(50, 50);
+  const tintOverlayContext = tintOverlay.getContext("2d")!;
+  tintOverlayContext.putImageData(imageData, 0, 0);
+  tintOverlayContext.globalCompositeOperation = "source-in";
+  tintOverlayContext.fillStyle = cssTintColour;
+  tintOverlayContext.fillRect(0, 0, 50, 50);
 
-  if (offscreenContext !== null) {
-    const imageData = ctx.getImageData(0, 0, 50, 50);
-    offscreenContext.putImageData(imageData, 0, 0);
-    offscreenContext.globalCompositeOperation = "source-in";
-    offscreenContext.fillStyle = cssTintColour;
-    offscreenContext.fillRect(0, 0, 50, 50);
-  }
-  ctx.drawImage(offscreen, 0, 0);
+  const tintedLayer = new OffscreenCanvas(50, 50);
+  const tintedLayerContext = tintedLayer.getContext("2d")!;
+  tintedLayerContext.putImageData(imageData, 0, 0);
+  tintedLayerContext.globalCompositeOperation = blendingMode;
+  tintedLayerContext.drawImage(tintOverlay, 0, 0);
 
+  const compositeOperation = ctx.globalCompositeOperation;
+  ctx.globalCompositeOperation = "source-in";
+  ctx.drawImage(tintedLayer, 0, 0);
   ctx.globalCompositeOperation = compositeOperation;
 }
 
