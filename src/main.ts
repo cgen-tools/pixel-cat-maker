@@ -200,4 +200,82 @@ reverseCheckbox.addEventListener("change", () => redrawCat());
 
 backgroundColourSelect.addEventListener("change", () => redrawCat());
 
+document.getElementById("randomize-all-button")?.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  randomizeSelected(spriteNumberSelect);
+  randomizeSelected(peltNameSelect);
+  randomizeSelected(colourSelect);
+  randomizeSelected(tortiePatternSelect);
+  randomizeSelected(tortieColourSelect);
+  randomizeSelected(tortieMaskSelect);
+  if (Math.random() <= 0.5) {
+    isTortieCheckbox.checked = true;
+    
+    tortieColourSelect.disabled = false;
+    tortieMaskSelect.disabled = false;
+    tortiePatternSelect.disabled = false;
+  }
+  else {
+    isTortieCheckbox.checked = false;
+
+    tortieColourSelect.disabled = true;
+    tortieMaskSelect.disabled = true;
+    tortiePatternSelect.disabled = true;
+  }
+  randomizeSelected(tintSelect);
+  randomizeSelected(eyeColourSelect);
+  if (Math.random() <= 0.5) {
+    randomizeSelected(eyeColour2Select);
+  }
+  else {
+    eyeColour2Select.selectedIndex = 0;
+  }
+  randomizeSelected(skinColourSelect);
+
+  if (Math.random() <= 0.5) {
+    if (Math.random() <= 0.5) {
+      randomizeSelected(whitePatchesSelect);
+    } else {
+      whitePatchesSelect.selectedIndex = 0;
+    }
+    if (Math.random() <= 0.5) {
+      randomizeSelected(pointsSelect);
+    } else {
+      pointsSelect.selectedIndex = 0;
+    }
+    randomizeSelected(whitePatchesTintSelect);
+    if (Math.random() <= 0.5) {
+      randomizeSelected(vitiligoSelect);
+    } else {
+      vitiligoSelect.selectedIndex = 0;
+    }
+  } else {
+    whitePatchesTintSelect.selectedIndex = 0;
+    whitePatchesSelect.selectedIndex = 0;
+    pointsSelect.selectedIndex = 0;
+    vitiligoSelect.selectedIndex = 0;
+  }
+
+  if (Math.random() <= 0.5) {
+    randomizeSelected(accessorySelect);
+  } else {
+    accessorySelect.selectedIndex = 0;
+  }
+
+  if (Math.random() <= 0.5) {
+    randomizeSelected(scarSelect);
+  } else {
+    scarSelect.selectedIndex = 0;
+  }
+
+  if (Math.random() <= 0.5) {
+    reverseCheckbox.checked = true;
+  } else {
+    reverseCheckbox.checked = false;
+  }
+
+  redrawCat();
+})
+
 redrawCat();
