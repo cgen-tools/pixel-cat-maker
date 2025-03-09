@@ -119,6 +119,34 @@ async function drawShading(
   await drawSprite("lighting", spriteNumber, ctx);
 }
 
+async function drawMissingScar(
+  spriteName: string,
+  spriteNumber: number,
+  ctx: any
+) {
+  const originalCompositeOperation = ctx.globalCompositeOperation;
+
+  // clip canvas to missing scar mask
+  // the missing mask goes "under" to not white-out the sprite,
+  // so it's destination-in
+  ctx.globalCompositeOperation = "destination-in";
+  await drawSprite(spriteName, spriteNumber, ctx);
+
+  // "layer" for the lines that go on top
+  // have to clip to the canvas to preserve transparency
+  const offscreenCanvas = new OffscreenCanvas(50, 50);
+  const offscreenContext = offscreenCanvas.getContext("2d")!;
+  offscreenContext.drawImage(ctx.canvas, 0, 0);
+  offscreenContext.globalCompositeOperation = "source-in";
+  await drawSprite(spriteName, spriteNumber, offscreenContext);
+
+  // multiply so the white disappears
+  ctx.globalCompositeOperation = "multiply";
+  ctx.drawImage(offscreenCanvas, 0, 0);
+
+  ctx.globalCompositeOperation = originalCompositeOperation;
+}
+
 async function drawCat(
   outCanvas: OffscreenCanvas,
   pelt: Pelt,
@@ -249,6 +277,14 @@ async function drawCat(
   }
 
   await drawSprite(`skin${pelt.skin}`, catSprite, ctx);
+
+  if (pelt.scars !== undefined) {
+    for (const scar of pelt.scars) {
+      if (peltInfo.scars2.includes(scar)) {
+        await drawMissingScar(`scars${scar}`, catSprite, ctx);
+      }
+    }
+  }
 
   if (pelt.accessory !== undefined) {
     if (peltInfo.plant_accessories.includes(pelt.accessory)) {
