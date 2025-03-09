@@ -54,10 +54,9 @@ async function drawTint(
 
   // we only want to tint non-transparent pixels
   // so get version of the tint that's only over those pixels
-  const imageData = ctx.getImageData(0, 0, 50, 50);
   const tintOverlay = new OffscreenCanvas(50, 50);
   const tintOverlayContext = tintOverlay.getContext("2d")!;
-  tintOverlayContext.putImageData(imageData, 0, 0);
+  tintOverlayContext.drawImage(ctx.canvas, 0, 0);
   tintOverlayContext.globalCompositeOperation = "source-in";
   tintOverlayContext.fillStyle = cssTintColour;
   tintOverlayContext.fillRect(0, 0, 50, 50);
@@ -65,7 +64,7 @@ async function drawTint(
   // tinted version of the image required for the next step
   const tintedLayer = new OffscreenCanvas(50, 50);
   const tintedLayerContext = tintedLayer.getContext("2d")!;
-  tintedLayerContext.putImageData(imageData, 0, 0);
+  tintedLayerContext.drawImage(ctx.canvas, 0, 0);
   tintedLayerContext.globalCompositeOperation = blendingMode;
   tintedLayerContext.drawImage(tintOverlay, 0, 0);
 
@@ -108,8 +107,7 @@ async function drawShading(
     return;
   }
 
-  const imageData = ctx.getImageData(0, 0, 50, 50);
-  offscreenContext.putImageData(imageData, 0, 0);
+  offscreenContext.drawImage(ctx.canvas, 0, 0);
   offscreenContext.globalCompositeOperation = "source-in";
   await drawSprite("shaders", spriteNumber, offscreenContext);
 
