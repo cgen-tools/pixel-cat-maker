@@ -2,7 +2,7 @@ name: Deploy to Pages
 
 on:
   push:
-    branches: ["main"]
+    tags: "v*"
 
   workflow_dispatch:
 
@@ -44,3 +44,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Package site for release
+        run: zip -r pixel-cat-maker.zip dist
+      - name: Release
+        run: gh release create ${{ github.ref_name }} ./pixel-cat-maker.zip
