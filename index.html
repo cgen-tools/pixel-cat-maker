@@ -7,7 +7,7 @@
     <meta name="description" content="Make a ClanGen cat sprite in your browser. No download required!">
   </head>
   <body>
-    <img id="cat-sprite-img" style="image-rendering: pixelated; width: 150px">
+    <img id="cat-sprite-img" style="image-rendering: pixelated">
 
     <form>
       <div class="form-row">
@@ -670,6 +670,16 @@
           <option value="rgb(39 45 79)">Starry Blue</option>
           <option value="rgb(158 151 170)">Unknown Grey</option>
           <option value="rgb(42 17 13)">Starless Red</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Scale</label>
+        <select id="zoom-level">
+          <option value="1">1x</option>
+          <option value="2">2x</option>
+          <option selected value="3">3x</option>
+          <option value="4">4x</option>
         </select>
       </div>
 

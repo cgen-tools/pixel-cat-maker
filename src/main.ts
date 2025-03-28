@@ -50,6 +50,8 @@ const reverseCheckbox = document.getElementById("reverse-checkbox") as HTMLInput
 
 const backgroundColourSelect = document.getElementById("bg-color-select") as HTMLSelectElement;
 
+const scaleSelect = document.getElementById("zoom-level") as HTMLSelectElement;
+
 function redrawCat() {
   const c = new OffscreenCanvas(50, 50);
   const ctx = c.getContext("2d");
@@ -130,11 +132,15 @@ function redrawCat() {
     isDf,
     shading,
   ).then(() => {
-    const finalCanvas = new OffscreenCanvas(50, 50);
+    const scale = Number(scaleSelect.value);
+    const canvasSize = scale * 50;
+    const finalCanvas = new OffscreenCanvas(canvasSize, canvasSize);
     const finalCtx = finalCanvas.getContext("2d")!;
+    finalCtx.imageSmoothingEnabled = false;
 
     finalCtx.fillStyle = backgroundColour;
     finalCtx.fillRect(0, 0, finalCanvas.width, finalCanvas.height);
+    finalCtx.scale(scale, scale);
     finalCtx.drawImage(c, 0, 0);
     
     return finalCanvas.convertToBlob();
@@ -198,6 +204,7 @@ shadingCheckbox.addEventListener("change", () => redrawCat());
 reverseCheckbox.addEventListener("change", () => redrawCat());
 
 backgroundColourSelect.addEventListener("change", () => redrawCat());
+scaleSelect.addEventListener("change", () => redrawCat());
 
 document.getElementById("randomize-all-button")?.addEventListener("click", (e) => {
   e.preventDefault();
