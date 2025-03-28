@@ -21,8 +21,6 @@ const nameToSpritesname = {
   'Calico': '',
 };
 
-const c = new OffscreenCanvas(50, 50);
-
 const catSprite = document.getElementById("cat-sprite-img") as HTMLImageElement;
 
 const spriteNumberSelect = document.getElementById("sprite-no-select") as HTMLSelectElement;
@@ -53,6 +51,7 @@ const reverseCheckbox = document.getElementById("reverse-checkbox") as HTMLInput
 const backgroundColourSelect = document.getElementById("bg-color-select") as HTMLSelectElement;
 
 function redrawCat() {
+  const c = new OffscreenCanvas(50, 50);
   const ctx = c.getContext("2d");
   if (ctx) {
     ctx.clearRect(0, 0, c.width, c.height);
