@@ -97,6 +97,7 @@ function redrawCat() {
 
   var isDead: boolean = false;
   var isDf: boolean = false;
+  var aprilFools: boolean = false;
   if (lineartSelect.value === "regular") {
     isDead = false;
     isDf = false;
@@ -106,6 +107,18 @@ function redrawCat() {
   } else if (lineartSelect.value === "dark forest") {
     isDead = true;
     isDf = true;
+  } else if (lineartSelect.value === "aprilfools-regular") {
+    isDead = false;
+    isDf = false;
+    aprilFools = true;
+  } else if (lineartSelect.value === "aprilfools-dead") {
+    isDead = true;
+    isDf = false;
+    aprilFools = true;
+  } else if (lineartSelect.value === "aprilfools-dark forest") {
+    isDead = true;
+    isDf = true;
+    aprilFools = true;
   }
 
   // update share code
@@ -155,6 +168,7 @@ function redrawCat() {
     isDead,
     isDf,
     shading,
+    aprilFools,
   ).then(() => {
     const scale = Number(scaleSelect.value);
     const canvasSize = scale * 50;
