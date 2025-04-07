@@ -61,6 +61,25 @@ def make_group(...):
 # This file will be spritesIndex.json
 ```
 
+The April Fools' lineart is added to the JSON manually because it's not loaded regularly unless it's April Fools':
+```json
+  "aprilfoolslineart": {
+    "spritesheet": "aprilfoolslineart",
+    "xOffset": 0.0,
+    "yOffset": 0.0
+  },
+  "aprilfoolslineartdead": {
+    "spritesheet": "aprilfoolslineartdead",
+    "xOffset": 0.0,
+    "yOffset": 0.0
+  },
+  "aprilfoolslineartdf": {
+    "spritesheet": "aprilfoolslineartdf",
+    "xOffset": 0.0,
+    "yOffset": 0.0
+  }
+```
+
 #### white_patches_tint.json and tint.json
 
 These are the same as the files that can be found in ClanGen under `sprites/dicts`. They're necessary because they define the exact tint colours and blending modes.
