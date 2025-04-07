@@ -154,6 +154,7 @@ async function drawCat(
   dead = false,
   darkForest = false,
   shading = false,
+  aprilFools = false,
 ) {
   const canvas = new OffscreenCanvas(50, 50);
   const ctx = canvas.getContext("2d");
@@ -266,14 +267,26 @@ async function drawCat(
     await drawShading(catSprite, ctx);
   }
 
-  if (dead) {
-    if (darkForest) {
-      await drawSprite("lineartdf", catSprite, ctx);
+  if (!aprilFools) {
+    if (dead) {
+      if (darkForest) {
+        await drawSprite("lineartdf", catSprite, ctx);
+      } else {
+        await drawSprite("lineartdead", catSprite, ctx);
+      }
     } else {
-      await drawSprite("lineartdead", catSprite, ctx);
+      await drawSprite("lines", catSprite, ctx);
     }
   } else {
-    await drawSprite("lines", catSprite, ctx);
+    if (dead) {
+      if (darkForest) {
+        await drawSprite("aprilfoolslineartdf", catSprite, ctx);
+      } else {
+        await drawSprite("aprilfoolslineartdead", catSprite, ctx);
+      }
+    } else {
+      await drawSprite("aprilfoolslineart", catSprite, ctx);
+    }
   }
 
   await drawSprite(`skin${pelt.skin}`, catSprite, ctx);

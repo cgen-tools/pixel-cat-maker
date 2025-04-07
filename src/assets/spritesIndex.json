@@ -4,6 +4,21 @@
       "xOffset": 0.0,
       "yOffset": 0.0
   },
+  "aprilfoolslineart": {
+    "spritesheet": "aprilfoolslineart",
+    "xOffset": 0.0,
+    "yOffset": 0.0
+  },
+  "aprilfoolslineartdead": {
+    "spritesheet": "aprilfoolslineartdead",
+    "xOffset": 0.0,
+    "yOffset": 0.0
+  },
+  "aprilfoolslineartdf": {
+    "spritesheet": "aprilfoolslineartdf",
+    "xOffset": 0.0,
+    "yOffset": 0.0
+  },
   "shaders": {
       "spritesheet": "shadersnewwhite",
       "xOffset": 0.0,
