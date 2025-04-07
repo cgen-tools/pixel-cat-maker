@@ -52,6 +52,8 @@ const backgroundColourSelect = document.getElementById("bg-color-select") as HTM
 
 const scaleSelect = document.getElementById("zoom-level") as HTMLSelectElement;
 
+const sharecodeTextArea = document.getElementById("sharecode") as HTMLTextAreaElement;
+
 function redrawCat() {
   const c = new OffscreenCanvas(50, 50);
   const ctx = c.getContext("2d");
@@ -105,6 +107,28 @@ function redrawCat() {
     isDead = true;
     isDf = true;
   }
+
+  // update share code
+  sharecodeTextArea.textContent = JSON.stringify({
+    pelt_name: name,
+    pelt_color: colour,
+    eye_colour: eyeColour,
+    eye_colour2: eyeColour2 === undefined ? null : eyeColour2,
+    reverse: reverse,
+    white_patches: whitePatches === undefined ? null : whitePatches,
+    vitiligo: vitiligo === undefined ? null : vitiligo,
+    points: points === undefined ? null : points,
+    white_patches_tint: whitePatchesTint,
+    pattern: name === "Tortie" ? tortieMask : null,
+    tortie_base: name === "Tortie" ? nameToSpritesname[peltName] : null,
+    tortie_pattern: name === "Tortie" ? nameToSpritesname[tortiePattern] : null,
+    tortie_color: name === "Tortie" ? tortieColour : null,
+    skin: skinColour,
+    tint: tint,
+    scars: scar,
+    accessory: accessory === undefined ? [] : [accessory],
+  }, undefined, 4);
+
 
   drawCat(c, {
     name: name,

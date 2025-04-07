@@ -17,3 +17,10 @@ form {
 .hidden {
   display: none;
 }
+
+.sharecode-div {
+  padding-top: 10px;
+}
+.sharecode-div textarea {
+  resize: none;
+}
