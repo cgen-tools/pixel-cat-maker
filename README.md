@@ -43,7 +43,7 @@ This file maps sprite group names to their spritesheet file and pixel offset. Th
 Currently, the simplest way to update this file is to modify ClanGen's `make_group()` function in `sprites.py`, then run the game normally (I'm sorry). Here's a quick example:
 
 ```py
-scripts/cat/sprites.py
+#scripts/cat/sprites.py
 
 def make_group(...):
   group_x_ofs = pos[0] * sprites_x * self.size
