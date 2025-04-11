@@ -1,5 +1,6 @@
 import './style.css'
 import drawCat from './drawCat';
+import errorImg from "./assets/error_placeholder.png";
 
 const nameToSpritesname = {
   "SingleColour": 'single',
@@ -185,6 +186,7 @@ function redrawCat() {
   }).then((blob) => {
     catSprite.src = URL.createObjectURL(blob);
   }).catch((err) => {
+    catSprite.src = errorImg;
     console.error(err);
   });
 }
