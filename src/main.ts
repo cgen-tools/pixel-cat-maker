@@ -1,5 +1,6 @@
 import './style.css'
 import drawCat from './drawCat';
+import loadingImg from "./assets/loading.png";
 import errorImg from "./assets/error_placeholder.png";
 
 const nameToSpritesname = {
@@ -144,6 +145,20 @@ function redrawCat() {
   }, undefined, 4);
 
 
+  const scale = Number(scaleSelect.value);
+  const canvasSize = scale * 50;
+
+  // set scale here so things aren't resizing
+  catSprite.width = canvasSize;
+  catSprite.height = canvasSize;
+
+  // if it's taking a while, show loading
+  var loaded = false;
+  setTimeout(() => {
+    if (!loaded) {
+      catSprite.src = loadingImg;
+    }
+  }, 200);
   drawCat(c, {
     name: name,
     colour: colour,
@@ -171,8 +186,6 @@ function redrawCat() {
     shading,
     aprilFools,
   ).then(() => {
-    const scale = Number(scaleSelect.value);
-    const canvasSize = scale * 50;
     const finalCanvas = new OffscreenCanvas(canvasSize, canvasSize);
     const finalCtx = finalCanvas.getContext("2d")!;
     finalCtx.imageSmoothingEnabled = false;
@@ -184,8 +197,10 @@ function redrawCat() {
     
     return finalCanvas.convertToBlob();
   }).then((blob) => {
+    loaded = true;
     catSprite.src = URL.createObjectURL(blob);
   }).catch((err) => {
+    loaded = true;
     catSprite.src = errorImg;
     console.error(err);
   });
