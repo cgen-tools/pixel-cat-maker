@@ -25,13 +25,16 @@ function getSpritePosition(spriteName: string, spriteNumber: number) {
 }
 
 async function loadImage(url: string) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const img = new Image();
     img.src = url;
 
     img.addEventListener("load", () => {
       resolve(img);
     });
+    img.addEventListener("error", () => {
+      reject(`${url} doesn't seem to exist!`);
+    })
   });
 }
 
