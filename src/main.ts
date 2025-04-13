@@ -24,6 +24,7 @@ const nameToSpritesname = {
 };
 
 const catSprite = document.getElementById("cat-sprite-img") as HTMLImageElement;
+catSprite.src = loadingImg;
 
 const spriteNumberSelect = document.getElementById("sprite-no-select") as HTMLSelectElement;
 const peltNameSelect = document.getElementById("pelt-name-select") as HTMLSelectElement;
