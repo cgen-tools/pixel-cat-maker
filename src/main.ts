@@ -191,6 +191,16 @@ function redrawCat(applyURL: boolean = true) {
     name = peltName;
   }
 
+  if (isTortieCheckbox.checked) {
+    tortieColourSelect.disabled = false;
+    tortieMaskSelect.disabled = false;
+    tortiePatternSelect.disabled = false;
+  } else {
+    tortieColourSelect.disabled = true;
+    tortieMaskSelect.disabled = true;
+    tortiePatternSelect.disabled = true;
+  }
+
   var isDead: boolean = false;
   var isDf: boolean = false;
   var aprilFools: boolean = false;
@@ -325,15 +335,6 @@ for (const randomButton of randomButtons) {
 }
 
 isTortieCheckbox.addEventListener("change", () => {
-  if (isTortieCheckbox.checked) {
-    tortieColourSelect.disabled = false;
-    tortieMaskSelect.disabled = false;
-    tortiePatternSelect.disabled = false;
-  } else {
-    tortieColourSelect.disabled = true;
-    tortieMaskSelect.disabled = true;
-    tortiePatternSelect.disabled = true;
-  }
   redrawCat();
 });
 tortieColourSelect.addEventListener("change", () => redrawCat());
@@ -371,17 +372,9 @@ document.getElementById("randomize-all-button")?.addEventListener("click", (e) =
   randomizeSelected(tortieMaskSelect);
   if (Math.random() <= 0.5) {
     isTortieCheckbox.checked = true;
-    
-    tortieColourSelect.disabled = false;
-    tortieMaskSelect.disabled = false;
-    tortiePatternSelect.disabled = false;
   }
   else {
     isTortieCheckbox.checked = false;
-
-    tortieColourSelect.disabled = true;
-    tortieMaskSelect.disabled = true;
-    tortiePatternSelect.disabled = true;
   }
   randomizeSelected(tintSelect);
   randomizeSelected(eyeColourSelect);
