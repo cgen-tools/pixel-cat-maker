@@ -57,7 +57,100 @@ const scaleSelect = document.getElementById("zoom-level") as HTMLSelectElement;
 
 const sharecodeTextArea = document.getElementById("sharecode") as HTMLTextAreaElement;
 
-function redrawCat() {
+function getFormObject() {
+  return {
+    shading: shadingCheckbox.checked.toString(),
+    reverse: reverseCheckbox.checked.toString(),
+    isTortie: isTortieCheckbox.checked.toString(),
+
+    backgroundColour: backgroundColourSelect.value,
+    tortieMask: tortieMaskSelect.value,
+    tortieColour: tortieColourSelect.value,
+    tortiePattern: tortiePatternSelect.value,
+
+    peltName: peltNameSelect.value,
+    spriteNumber: spriteNumberSelect.value,
+    colour: colourSelect.value,
+    tint: tintSelect.value,
+    skinColour: skinColourSelect.value,
+    eyeColour: eyeColourSelect.value,
+    eyeColour2: eyeColour2Select.value,
+    whitePatches: whitePatchesSelect.value,
+    points: pointsSelect.value,
+    whitePatchesTint: whitePatchesTintSelect.value,
+    vitiligo: vitiligoSelect.value,
+    accessory: accessorySelect.value,
+    scar: scarSelect.value,
+
+    version: "v1"
+  }
+}
+
+function selectByValue(select: HTMLSelectElement, value: string) {
+  const options = select.options;
+  for (var i = 0; i < options.length; i++) {
+    const option = options.item(i)!;
+    if (option.value === value) {
+      select.selectedIndex = i;
+    }
+  }
+}
+
+function setFormFromObject(data: Record<string, any>) {
+  if (data.version === "v1") {
+    isTortieCheckbox.checked = data.isTortie === "true" ? true : false;
+    shadingCheckbox.checked = data.shading === "true" ? true : false;
+    reverseCheckbox.checked = data.reverse === "true" ? true : false;
+  
+    selectByValue(backgroundColourSelect, data.backgroundColour);
+    selectByValue(tortieMaskSelect, data.tortieMask);
+    selectByValue(tortieColourSelect, data.tortieColour);
+    selectByValue(tortiePatternSelect, data.tortiePattern);
+    selectByValue(peltNameSelect, data.peltName);
+    selectByValue(spriteNumberSelect, data.spriteNumber);
+    selectByValue(colourSelect, data.colour);
+    selectByValue(tintSelect, data.tint);
+    selectByValue(skinColourSelect, data.skinColour);
+    selectByValue(eyeColourSelect, data.eyeColour);
+    selectByValue(eyeColour2Select, data.eyeColour2);
+    selectByValue(whitePatchesSelect, data.whitePatches);
+    selectByValue(pointsSelect, data.points);
+    selectByValue(whitePatchesTintSelect, data.whitePatchesTint);
+    selectByValue(vitiligoSelect, data.vitiligo);
+    selectByValue(accessorySelect, data.accessory);
+    selectByValue(scarSelect, data.scar);
+  }
+}
+
+function getDataURL() {
+  const url = new URL(document.URL);
+
+  const params = new URLSearchParams(getFormObject());
+  return new URL(`${url.origin}${url.pathname}?${params}`);  
+}
+
+function applyDataURL() {
+  const params = new URLSearchParams(document.location.search);
+  const obj: Record<string, any> = {}
+  for (const [k, v] of params.entries()) {
+    obj[k] = v;
+  }
+  setFormFromObject(obj);
+
+  // don't want to reapply url or it adds to history twice
+  redrawCat(false);
+}
+
+/** 
+ * Redraws the cat sprite and applies the new sprite to the cat image
+ * element on the page.
+ * 
+ * @param applyURL {boolean} Whether or not to add the data URL representing 
+ * the current sprite to the history. 
+ * Should be true on form modification but false on page load to avoid
+ * getting added to history twice.
+ */
+function redrawCat(applyURL: boolean = true) {
   const c = new OffscreenCanvas(50, 50);
   const ctx = c.getContext("2d");
   if (ctx) {
@@ -200,6 +293,11 @@ function redrawCat() {
   }).then((blob) => {
     loaded = true;
     catSprite.src = URL.createObjectURL(blob);
+
+    if (applyURL) {
+      const dataURL = getDataURL().toString();
+      history.pushState(null, "", dataURL);  
+    }
   }).catch((err) => {
     loaded = true;
     catSprite.src = errorImg;
@@ -340,4 +438,8 @@ document.getElementById("randomize-all-button")?.addEventListener("click", (e) =
   redrawCat();
 })
 
-redrawCat();
+addEventListener("popstate", () => {
+  applyDataURL();
+});
+
+applyDataURL();
