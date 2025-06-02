@@ -13,7 +13,13 @@ Dollmaker that uses sprites from ClanGen.
 
 ```
 git clone https://github.com/cgen-tools/pixel-cat-maker.git
+cd pixel-cat-maker
 npm install
+```
+
+Split the sprites (only have to do this if the sprites change):
+```
+node scripts/build-sprites.js
 ```
 
 To run the dev server:

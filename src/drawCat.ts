@@ -9,18 +9,12 @@ import { Pelt } from "./types";
 import tints from "./assets/tints/tint.json";
 import whitePatchesTints from "./assets/tints/white_patches_tint.json";
 import peltInfo from "./assets/peltInfo.json";
-import spritesIndex from "./assets/spritesIndex.json";
-import spriteNumbers from "./assets/spritesOffsetMap.json";
 
 function getSpritePosition(spriteName: string, spriteNumber: number) {
-  const spriteKey = spriteName as keyof typeof spritesIndex;
-  const spriteXPosition = spriteNumbers[spriteNumber].x;
-  const spriteYPosition = spriteNumbers[spriteNumber].y;
-
   return {
-    url: `sprites/${spritesIndex[spriteKey].spritesheet}.png`,
-    x: spritesIndex[spriteKey].xOffset + 50 * spriteXPosition,
-    y: spritesIndex[spriteKey].yOffset + 50 * spriteYPosition,
+    url: `sprites/split/${spriteName}_${spriteNumber}.png`,
+    x: 0,
+    y: 0,
   };
 }
 
