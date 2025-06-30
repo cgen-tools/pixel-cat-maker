@@ -24,3 +24,8 @@ form {
 .sharecode-div textarea {
   resize: none;
 }
+
+footer {
+  border-top: 1px solid darkgrey;
+  max-width: 500px;
+}
