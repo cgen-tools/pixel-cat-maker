@@ -429,7 +429,20 @@ document.getElementById("randomize-all-button")?.addEventListener("click", (e) =
   }
 
   redrawCat();
-})
+});
+
+const copyUrlButton = document.getElementById("copy-url-button");
+copyUrlButton?.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  navigator.clipboard.writeText(getDataURL().toString()).then(() => {
+    // temporarily change button text to say "Copied!"
+    copyUrlButton.textContent = "Copied!";
+    setTimeout(() => {
+      copyUrlButton.textContent = "Copy this cat's URL";
+    }, 1250);
+  });
+});
 
 addEventListener("popstate", () => {
   applyDataURL();
