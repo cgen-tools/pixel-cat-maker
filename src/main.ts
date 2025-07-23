@@ -245,7 +245,7 @@ function redrawCat(applyURL: boolean = true) {
     skin: skinColour,
     tint: tint,
     scars: scar,
-    accessory: accessory === undefined ? [] : [accessory],
+    accessory: accessory === undefined ? null : accessory,
   }, undefined, 4);
 
 
