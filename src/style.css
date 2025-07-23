@@ -1,3 +1,7 @@
+body {
+  max-width: 500px;
+}
+
 form {
   max-width: 400px;
 }
@@ -27,5 +31,4 @@ form {
 
 footer {
   border-top: 1px solid darkgrey;
-  max-width: 500px;
 }
