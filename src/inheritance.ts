@@ -683,28 +683,18 @@ function generateTortiePattern(child: Pelt) {
           child.colour = choice(possibleColours);
         }
 
-        // TODO: not quite right...
         if (
           black_colours.includes(child.colour) ||
           white_colours.includes(child.colour)
         ) {
-          child.tortieColour = choice(
-            weightedChoice([ginger_colours, brown_colours], [2, 1]),
-          );
+          child.tortieColour = choice([ginger_colours, ginger_colours, brown_colours].flat());
         } else if (ginger_colours.includes(child.colour)) {
-          child.tortieColour = choice(
-            weightedChoice([black_colours, brown_colours], [2, 1]),
-          );
+          child.tortieColour = choice([brown_colours, black_colours, black_colours].flat());
         } else if (brown_colours.includes(child.colour)) {
           const possibleColours = brown_colours.filter(
             (v) => v !== child.colour,
           );
-          child.tortieColour = choice(
-            weightedChoice(
-              [black_colours, ginger_colours, possibleColours],
-              [1, 2, 1],
-            ),
-          );
+          child.tortieColour = choice([possibleColours, black_colours, ginger_colours, ginger_colours].flat());
         } else {
           child.tortieColour = "GOLDEN";
         }
