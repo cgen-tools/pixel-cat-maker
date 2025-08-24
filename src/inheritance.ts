@@ -7,6 +7,9 @@
 
 import { Pelt } from "./types";
 
+const skin_sprites = ['BLACK', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
+                    'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE', 'RED']
+
 const pelt_colours = [
   "WHITE",
   "PALEGREY",
@@ -730,6 +733,7 @@ function generateChildPelt(parents: Pelt[]) {
   }
   inheritEyes(parents, defaultKit);
   generateTortiePattern(defaultKit);
+  defaultKit.skin = choice(skin_sprites);
 
   defaultKit.spritesName = nameToSpritesname[defaultKit.name];
   return defaultKit;
