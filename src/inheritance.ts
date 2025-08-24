@@ -7,8 +7,26 @@
 
 import { Pelt } from "./types";
 
-const skin_sprites = ['BLACK', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
-                    'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE', 'RED']
+const skin_sprites = [
+  "BLACK",
+  "PINK",
+  "DARKBROWN",
+  "BROWN",
+  "LIGHTBROWN",
+  "DARK",
+  "DARKGREY",
+  "GREY",
+  "DARKSALMON",
+  "SALMON",
+  "PEACH",
+  "DARKMARBLED",
+  "MARBLED",
+  "LIGHTMARBLED",
+  "DARKBLUE",
+  "BLUE",
+  "LIGHTBLUE",
+  "RED",
+];
 
 const pelt_colours = [
   "WHITE",
@@ -411,7 +429,11 @@ function inheritEyes(parents: Pelt[], child: Pelt) {
   }
 }
 
-function inheritWhite(parents: Pelt[], child: Pelt, forceInherit: boolean = false) {
+function inheritWhite(
+  parents: Pelt[],
+  child: Pelt,
+  forceInherit: boolean = false,
+) {
   const parentsVitiligo = [];
   const parentsWhite = [];
 
@@ -547,7 +569,6 @@ function inheritWhite(parents: Pelt[], child: Pelt, forceInherit: boolean = fals
     }
   }
 }
-
 
 // doesn't include pelt length!!!
 function inheritPattern(parents: Pelt[], child: Pelt) {
@@ -690,14 +711,25 @@ function generateTortiePattern(child: Pelt) {
           black_colours.includes(child.colour) ||
           white_colours.includes(child.colour)
         ) {
-          child.tortieColour = choice([ginger_colours, ginger_colours, brown_colours].flat());
+          child.tortieColour = choice(
+            [ginger_colours, ginger_colours, brown_colours].flat(),
+          );
         } else if (ginger_colours.includes(child.colour)) {
-          child.tortieColour = choice([brown_colours, black_colours, black_colours].flat());
+          child.tortieColour = choice(
+            [brown_colours, black_colours, black_colours].flat(),
+          );
         } else if (brown_colours.includes(child.colour)) {
           const possibleColours = brown_colours.filter(
             (v) => v !== child.colour,
           );
-          child.tortieColour = choice([possibleColours, black_colours, ginger_colours, ginger_colours].flat());
+          child.tortieColour = choice(
+            [
+              possibleColours,
+              black_colours,
+              ginger_colours,
+              ginger_colours,
+            ].flat(),
+          );
         } else {
           child.tortieColour = "GOLDEN";
         }
