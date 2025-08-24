@@ -3,6 +3,10 @@ import drawCat from './drawCat';
 import loadingImg from "./assets/loading.png";
 import errorImg from "./assets/error_placeholder.png";
 
+function getElementByUniqueClassName(className: string): Element {
+  return document.getElementsByClassName(className)[0];
+}
+
 const nameToSpritesname = {
   "SingleColour": 'single',
   'TwoColour': 'single',
@@ -23,39 +27,39 @@ const nameToSpritesname = {
   'Calico': '',
 };
 
-const catSprite = document.getElementById("cat-sprite-img") as HTMLImageElement;
+const catSprite = getElementByUniqueClassName("cat-sprite-img") as HTMLImageElement;
 catSprite.src = loadingImg;
 
-const spriteNumberSelect = document.getElementById("sprite-no-select") as HTMLSelectElement;
-const peltNameSelect = document.getElementById("pelt-name-select") as HTMLSelectElement;
-const colourSelect = document.getElementById("colour-select") as HTMLSelectElement;
-const tintSelect = document.getElementById("tint-select") as HTMLSelectElement;
-const skinColourSelect = document.getElementById("skin-colour-select") as HTMLSelectElement;
-const eyeColourSelect = document.getElementById("eye-colour-select") as HTMLSelectElement;
-const eyeColour2Select = document.getElementById("eye-colour2-select") as HTMLSelectElement;
-const accessorySelect = document.getElementById("accessory-select") as HTMLSelectElement;
-const scarSelect = document.getElementById("scar-select") as HTMLSelectElement;
+const spriteNumberSelect = getElementByUniqueClassName("sprite-no-select") as HTMLSelectElement;
+const peltNameSelect = getElementByUniqueClassName("pelt-name-select") as HTMLSelectElement;
+const colourSelect = getElementByUniqueClassName("colour-select") as HTMLSelectElement;
+const tintSelect = getElementByUniqueClassName("tint-select") as HTMLSelectElement;
+const skinColourSelect = getElementByUniqueClassName("skin-colour-select") as HTMLSelectElement;
+const eyeColourSelect = getElementByUniqueClassName("eye-colour-select") as HTMLSelectElement;
+const eyeColour2Select = getElementByUniqueClassName("eye-colour2-select") as HTMLSelectElement;
+const accessorySelect = getElementByUniqueClassName("accessory-select") as HTMLSelectElement;
+const scarSelect = getElementByUniqueClassName("scar-select") as HTMLSelectElement;
 
-const whitePatchesSelect = document.getElementById("white-patches-select") as HTMLSelectElement;
-const pointsSelect = document.getElementById("points-select") as HTMLSelectElement;
-const whitePatchesTintSelect = document.getElementById("white-patches-tint-select") as HTMLSelectElement;
-const vitiligoSelect = document.getElementById("vitiligo-select") as HTMLSelectElement;
+const whitePatchesSelect = getElementByUniqueClassName("white-patches-select") as HTMLSelectElement;
+const pointsSelect = getElementByUniqueClassName("points-select") as HTMLSelectElement;
+const whitePatchesTintSelect = getElementByUniqueClassName("white-patches-tint-select") as HTMLSelectElement;
+const vitiligoSelect = getElementByUniqueClassName("vitiligo-select") as HTMLSelectElement;
 
-const tortieMaskSelect = document.getElementById("tortie-mask-select") as HTMLSelectElement;
-const tortieColourSelect = document.getElementById("tortie-colour-select") as HTMLSelectElement;
-const tortiePatternSelect = document.getElementById("tortie-pattern-select") as HTMLSelectElement;
+const tortieMaskSelect = getElementByUniqueClassName("tortie-mask-select") as HTMLSelectElement;
+const tortieColourSelect = getElementByUniqueClassName("tortie-colour-select") as HTMLSelectElement;
+const tortiePatternSelect = getElementByUniqueClassName("tortie-pattern-select") as HTMLSelectElement;
 
-const lineartSelect = document.getElementById("lineart-select") as HTMLSelectElement;
+const lineartSelect = getElementByUniqueClassName("lineart-select") as HTMLSelectElement;
 
-const isTortieCheckbox = document.getElementById("tortie-checkbox") as HTMLInputElement;
-const shadingCheckbox = document.getElementById("shading-checkbox") as HTMLInputElement;
-const reverseCheckbox = document.getElementById("reverse-checkbox") as HTMLInputElement;
+const isTortieCheckbox = getElementByUniqueClassName("tortie-checkbox") as HTMLInputElement;
+const shadingCheckbox = getElementByUniqueClassName("shading-checkbox") as HTMLInputElement;
+const reverseCheckbox = getElementByUniqueClassName("reverse-checkbox") as HTMLInputElement;
 
-const backgroundColourSelect = document.getElementById("bg-color-select") as HTMLSelectElement;
+const backgroundColourSelect = getElementByUniqueClassName("bg-color-select") as HTMLSelectElement;
 
-const scaleSelect = document.getElementById("zoom-level") as HTMLSelectElement;
+const scaleSelect = getElementByUniqueClassName("zoom-level") as HTMLSelectElement;
 
-const sharecodeTextArea = document.getElementById("sharecode") as HTMLTextAreaElement;
+const sharecodeTextArea = getElementByUniqueClassName("sharecode") as HTMLTextAreaElement;
 
 function getFormObject() {
   return {
@@ -328,7 +332,7 @@ for (const randomButton of randomButtons) {
     if (!selectId) {
       return;
     }
-    const select = document.getElementById(selectId) as HTMLSelectElement;
+    const select = getElementByUniqueClassName(selectId) as HTMLSelectElement;
     randomizeSelected(select);
     redrawCat();
   });
@@ -361,7 +365,7 @@ reverseCheckbox.addEventListener("change", () => redrawCat());
 backgroundColourSelect.addEventListener("change", () => redrawCat());
 scaleSelect.addEventListener("change", () => redrawCat());
 
-document.getElementById("randomize-all-button")?.addEventListener("click", (e) => {
+getElementByUniqueClassName("randomize-all-button")?.addEventListener("click", (e) => {
   e.preventDefault();
 
   randomizeSelected(spriteNumberSelect);
@@ -431,7 +435,7 @@ document.getElementById("randomize-all-button")?.addEventListener("click", (e) =
   redrawCat();
 });
 
-const copyUrlButton = document.getElementById("copy-url-button");
+const copyUrlButton = getElementByUniqueClassName("copy-url-button");
 if ("clipboard" in navigator) {
   copyUrlButton?.addEventListener("click", (e) => {
     e.preventDefault();
