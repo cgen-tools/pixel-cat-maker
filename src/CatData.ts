@@ -194,6 +194,10 @@ class CatData {
     const spritesName = pelt.tortiePattern as keyof typeof spritesnameToName;
     const catData = new CatData();
 
+    if (pelt.name === "Tortie" || pelt.name === "Calico") {
+      catData.isTortie = true;
+      catData.peltName = pelt.tortieBase!;
+    }
     catData.peltName = pelt.name;
     catData.colour = pelt.colour;
     catData.skinColour = pelt.skin;
@@ -212,6 +216,8 @@ class CatData {
     catData.tortieMask = pelt.pattern === undefined ? null : pelt.pattern;
     catData.tortiePattern = pelt.tortiePattern === undefined ? null : spritesnameToName[spritesName];
     catData.tortieColour = pelt.tortieColour === undefined ? null : pelt.tortieColour;
+
+    return catData;
   }
 
   static fromURL(url: string) {
@@ -245,17 +251,27 @@ class CatData {
       catData.shading = shading === "true" ? true : false;
       catData.reverse = reverse === "true" ? true : false;
 
-      catData.scar = scar;
-      catData.accessory = accessory;
-      catData.vitiligo = vitiligo;
+      if (scar) {
+        catData.scar = scar;
+      }
+      if (accessory) {
+        catData.accessory = accessory;
+      }
+      if (vitiligo) {
+        catData.vitiligo = vitiligo;
+      }      
       if (whitePatchesTint) {
         catData.whitePatchesTint = whitePatchesTint;
       }
       if (points) {
         catData.points = points;
       }
-      catData.whitePatches = whitePatches;
-      catData.eyeColour2 = eyeColour2;
+      if (whitePatches) {
+        catData.whitePatches = whitePatches;
+      }
+      if (eyeColour2) {
+        catData.eyeColour2 = eyeColour2;
+      }
       if (eyeColour) {
         catData.eyeColour = eyeColour;
       }
@@ -275,6 +291,9 @@ class CatData {
         catData.peltName = peltName;
       }
       if (tortiePattern) {
+        catData.tortiePattern = tortiePattern;
+      }
+      if (tortieColour) {
         catData.tortieColour = tortieColour;
       }
       if (tortieMask) {
