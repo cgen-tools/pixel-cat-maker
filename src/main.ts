@@ -3,29 +3,13 @@ import drawCat from './drawCat';
 import loadingImg from "./assets/loading.png";
 import errorImg from "./assets/error_placeholder.png";
 
+import CatData from './CatData';
+
 function getElementByUniqueClassName(className: string): Element {
   return document.getElementsByClassName(className)[0];
 }
 
-const nameToSpritesname = {
-  "SingleColour": 'single',
-  'TwoColour': 'single',
-  'Tabby': 'tabby',
-  'Marbled': 'marbled',
-  'Rosette': 'rosette',
-  'Smoke': 'smoke',
-  'Ticked': 'ticked',
-  'Speckled': 'speckled',
-  'Bengal': 'bengal',
-  'Mackerel': 'mackerel',
-  'Classic': 'classic',
-  'Sokoke': 'sokoke',
-  'Agouti': 'agouti',
-  'Singlestripe': 'singlestripe',
-  'Masked': 'masked',
-  'Tortie': '',
-  'Calico': '',
-};
+var catData: CatData;
 
 const catSprite = getElementByUniqueClassName("cat-sprite-img") as HTMLImageElement;
 catSprite.src = loadingImg;
@@ -61,36 +45,9 @@ const scaleSelect = getElementByUniqueClassName("zoom-level") as HTMLSelectEleme
 
 const sharecodeTextArea = getElementByUniqueClassName("sharecode") as HTMLTextAreaElement;
 
-function getFormObject() {
-  return {
-    shading: shadingCheckbox.checked.toString(),
-    reverse: reverseCheckbox.checked.toString(),
-    isTortie: isTortieCheckbox.checked.toString(),
+function selectByValue(select: HTMLSelectElement, value: string | null) {
+  if (value === null) { return }
 
-    backgroundColour: backgroundColourSelect.value,
-    tortieMask: tortieMaskSelect.value,
-    tortieColour: tortieColourSelect.value,
-    tortiePattern: tortiePatternSelect.value,
-
-    peltName: peltNameSelect.value,
-    spriteNumber: spriteNumberSelect.value,
-    colour: colourSelect.value,
-    tint: tintSelect.value,
-    skinColour: skinColourSelect.value,
-    eyeColour: eyeColourSelect.value,
-    eyeColour2: eyeColour2Select.value,
-    whitePatches: whitePatchesSelect.value,
-    points: pointsSelect.value,
-    whitePatchesTint: whitePatchesTintSelect.value,
-    vitiligo: vitiligoSelect.value,
-    accessory: accessorySelect.value,
-    scar: scarSelect.value,
-
-    version: "v1"
-  }
-}
-
-function selectByValue(select: HTMLSelectElement, value: string) {
   const options = select.options;
   for (var i = 0; i < options.length; i++) {
     const option = options.item(i)!;
@@ -100,18 +57,17 @@ function selectByValue(select: HTMLSelectElement, value: string) {
   }
 }
 
-function setFormFromObject(data: Record<string, any>) {
-  if (data.version === "v1") {
-    isTortieCheckbox.checked = data.isTortie === "true" ? true : false;
-    shadingCheckbox.checked = data.shading === "true" ? true : false;
-    reverseCheckbox.checked = data.reverse === "true" ? true : false;
+function setFormFromObject(data: CatData) {
+    isTortieCheckbox.checked = data.isTortie;
+    shadingCheckbox.checked = data.shading;
+    reverseCheckbox.checked = data.reverse;
   
     selectByValue(backgroundColourSelect, data.backgroundColour);
     selectByValue(tortieMaskSelect, data.tortieMask);
     selectByValue(tortieColourSelect, data.tortieColour);
     selectByValue(tortiePatternSelect, data.tortiePattern);
     selectByValue(peltNameSelect, data.peltName);
-    selectByValue(spriteNumberSelect, data.spriteNumber);
+    selectByValue(spriteNumberSelect, data.spriteNumber.toString());
     selectByValue(colourSelect, data.colour);
     selectByValue(tintSelect, data.tint);
     selectByValue(skinColourSelect, data.skinColour);
@@ -123,23 +79,16 @@ function setFormFromObject(data: Record<string, any>) {
     selectByValue(vitiligoSelect, data.vitiligo);
     selectByValue(accessorySelect, data.accessory);
     selectByValue(scarSelect, data.scar);
-  }
 }
 
 function getDataURL() {
   const url = new URL(document.URL);
-
-  const params = new URLSearchParams(getFormObject());
-  return new URL(`${url.origin}${url.pathname}?${params}`);  
+  return catData.getURL(`${url.origin}${url.pathname}`);
 }
 
 function applyDataURL() {
-  const params = new URLSearchParams(document.location.search);
-  const obj: Record<string, any> = {}
-  for (const [k, v] of params.entries()) {
-    obj[k] = v;
-  }
-  setFormFromObject(obj);
+  catData = CatData.fromURL(document.location.search);
+  setFormFromObject(catData);
 
   // don't want to reapply url or it adds to history twice
   redrawCat(false);
@@ -161,39 +110,31 @@ function redrawCat(applyURL: boolean = true) {
     ctx.clearRect(0, 0, c.width, c.height);
   }
 
-  const backgroundColour = backgroundColourSelect.value;
+  catData.backgroundColour = backgroundColourSelect.value;
 
+  catData.isTortie = isTortieCheckbox.checked;
   // pattern - represents mask
-  const tortieMask = tortieMaskSelect.value;
+  catData.tortieMask = tortieMaskSelect.value;
   // tortieColour - represents masked pelt colour
-  const tortieColour = tortieColourSelect.value;
+  catData.tortieColour = tortieColourSelect.value;
   // tortiePattern - represents masked pelt name
-  const tortiePattern = tortiePatternSelect.value as keyof typeof nameToSpritesname;
+  catData.tortiePattern = tortiePatternSelect.value;
 
-  const peltName = peltNameSelect.value as keyof typeof nameToSpritesname;
-  const spriteNumber = Number(spriteNumberSelect.value);
-  const colour = colourSelect.value;
-  const tint = tintSelect.value;
-  const skinColour = skinColourSelect.value;
-  const eyeColour = eyeColourSelect.value;
-  const whitePatchesTint = whitePatchesTintSelect.value;
-  const eyeColour2 = eyeColour2Select.value === "" ? undefined : eyeColour2Select.value;
-  const whitePatches = whitePatchesSelect.value === "" ? undefined : whitePatchesSelect.value;
-  const points = pointsSelect.value === "" ? undefined : pointsSelect.value;
-  const vitiligo = vitiligoSelect.value === "" ? undefined : vitiligoSelect.value;
-  const accessory = accessorySelect.value === "" ? undefined : accessorySelect.value;
-  const scar = scarSelect.value === "" ? [] : [scarSelect.value];
-  const shading = shadingCheckbox.checked;
-  const reverse = reverseCheckbox.checked;
-
-  // we have to keep the original name (which is peltName) for spritesName,
-  // but we have to also tell "name" in Pelt that it's a tortie if it's a tortie
-  var name;
-  if (isTortieCheckbox.checked) {
-    name = "Tortie";
-  } else {
-    name = peltName;
-  }
+  catData.peltName = peltNameSelect.value;
+  catData.spriteNumber = Number(spriteNumberSelect.value);
+  catData.colour = colourSelect.value;
+  catData.tint = tintSelect.value;
+  catData.skinColour = skinColourSelect.value;
+  catData.eyeColour = eyeColourSelect.value;
+  catData.whitePatchesTint = whitePatchesTintSelect.value;
+  catData.eyeColour2 = eyeColour2Select.value === "" ? null : eyeColour2Select.value;
+  catData.whitePatches = whitePatchesSelect.value === "" ? null : whitePatchesSelect.value;
+  catData.points = pointsSelect.value === "" ? null : pointsSelect.value;
+  catData.vitiligo = vitiligoSelect.value === "" ? null : vitiligoSelect.value;
+  catData.accessory = accessorySelect.value === "" ? null : accessorySelect.value;
+  catData.scar = scarSelect.value === "" ? null : scarSelect.value;
+  catData.shading = shadingCheckbox.checked;
+  catData.reverse = reverseCheckbox.checked;
 
   if (isTortieCheckbox.checked) {
     tortieColourSelect.disabled = false;
@@ -232,26 +173,7 @@ function redrawCat(applyURL: boolean = true) {
   }
 
   // update share code
-  sharecodeTextArea.textContent = JSON.stringify({
-    pelt_name: name,
-    pelt_color: colour,
-    eye_colour: eyeColour,
-    eye_colour2: eyeColour2 === undefined ? null : eyeColour2,
-    reverse: reverse,
-    white_patches: whitePatches === undefined ? null : whitePatches,
-    vitiligo: vitiligo === undefined ? null : vitiligo,
-    points: points === undefined ? null : points,
-    white_patches_tint: whitePatchesTint,
-    pattern: name === "Tortie" ? tortieMask : null,
-    tortie_base: name === "Tortie" ? nameToSpritesname[peltName] : null,
-    tortie_pattern: name === "Tortie" ? nameToSpritesname[tortiePattern] : null,
-    tortie_color: name === "Tortie" ? tortieColour : null,
-    skin: skinColour,
-    tint: tint,
-    scars: scar,
-    accessory: accessory === undefined ? null : accessory,
-  }, undefined, 4);
-
+  sharecodeTextArea.textContent = catData.getJSONData();
 
   const scale = Number(scaleSelect.value);
   const canvasSize = scale * 50;
@@ -267,38 +189,19 @@ function redrawCat(applyURL: boolean = true) {
       catSprite.src = loadingImg;
     }
   }, 200);
-  drawCat(c, {
-    name: name,
-    colour: colour,
-    skin: skinColour,
-    tint: tint,
-    whitePatchesTint: whitePatchesTint,
-    eyeColour: eyeColour,
-    eyeColour2: eyeColour2,
-    whitePatches: whitePatches,
-    points: points,
-    vitiligo: vitiligo,
-    spritesName: nameToSpritesname[peltName],
-    accessory: accessory,
-    scars: scar,
-    reverse: reverse,
-
-    tortieBase: nameToSpritesname[peltName],
-    pattern: tortieMask,
-    tortiePattern: nameToSpritesname[tortiePattern],
-    tortieColour: tortieColour,
-    },
-    spriteNumber,
+  drawCat(c,
+    catData.getPelt(),
+    catData.spriteNumber,
     isDead,
     isDf,
-    shading,
+    catData.shading,
     aprilFools,
   ).then(() => {
     const finalCanvas = new OffscreenCanvas(canvasSize, canvasSize);
     const finalCtx = finalCanvas.getContext("2d")!;
     finalCtx.imageSmoothingEnabled = false;
 
-    finalCtx.fillStyle = backgroundColour;
+    finalCtx.fillStyle = catData.backgroundColour;
     finalCtx.fillRect(0, 0, finalCanvas.width, finalCanvas.height);
     finalCtx.scale(scale, scale);
     finalCtx.drawImage(c, 0, 0);
