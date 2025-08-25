@@ -20,6 +20,23 @@ const nameToSpritesname = {
   Calico: "",
 };
 
+const spritesnameToName = {
+  single: 'TwoColour',
+  tabby: 'Tabby',
+  marbled: 'Marbled',
+  rosette: 'Rosette',
+  smoke: 'Smoke',
+  ticked: 'Ticked',
+  speckled: 'Speckled',
+  bengal: 'Bengal',
+  mackerel: 'Mackerel',
+  classic: 'Classic',
+  sokoke: 'Sokoke',
+  agouti: 'Agouti',
+  singlestripe: 'Singlestripe',
+  masked: 'Masked',
+}
+
 class CatData {
   shading: boolean;
   reverse: boolean;
@@ -171,6 +188,30 @@ class CatData {
       version: "v1",
     });
     return new URL(`${base}?${params}`);
+  }
+
+  static fromPelt(pelt: Pelt) {
+    const spritesName = pelt.tortiePattern as keyof typeof spritesnameToName;
+    const catData = new CatData();
+
+    catData.peltName = pelt.name;
+    catData.colour = pelt.colour;
+    catData.skinColour = pelt.skin;
+    catData.tint = pelt.skin;
+    catData.eyeColour = pelt.eyeColour;
+    catData.eyeColour2 = pelt.eyeColour2 === undefined ? null : pelt.eyeColour2;
+
+    catData.whitePatchesTint = pelt.whitePatchesTint;
+    catData.whitePatches = pelt.whitePatches === undefined ? null : pelt.whitePatches;
+    catData.points = pelt.points === undefined ? null : pelt.points;
+    catData.vitiligo = pelt.vitiligo === undefined ? null : pelt.vitiligo;
+
+    catData.accessory = pelt.accessory === undefined ? null : pelt.accessory;
+    catData.reverse = pelt.reverse;
+
+    catData.tortieMask = pelt.pattern === undefined ? null : pelt.pattern;
+    catData.tortiePattern = pelt.tortiePattern === undefined ? null : spritesnameToName[spritesName];
+    catData.tortieColour = pelt.tortieColour === undefined ? null : pelt.tortieColour;
   }
 
   static fromURL(url: string) {
