@@ -56,6 +56,7 @@ regenerateButton.addEventListener("click", async () => {
     const can = document.createElement("canvas") as HTMLCanvasElement;
     can.width = 50;
     can.height = 50;
+    can.style.imageRendering = "pixelated";
     const context = can.getContext("2d");
 
     await drawCat(offscreenCanvas, defaultKit, catData.spriteNumber);
