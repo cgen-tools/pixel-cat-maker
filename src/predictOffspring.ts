@@ -1,7 +1,7 @@
-import { generateChildPelt } from "./inheritance";
-import CatData from "./CatData";
-import drawCat from "./drawCat";
-import { Pelt } from "./types";
+import { generateChildPelt } from "./library/inheritance";
+import CatData from "./library/CatData";
+import drawCat from "./library/drawCat";
+import { Pelt } from "./library/types";
 
 const parent1Canvas = document.getElementById(
   "parent1",
