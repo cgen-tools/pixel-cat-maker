@@ -6,9 +6,9 @@
 */
 
 import { Pelt } from "./types";
-import tints from "./assets/tints/tint.json";
-import whitePatchesTints from "./assets/tints/white_patches_tint.json";
-import peltInfo from "./assets/peltInfo.json";
+import tints from "../assets/tints/tint.json";
+import whitePatchesTints from "../assets/tints/white_patches_tint.json";
+import peltInfo from "../assets/peltInfo.json";
 
 function getSpritePosition(spriteName: string, spriteNumber: number) {
   return {

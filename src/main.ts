@@ -1,9 +1,9 @@
 import './main.css'
-import drawCat from './drawCat';
+import drawCat from './library/drawCat';
 import loadingImg from "./assets/loading.png";
 import errorImg from "./assets/error_placeholder.png";
 
-import CatData from './CatData';
+import CatData from './library/CatData';
 
 function getElementByUniqueClassName(className: string): Element {
   return document.getElementsByClassName(className)[0];
