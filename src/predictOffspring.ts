@@ -23,14 +23,14 @@ const regenerateButton = document.getElementById(
   "regenerate-button",
 ) as HTMLButtonElement;
 
-parent1URLInput.addEventListener("change", (e: any) => {
+parent1URLInput.addEventListener("input", (e: any) => {
   const parent1URL = e.target.value;
   const parent1Data = CatData.fromURL(parent1URL);
   parent1Pelt = parent1Data.getPelt();
   drawCat(parent1Canvas, parent1Pelt, parent1Data.spriteNumber);
 });
 
-parent2URLInput.addEventListener("change", (e: any) => {
+parent2URLInput.addEventListener("input", (e: any) => {
   const parent2URL = e.target.value;
   const parent2Data = CatData.fromURL(parent2URL);
   parent2Pelt = parent2Data.getPelt();
