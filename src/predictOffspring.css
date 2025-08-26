@@ -18,6 +18,11 @@ button:hover {
   background-color: #642211;
 }
 
+#parent1,
+#parent2 {
+  display: block;
+}
+
 .cat-link {
   display: inline-block;
   border-radius: 5px;
