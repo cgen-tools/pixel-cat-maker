@@ -197,8 +197,10 @@ class CatData {
     if (pelt.name === "Tortie" || pelt.name === "Calico") {
       catData.isTortie = true;
       catData.peltName = pelt.tortieBase!;
+    } else {
+      catData.isTortie = false;
+      catData.peltName = pelt.name;
     }
-    catData.peltName = pelt.name;
     catData.colour = pelt.colour;
     catData.skinColour = pelt.skin;
     catData.tint = pelt.skin;
