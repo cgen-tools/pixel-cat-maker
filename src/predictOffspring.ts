@@ -41,7 +41,7 @@ parent2URLInput.addEventListener("input", (e: any) => {
 regenerateButton.addEventListener("click", async () => {
   const d = document.getElementById("offspring")!;
   d.replaceChildren();
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 6; i++) {
     const defaultKit = generateChildPelt([parent1Pelt, parent2Pelt]);
     const catData = CatData.fromPelt(defaultKit);
     catData.spriteNumber = [0, 1, 2][Math.floor(Math.random() * 3)];
@@ -51,17 +51,21 @@ regenerateButton.addEventListener("click", async () => {
       .getURL("https://cgen-tools.github.io/pixel-cat-maker/")
       .toString();
     link.target = "_blank";
+    link.className = "cat-link";
 
     const offscreenCanvas = new OffscreenCanvas(50, 50);
 
     const can = document.createElement("canvas") as HTMLCanvasElement;
-    can.width = 50;
-    can.height = 50;
+    can.width = 100;
+    can.height = 100;
     can.style.imageRendering = "pixelated";
-    const context = can.getContext("2d");
+    const context = can.getContext("2d")!;
 
     await drawCat(offscreenCanvas, catData.getPelt(), catData.spriteNumber);
-    context?.drawImage(offscreenCanvas, 0, 0);
+
+    context.imageSmoothingEnabled = false;
+    context.scale(2, 2);
+    context.drawImage(offscreenCanvas, 0, 0);
 
     link.append(can);
     d.appendChild(link);
