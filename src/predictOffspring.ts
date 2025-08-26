@@ -60,7 +60,7 @@ regenerateButton.addEventListener("click", async () => {
     can.style.imageRendering = "pixelated";
     const context = can.getContext("2d");
 
-    await drawCat(offscreenCanvas, defaultKit, catData.spriteNumber);
+    await drawCat(offscreenCanvas, catData.getPelt(), catData.spriteNumber);
     context?.drawImage(offscreenCanvas, 0, 0);
 
     link.append(can);
