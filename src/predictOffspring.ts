@@ -5,10 +5,10 @@ import drawCat from "./library/drawCat";
 import { Pelt } from "./library/types";
 
 const parent1Canvas = document.getElementById(
-  "parent1",
+  "parent1-canvas",
 ) as unknown as OffscreenCanvas;
 const parent2Canvas = document.getElementById(
-  "parent2",
+  "parent2-canvas",
 ) as unknown as OffscreenCanvas;
 
 const parent1URLInput = document.getElementById(
