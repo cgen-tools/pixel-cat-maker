@@ -1,4 +1,4 @@
-import './style.css'
+import './main.css'
 import drawCat from './drawCat';
 import loadingImg from "./assets/loading.png";
 import errorImg from "./assets/error_placeholder.png";
