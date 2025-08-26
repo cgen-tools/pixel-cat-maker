@@ -38,8 +38,8 @@ parent2URLInput.addEventListener("input", (e: any) => {
 });
 
 regenerateButton.addEventListener("click", async () => {
-  const d = document.getElementById("offspring");
-  d!.innerHTML = "";
+  const d = document.getElementById("offspring")!;
+  d.replaceChildren();
   for (var i = 0; i < 100; i++) {
     const defaultKit = generateChildPelt([parent1Pelt, parent2Pelt]);
     const catData = CatData.fromPelt(defaultKit);
@@ -63,6 +63,6 @@ regenerateButton.addEventListener("click", async () => {
     context?.drawImage(offscreenCanvas, 0, 0);
 
     link.append(can);
-    d?.appendChild(link);
+    d.appendChild(link);
   }
 });
