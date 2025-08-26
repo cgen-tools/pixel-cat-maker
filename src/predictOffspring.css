@@ -18,8 +18,8 @@ button:hover {
   background-color: #642211;
 }
 
-#parent1,
-#parent2 {
+#parent1-canvas,
+#parent2-canvas {
   display: block;
 }
 
