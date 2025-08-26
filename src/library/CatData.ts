@@ -196,7 +196,7 @@ class CatData {
 
     if (pelt.name === "Tortie" || pelt.name === "Calico") {
       catData.isTortie = true;
-      catData.peltName = pelt.tortieBase!;
+      catData.peltName = spritesnameToName[pelt.tortieBase! as keyof typeof spritesnameToName];
     } else {
       catData.isTortie = false;
       catData.peltName = pelt.name;
