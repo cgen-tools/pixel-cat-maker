@@ -4,6 +4,9 @@ import CatData from "./library/CatData";
 import drawCat from "./library/drawCat";
 import { Pelt } from "./library/types";
 
+const parent1Div = document.getElementById("parent1");
+const parent2Div = document.getElementById("parent2");
+
 const parent1Canvas = document.getElementById(
   "parent1-canvas",
 ) as unknown as OffscreenCanvas;
@@ -30,10 +33,36 @@ parent1URLInput.addEventListener("input", (e: any) => {
   parent1Pelt = parent1Data.getPelt();
   drawCat(parent1Canvas, parent1Pelt, parent1Data.spriteNumber);
 });
+parent1Div?.addEventListener("dragover", (ev) => {
+  ev.preventDefault();
+  ev.dataTransfer!.dropEffect = "copy";
+});
+parent1Div?.addEventListener("drop", (ev) => {
+  ev.preventDefault();
+  const data = ev.dataTransfer?.getData("text/plain")!;
+  parent1URLInput.value = data;
+
+  const parent1Data = CatData.fromURL(parent1URLInput.value);
+  parent1Pelt = parent1Data.getPelt();
+  drawCat(parent1Canvas, parent1Pelt, parent1Data.spriteNumber);
+});
 
 parent2URLInput.addEventListener("input", (e: any) => {
   const parent2URL = e.target.value;
   const parent2Data = CatData.fromURL(parent2URL);
+  parent2Pelt = parent2Data.getPelt();
+  drawCat(parent2Canvas, parent2Pelt, parent2Data.spriteNumber);
+});
+parent2Div?.addEventListener("dragover", (ev) => {
+  ev.preventDefault();
+  ev.dataTransfer!.dropEffect = "copy";
+});
+parent2Div?.addEventListener("drop", (ev) => {
+  ev.preventDefault();
+  const data = ev.dataTransfer?.getData("text/plain")!;
+  parent2URLInput.value = data;
+
+  const parent2Data = CatData.fromURL(parent2URLInput.value);
   parent2Pelt = parent2Data.getPelt();
   drawCat(parent2Canvas, parent2Pelt, parent2Data.spriteNumber);
 });
@@ -52,6 +81,10 @@ regenerateButton.addEventListener("click", async () => {
       .toString();
     link.target = "_blank";
     link.className = "cat-link";
+    link.draggable = true;
+    link.addEventListener("dragstart", (ev) => {
+      ev.dataTransfer?.setData("text/plain", link.href);
+    });
 
     const offscreenCanvas = new OffscreenCanvas(50, 50);
 
