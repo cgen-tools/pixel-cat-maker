@@ -1,4 +1,19 @@
 input[type="text"],
-label {
+label,
+button {
   font-size: 16px;
+}
+
+button {
+  padding: 10px 10px;
+  border-radius: 5px;
+  background-color: #9a4328;
+  color: rgb(253, 251, 232);
+  border: none;
+  margin: 10px 0;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #642211;
 }
