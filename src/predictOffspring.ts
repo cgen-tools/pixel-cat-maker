@@ -13,10 +13,10 @@ const parent2Canvas = document.getElementById(
 
 const parent1URLInput = document.getElementById(
   "parent1-url",
-) as HTMLSelectElement;
+) as HTMLInputElement;
 const parent2URLInput = document.getElementById(
   "parent2-url",
-) as HTMLSelectElement;
+) as HTMLInputElement;
 var parent1Pelt: Pelt;
 var parent2Pelt: Pelt;
 
