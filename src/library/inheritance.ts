@@ -767,7 +767,11 @@ function generateChildPelt(parents: Pelt[]) {
   generateTortiePattern(defaultKit);
   defaultKit.skin = choice(skin_sprites);
 
-  defaultKit.spritesName = nameToSpritesname[defaultKit.name];
+  if (defaultKit.name === "Tortie" || defaultKit.name === "Calico") {
+    defaultKit.spritesName = defaultKit.tortieBase!;
+  } else {
+    defaultKit.spritesName = nameToSpritesname[defaultKit.name];
+  }
   return defaultKit;
 }
 
