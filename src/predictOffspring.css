@@ -17,3 +17,11 @@ button:hover {
   cursor: pointer;
   background-color: #642211;
 }
+
+.cat-link {
+  display: inline-block;
+  border-radius: 5px;
+}
+.cat-link:hover {
+  background-color: #fff4da;
+}
