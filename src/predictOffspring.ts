@@ -4,29 +4,30 @@ import CatData from "./library/CatData";
 import drawCat from "./library/drawCat";
 import { Pelt } from "./library/types";
 
+// HTML Elements
 const parent1Div = document.getElementById("parent1");
 const parent2Div = document.getElementById("parent2");
-
 const parent1Canvas = document.getElementById(
   "parent1-canvas",
 ) as unknown as OffscreenCanvas;
 const parent2Canvas = document.getElementById(
   "parent2-canvas",
 ) as unknown as OffscreenCanvas;
-
 const parent1URLInput = document.getElementById(
   "parent1-url",
 ) as HTMLInputElement;
 const parent2URLInput = document.getElementById(
   "parent2-url",
 ) as HTMLInputElement;
-var parent1Pelt: Pelt;
-var parent2Pelt: Pelt;
-
 const regenerateButton = document.getElementById(
   "regenerate-button",
 ) as HTMLButtonElement;
 
+// Global vars
+var parent1Pelt: Pelt;
+var parent2Pelt: Pelt;
+
+// Helper functions
 function refreshParent1(parent1URL: string) {
   const parent1Data = CatData.fromURL(parent1URL);
   parent1Pelt = parent1Data.getPelt();
@@ -39,6 +40,7 @@ function refreshParent2(parent2URL: string) {
   drawCat(parent2Canvas, parent2Pelt, parent2Data.spriteNumber);
 }
 
+// Event listener functions
 parent1URLInput.addEventListener("input", (e: any) => {
   refreshParent1(e.target.value)
 });
