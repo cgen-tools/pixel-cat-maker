@@ -94,13 +94,13 @@ regenerateButton.addEventListener("click", async () => {
     can.style.imageRendering = "pixelated";
     const context = can.getContext("2d")!;
 
-    await drawCat(offscreenCanvas, catData.getPelt(), catData.spriteNumber);
+    drawCat(offscreenCanvas, catData.getPelt(), catData.spriteNumber).then(() => {
+      context.imageSmoothingEnabled = false;
+      context.scale(2, 2);
+      context.drawImage(offscreenCanvas, 0, 0);
 
-    context.imageSmoothingEnabled = false;
-    context.scale(2, 2);
-    context.drawImage(offscreenCanvas, 0, 0);
-
-    link.append(can);
-    d.appendChild(link);
+      link.append(can);
+      d.appendChild(link);
+    });
   }
 });
