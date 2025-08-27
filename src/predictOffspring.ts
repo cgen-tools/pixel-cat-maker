@@ -1,3 +1,4 @@
+import './common.css';
 import './predictOffspring.css'
 import { generateChildPelt } from "./library/inheritance";
 import CatData from "./library/CatData";
