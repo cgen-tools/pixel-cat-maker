@@ -27,11 +27,20 @@ const regenerateButton = document.getElementById(
   "regenerate-button",
 ) as HTMLButtonElement;
 
-parent1URLInput.addEventListener("input", (e: any) => {
-  const parent1URL = e.target.value;
+function refreshParent1(parent1URL: string) {
   const parent1Data = CatData.fromURL(parent1URL);
   parent1Pelt = parent1Data.getPelt();
   drawCat(parent1Canvas, parent1Pelt, parent1Data.spriteNumber);
+}
+
+function refreshParent2(parent2URL: string) {
+  const parent2Data = CatData.fromURL(parent2URL);
+  parent2Pelt = parent2Data.getPelt();
+  drawCat(parent2Canvas, parent2Pelt, parent2Data.spriteNumber);
+}
+
+parent1URLInput.addEventListener("input", (e: any) => {
+  refreshParent1(e.target.value)
 });
 parent1Div?.addEventListener("dragover", (ev) => {
   ev.preventDefault();
@@ -41,17 +50,11 @@ parent1Div?.addEventListener("drop", (ev) => {
   ev.preventDefault();
   const data = ev.dataTransfer?.getData("text/plain")!;
   parent1URLInput.value = data;
-
-  const parent1Data = CatData.fromURL(parent1URLInput.value);
-  parent1Pelt = parent1Data.getPelt();
-  drawCat(parent1Canvas, parent1Pelt, parent1Data.spriteNumber);
+  refreshParent1(data);
 });
 
 parent2URLInput.addEventListener("input", (e: any) => {
-  const parent2URL = e.target.value;
-  const parent2Data = CatData.fromURL(parent2URL);
-  parent2Pelt = parent2Data.getPelt();
-  drawCat(parent2Canvas, parent2Pelt, parent2Data.spriteNumber);
+  refreshParent2( e.target.value)
 });
 parent2Div?.addEventListener("dragover", (ev) => {
   ev.preventDefault();
@@ -61,10 +64,7 @@ parent2Div?.addEventListener("drop", (ev) => {
   ev.preventDefault();
   const data = ev.dataTransfer?.getData("text/plain")!;
   parent2URLInput.value = data;
-
-  const parent2Data = CatData.fromURL(parent2URLInput.value);
-  parent2Pelt = parent2Data.getPelt();
-  drawCat(parent2Canvas, parent2Pelt, parent2Data.spriteNumber);
+  refreshParent2(data);
 });
 
 regenerateButton.addEventListener("click", async () => {
