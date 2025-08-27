@@ -23,6 +23,17 @@ const regenerateButton = document.getElementById(
   "regenerate-button",
 ) as HTMLButtonElement;
 
+// Global constants
+const fanSubmittedParents = [
+  "https://cgen-tools.github.io/pixel-cat-maker/?shading=true&reverse=true&isTortie=false&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=ONE&tortieColour=BLACK&tortiePattern=Classic&peltName=Speckled&spriteNumber=6&colour=BLACK&tint=pink&skinColour=PEACH&eyeColour=YELLOW&eyeColour2=&whitePatches=&points=&whitePatchesTint=&vitiligo=&accessory=HOLLY&scar=&version=v1",
+  "https://cgen-tools.github.io/pixel-cat-maker/?shading=true&reverse=true&isTortie=false&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=HEARTBEAT&tortieColour=DARKGREY&tortiePattern=Tabby&peltName=Agouti&spriteNumber=7&colour=WHITE&tint=red&skinColour=BROWN&eyeColour=PALEYELLOW&eyeColour2=&whitePatches=&points=&whitePatchesTint=&vitiligo=&accessory=&scar=&version=v1",
+  "https://cgen-tools.github.io/pixel-cat-maker/?shading=true&reverse=false&isTortie=false&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=HEARTBEAT&tortieColour=DARKGREY&tortiePattern=Tabby&peltName=Sokoke&spriteNumber=15&colour=GOLDEN-BROWN&tint=pink&skinColour=GREY&eyeColour=BRONZE&eyeColour2=&whitePatches=SAMMY&points=&whitePatchesTint=cream&vitiligo=&accessory=&scar=&version=v1",
+  "https://cgen-tools.github.io/pixel-cat-maker/?shading=true&reverse=false&isTortie=false&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=HEARTBEAT&tortieColour=DARKGREY&tortiePattern=Tabby&peltName=Mackerel&spriteNumber=8&colour=LILAC&tint=red&skinColour=LIGHTMARBLED&eyeColour=PALEYELLOW&eyeColour2=&whitePatches=FRONT&points=&whitePatchesTint=cream&vitiligo=&accessory=&scar=&version=v1",
+  "https://cgen-tools.github.io/pixel-cat-maker/?shading=false&reverse=true&isTortie=false&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=HEARTBEAT&tortieColour=DARKGREY&tortiePattern=Tabby&peltName=Bengal&spriteNumber=9&colour=GHOST&tint=black&skinColour=DARKBLUE&eyeColour=DARKBLUE&eyeColour2=&whitePatches=&points=&whitePatchesTint=&vitiligo=&accessory=&scar=&version=v1",
+  "https://cgen-tools.github.io/pixel-cat-maker/?shading=false&reverse=true&isTortie=false&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=HEARTBEAT&tortieColour=DARKGREY&tortiePattern=Tabby&peltName=Ticked&spriteNumber=7&colour=CREAM&tint=red&skinColour=PEACH&eyeColour=YELLOW&eyeColour2=&whitePatches=MASKMANTLE&points=&whitePatchesTint=cream&vitiligo=&accessory=&scar=&version=v1",
+  "https://cgen-tools.github.io/pixel-cat-maker/?shading=false&reverse=true&isTortie=true&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=HEARTBEAT&tortieColour=DARKGREY&tortiePattern=Tabby&peltName=Classic&spriteNumber=6&colour=DARKGINGER&tint=orange&skinColour=BROWN&eyeColour=COBALT&eyeColour2=&whitePatches=HALFWHITE&points=&whitePatchesTint=pink&vitiligo=&accessory=&scar=&version=v1",
+]
+
 // Global vars
 var parent1Pelt: Pelt;
 var parent2Pelt: Pelt;
@@ -106,3 +117,12 @@ regenerateButton.addEventListener("click", async () => {
     });
   }
 });
+
+// Startup code
+const randomParent1 = fanSubmittedParents.splice(Math.floor(Math.random() * fanSubmittedParents.length), 1)[0];
+parent1URLInput.value = randomParent1;
+refreshParent1(randomParent1);
+
+const randomParent2 = fanSubmittedParents[Math.floor(Math.random() * fanSubmittedParents.length)];
+parent2URLInput.value = randomParent2;
+refreshParent2(randomParent2);
