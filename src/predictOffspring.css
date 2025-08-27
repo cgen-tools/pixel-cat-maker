@@ -22,6 +22,10 @@ button:hover {
   background-color: #642211;
 }
 
+details {
+  margin-bottom: 15px;
+}
+
 #parent1-canvas,
 #parent2-canvas {
   display: block;
