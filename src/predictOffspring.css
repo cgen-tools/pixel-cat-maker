@@ -4,6 +4,10 @@ button {
   font-size: 16px;
 }
 
+input[type="number"] {
+  font-size: 18px;
+}
+
 button {
   padding: 10px 10px;
   border-radius: 5px;
@@ -21,6 +25,10 @@ button:hover {
 #parent1-canvas,
 #parent2-canvas {
   display: block;
+}
+
+#amount-div {
+  margin: 10px 0 0 0;
 }
 
 .cat-link {
