@@ -22,6 +22,7 @@ const parent2URLInput = document.getElementById(
 const regenerateButton = document.getElementById(
   "regenerate-button",
 ) as HTMLButtonElement;
+const amountInput = document.getElementById("amount-input") as HTMLInputElement;
 
 // Global constants
 const fanSubmittedParents = [
@@ -83,7 +84,26 @@ parent2Div?.addEventListener("drop", (ev) => {
 regenerateButton.addEventListener("click", async () => {
   const d = document.getElementById("offspring")!;
   d.replaceChildren();
-  for (var i = 0; i < 6; i++) {
+
+  const stringAmount = amountInput.value;
+  var numberAmount = Number(stringAmount);
+  const minAmount = Number(amountInput.min);
+  const maxAmount = Number(amountInput.max);
+
+  if (isNaN(numberAmount)) {
+    amountInput.value = "1";
+    numberAmount = 1;
+  }
+  if (numberAmount < minAmount) {
+    amountInput.value = amountInput.min;
+    numberAmount = minAmount;
+  }
+  if (numberAmount > maxAmount) {
+    amountInput.value = amountInput.max;
+    numberAmount = maxAmount;
+  }
+
+  for (var i = 0; i < numberAmount; i++) {
     const defaultKit = generateChildPelt([parent1Pelt, parent2Pelt]);
     const catData = CatData.fromPelt(defaultKit);
     catData.spriteNumber = [0, 1, 2][Math.floor(Math.random() * 3)];
