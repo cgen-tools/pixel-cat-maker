@@ -28,7 +28,7 @@ async function loadImage(url: string) {
     });
     img.addEventListener("error", () => {
       reject(`${url} doesn't seem to exist!`);
-    })
+    });
   });
 }
 
@@ -47,7 +47,7 @@ async function drawTint(
   if (tint === null) {
     return;
   }
-  const cssTintColour = `rgb(${tint[0]} ${tint[1]} ${tint[2]})`
+  const cssTintColour = `rgb(${tint[0]} ${tint[1]} ${tint[2]})`;
 
   // we only want to tint non-transparent pixels
   // so get version of the tint that's only over those pixels
@@ -92,11 +92,7 @@ async function drawMaskedSprite(
   }
 }
 
-async function drawShading(
-  spriteNumber: number,
-  ctx: any
-) {
-
+async function drawShading(spriteNumber: number, ctx: any) {
   const offscreen = new OffscreenCanvas(50, 50);
   const offscreenContext = offscreen.getContext("2d");
 
@@ -119,7 +115,7 @@ async function drawShading(
 async function drawMissingScar(
   spriteName: string,
   spriteNumber: number,
-  ctx: any
+  ctx: any,
 ) {
   const originalCompositeOperation = ctx.globalCompositeOperation;
 
@@ -199,11 +195,7 @@ async function drawCat(
   if (pelt.whitePatches !== undefined) {
     const offscreen = new OffscreenCanvas(50, 50);
     const offscreenContext = offscreen.getContext("2d");
-    await drawSprite(
-      `white${pelt.whitePatches}`,
-      catSprite,
-      offscreenContext,
-    );
+    await drawSprite(`white${pelt.whitePatches}`, catSprite, offscreenContext);
     if (
       pelt.whitePatchesTint !== "none" &&
       Object.keys(whitePatchesTints.tint_colours).includes(

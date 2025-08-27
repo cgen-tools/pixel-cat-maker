@@ -21,21 +21,21 @@ const nameToSpritesname = {
 };
 
 const spritesnameToName = {
-  single: 'TwoColour',
-  tabby: 'Tabby',
-  marbled: 'Marbled',
-  rosette: 'Rosette',
-  smoke: 'Smoke',
-  ticked: 'Ticked',
-  speckled: 'Speckled',
-  bengal: 'Bengal',
-  mackerel: 'Mackerel',
-  classic: 'Classic',
-  sokoke: 'Sokoke',
-  agouti: 'Agouti',
-  singlestripe: 'Singlestripe',
-  masked: 'Masked',
-}
+  single: "TwoColour",
+  tabby: "Tabby",
+  marbled: "Marbled",
+  rosette: "Rosette",
+  smoke: "Smoke",
+  ticked: "Ticked",
+  speckled: "Speckled",
+  bengal: "Bengal",
+  mackerel: "Mackerel",
+  classic: "Classic",
+  sokoke: "Sokoke",
+  agouti: "Agouti",
+  singlestripe: "Singlestripe",
+  masked: "Masked",
+};
 
 class CatData {
   shading: boolean;
@@ -196,7 +196,8 @@ class CatData {
 
     if (pelt.name === "Tortie" || pelt.name === "Calico") {
       catData.isTortie = true;
-      catData.peltName = spritesnameToName[pelt.tortieBase! as keyof typeof spritesnameToName];
+      catData.peltName =
+        spritesnameToName[pelt.tortieBase! as keyof typeof spritesnameToName];
     } else {
       catData.isTortie = false;
       catData.peltName = pelt.name;
@@ -208,7 +209,8 @@ class CatData {
     catData.eyeColour2 = pelt.eyeColour2 === undefined ? null : pelt.eyeColour2;
 
     catData.whitePatchesTint = pelt.whitePatchesTint;
-    catData.whitePatches = pelt.whitePatches === undefined ? null : pelt.whitePatches;
+    catData.whitePatches =
+      pelt.whitePatches === undefined ? null : pelt.whitePatches;
     catData.points = pelt.points === undefined ? null : pelt.points;
     catData.vitiligo = pelt.vitiligo === undefined ? null : pelt.vitiligo;
 
@@ -216,8 +218,10 @@ class CatData {
     catData.reverse = pelt.reverse;
 
     catData.tortieMask = pelt.pattern === undefined ? null : pelt.pattern;
-    catData.tortiePattern = pelt.tortiePattern === undefined ? null : spritesnameToName[spritesName];
-    catData.tortieColour = pelt.tortieColour === undefined ? null : pelt.tortieColour;
+    catData.tortiePattern =
+      pelt.tortiePattern === undefined ? null : spritesnameToName[spritesName];
+    catData.tortieColour =
+      pelt.tortieColour === undefined ? null : pelt.tortieColour;
 
     return catData;
   }
@@ -261,7 +265,7 @@ class CatData {
       }
       if (vitiligo) {
         catData.vitiligo = vitiligo;
-      }      
+      }
       if (whitePatchesTint) {
         catData.whitePatchesTint = whitePatchesTint;
       }

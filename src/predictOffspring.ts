@@ -1,5 +1,5 @@
-import './common.css';
-import './predictOffspring.css'
+import "./common.css";
+import "./predictOffspring.css";
 import { generateChildPelt } from "./library/inheritance";
 import CatData from "./library/CatData";
 import drawCat from "./library/drawCat";
@@ -34,7 +34,7 @@ const fanSubmittedParents = [
   "https://cgen-tools.github.io/pixel-cat-maker/?shading=false&reverse=true&isTortie=false&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=HEARTBEAT&tortieColour=DARKGREY&tortiePattern=Tabby&peltName=Bengal&spriteNumber=9&colour=GHOST&tint=black&skinColour=DARKBLUE&eyeColour=DARKBLUE&eyeColour2=&whitePatches=&points=&whitePatchesTint=&vitiligo=&accessory=&scar=&version=v1",
   "https://cgen-tools.github.io/pixel-cat-maker/?shading=false&reverse=true&isTortie=false&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=HEARTBEAT&tortieColour=DARKGREY&tortiePattern=Tabby&peltName=Ticked&spriteNumber=7&colour=CREAM&tint=red&skinColour=PEACH&eyeColour=YELLOW&eyeColour2=&whitePatches=MASKMANTLE&points=&whitePatchesTint=cream&vitiligo=&accessory=&scar=&version=v1",
   "https://cgen-tools.github.io/pixel-cat-maker/?shading=false&reverse=true&isTortie=true&backgroundColour=rgb(0+0+0+%2F+0)&tortieMask=HEARTBEAT&tortieColour=DARKGREY&tortiePattern=Tabby&peltName=Classic&spriteNumber=6&colour=DARKGINGER&tint=orange&skinColour=BROWN&eyeColour=COBALT&eyeColour2=&whitePatches=HALFWHITE&points=&whitePatchesTint=pink&vitiligo=&accessory=&scar=&version=v1",
-]
+];
 
 // Global vars
 var parent1Pelt: Pelt;
@@ -55,7 +55,7 @@ function refreshParent2(parent2URL: string) {
 
 // Event listener functions
 parent1URLInput.addEventListener("input", (e: any) => {
-  refreshParent1(e.target.value)
+  refreshParent1(e.target.value);
 });
 parent1Div?.addEventListener("dragover", (ev) => {
   ev.preventDefault();
@@ -69,7 +69,7 @@ parent1Div?.addEventListener("drop", (ev) => {
 });
 
 parent2URLInput.addEventListener("input", (e: any) => {
-  refreshParent2( e.target.value)
+  refreshParent2(e.target.value);
 });
 parent2Div?.addEventListener("dragover", (ev) => {
   ev.preventDefault();
@@ -128,22 +128,28 @@ regenerateButton.addEventListener("click", async () => {
     can.style.imageRendering = "pixelated";
     const context = can.getContext("2d")!;
 
-    drawCat(offscreenCanvas, catData.getPelt(), catData.spriteNumber).then(() => {
-      context.imageSmoothingEnabled = false;
-      context.scale(2, 2);
-      context.drawImage(offscreenCanvas, 0, 0);
+    drawCat(offscreenCanvas, catData.getPelt(), catData.spriteNumber).then(
+      () => {
+        context.imageSmoothingEnabled = false;
+        context.scale(2, 2);
+        context.drawImage(offscreenCanvas, 0, 0);
 
-      link.append(can);
-      d.appendChild(link);
-    });
+        link.append(can);
+        d.appendChild(link);
+      },
+    );
   }
 });
 
 // Startup code
-const randomParent1 = fanSubmittedParents.splice(Math.floor(Math.random() * fanSubmittedParents.length), 1)[0];
+const randomParent1 = fanSubmittedParents.splice(
+  Math.floor(Math.random() * fanSubmittedParents.length),
+  1,
+)[0];
 parent1URLInput.value = randomParent1;
 refreshParent1(randomParent1);
 
-const randomParent2 = fanSubmittedParents[Math.floor(Math.random() * fanSubmittedParents.length)];
+const randomParent2 =
+  fanSubmittedParents[Math.floor(Math.random() * fanSubmittedParents.length)];
 parent2URLInput.value = randomParent2;
 refreshParent2(randomParent2);
