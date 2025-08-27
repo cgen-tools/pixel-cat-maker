@@ -26,6 +26,16 @@ details {
   margin-bottom: 15px;
 }
 
+details img {
+  max-width: 380px;
+}
+
+@media (max-width: 380px) {
+  details img {
+    width: 100%;
+  }
+}
+
 #parent1-canvas,
 #parent2-canvas {
   display: block;
