@@ -772,6 +772,11 @@ function generateChildPelt(parents: Pelt[]) {
   } else {
     defaultKit.spritesName = nameToSpritesname[defaultKit.name];
   }
+  if (Math.random() <= 0.5) {
+    defaultKit.reverse = true;
+  } else {
+    defaultKit.reverse = false;
+  }
   return defaultKit;
 }
 
