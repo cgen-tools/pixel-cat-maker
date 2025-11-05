@@ -301,6 +301,11 @@ for (const randomButton of randomButtons) {
   });
 }
 
+// allow dropping into offspring predict
+catSprite.addEventListener("dragstart", (ev) => {
+  ev.dataTransfer?.setData("text/plain", document.location.search);
+});
+
 isTortieCheckbox.addEventListener("change", () => {
   redrawCat();
 });
