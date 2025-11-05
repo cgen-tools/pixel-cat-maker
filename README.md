@@ -36,6 +36,10 @@ npm run build
 
 The site will be in the `dist` folder. Note that the built site won't run locally without a development server due to browser security policies. However, you should be able to upload it to [neocities](https://neocities.org) or any other static hosting site without a problem.
 
+### Notes For Forks
+* If using GitHub Actions to build and deploy the site, you have to go into `Settings > Pages` and make sure that `Source` under `Build and deployment` is set to `GitHub Actions`. Otherwise, GitHub will deploy the unprocessed HTML files, which won’t work. 
+* This repo uses Git LFS to store images. That unfortunately means that you have to use Git or GitHub Desktop on your computer to edit the images, and they won’t show up when downloading the repo as a zip.
+
 ### Updating JSON Files
 
 Unlike with ClanGen, even if you're just modifying the JSON files, you have to build from source. You _cannot_ (easily) modify the JSON files from the built site because the JSON data is transformed into Javascript objects during the build process for optimization.
