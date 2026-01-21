@@ -313,6 +313,39 @@ class CatData {
     }
     return catData;
   }
+
+  static fromJSONData(data: string) {
+    const catData = new CatData();
+    const jsonData = JSON.parse(data);
+
+    if (jsonData.pelt_name === "Tortie" || jsonData.pelt_name === "Calico") {
+      catData.isTortie = true;
+      catData.peltName = 
+        spritesnameToName[jsonData.tortie_base! as keyof typeof spritesnameToName];
+    } else {
+      catData.isTortie = false;
+      catData.peltName = jsonData.pelt_name;
+    }
+    catData.colour = jsonData.pelt_color;
+    catData.skinColour = jsonData.skin;
+    catData.tint = jsonData.tint;
+    catData.eyeColour = jsonData.eye_colour;
+    catData.eyeColour2 = jsonData.eye_colour2;
+    
+    catData.whitePatchesTint = jsonData.white_patches_tint;
+    catData.whitePatches = jsonData.white_patches;
+    catData.points = jsonData.points;
+    catData.vitiligo = jsonData.vitiligo;
+
+    catData.accessory = jsonData.accessory;
+    catData.reverse = jsonData.reverse;
+
+    catData.tortieMask = catData.isTortie ? jsonData.pattern : null;
+    catData.tortiePattern = 
+      jsonData.tortie_pattern === null ? null : nameToSpritesname[jsonData.tortie_pattern as keyof typeof nameToSpritesname];
+    catData.tortieColour = jsonData.tortie_color;
+    return catData;
+  }
 }
 
 export default CatData;
