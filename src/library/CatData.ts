@@ -314,36 +314,38 @@ class CatData {
     return catData;
   }
 
-  static fromJSONData(data: string) {
+  static fromJSONData(data: any) {
     const catData = new CatData();
-    const jsonData = JSON.parse(data);
 
-    if (jsonData.pelt_name === "Tortie" || jsonData.pelt_name === "Calico") {
+    if (data.pelt_name === "Tortie" || data.pelt_name === "Calico") {
       catData.isTortie = true;
       catData.peltName = 
-        spritesnameToName[jsonData.tortie_base! as keyof typeof spritesnameToName];
+        spritesnameToName[data.tortie_base! as keyof typeof spritesnameToName];
     } else {
       catData.isTortie = false;
-      catData.peltName = jsonData.pelt_name;
+      catData.peltName = data.pelt_name;
     }
-    catData.colour = jsonData.pelt_color;
-    catData.skinColour = jsonData.skin;
-    catData.tint = jsonData.tint;
-    catData.eyeColour = jsonData.eye_colour;
-    catData.eyeColour2 = jsonData.eye_colour2;
-    
-    catData.whitePatchesTint = jsonData.white_patches_tint;
-    catData.whitePatches = jsonData.white_patches;
-    catData.points = jsonData.points;
-    catData.vitiligo = jsonData.vitiligo;
+    catData.colour = data.pelt_color;
+    catData.skinColour = data.skin;
+    catData.tint = data.tint;
+    catData.eyeColour = data.eye_colour;
+    catData.eyeColour2 = data.eye_colour2;
 
-    catData.accessory = jsonData.accessory;
-    catData.reverse = jsonData.reverse;
+    catData.whitePatchesTint = data.white_patches_tint;
+    catData.whitePatches = data.white_patches;
+    catData.points = data.points;
+    catData.vitiligo = data.vitiligo;
+    if (Array.isArray(catData.accessory)) {
+      catData.accessory = data.accessory.length === 0 ? null : data.accessory[0];
+    } else {
+      catData.accessory = data.accessory;
+    }
+    catData.reverse = data.reverse;
 
-    catData.tortieMask = catData.isTortie ? jsonData.pattern : null;
+    catData.tortieMask = catData.isTortie ? data.pattern : null;
     catData.tortiePattern = 
-      jsonData.tortie_pattern === null ? null : nameToSpritesname[jsonData.tortie_pattern as keyof typeof nameToSpritesname];
-    catData.tortieColour = jsonData.tortie_color;
+      data.tortie_pattern === null ? null : nameToSpritesname[data.tortie_pattern as keyof typeof nameToSpritesname];
+    catData.tortieColour = data.tortie_color;
     return catData;
   }
 }

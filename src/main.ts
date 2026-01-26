@@ -421,6 +421,26 @@ if ("clipboard" in navigator) {
   copyUrlButton?.classList.add("hidden");
 }
 
+const importJSONButton = getElementByUniqueClassName("import-json-button");
+importJSONButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const input = prompt("Enter data:");
+  let data;
+  if (input !== null) {
+    try {
+      data = JSON.parse(input);
+    } catch (e: any) {
+      alert("JSON parse error - check your syntax\n" + e.toString());
+      return;
+    }
+
+    const catData = CatData.fromJSONData(data);
+    setFormFromObject(catData);
+    redrawCat(true);
+  }
+})
+
 addEventListener("popstate", () => {
   applyDataURL();
 });
