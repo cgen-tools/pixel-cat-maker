@@ -1,4 +1,4 @@
-import { Pelt } from "./types";
+import { Pelt, JSONData } from "./types";
 
 const nameToSpritesname = {
   SingleColour: "single",
@@ -314,7 +314,7 @@ class CatData {
     return catData;
   }
 
-  static fromJSONData(data: any) {
+  static fromJSONData(data: JSONData) {
     const catData = new CatData();
 
     if (data.pelt_name === "Tortie" || data.pelt_name === "Calico") {
@@ -335,7 +335,7 @@ class CatData {
     catData.whitePatches = data.white_patches;
     catData.points = data.points;
     catData.vitiligo = data.vitiligo;
-    if (Array.isArray(catData.accessory)) {
+    if (Array.isArray(data.accessory)) {
       catData.accessory = data.accessory.length === 0 ? null : data.accessory[0];
     } else {
       catData.accessory = data.accessory;
