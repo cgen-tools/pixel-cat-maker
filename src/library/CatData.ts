@@ -344,7 +344,7 @@ class CatData {
 
     catData.tortieMask = catData.isTortie ? data.pattern : null;
     catData.tortiePattern = 
-      data.tortie_pattern === null ? null : nameToSpritesname[data.tortie_pattern as keyof typeof nameToSpritesname];
+      data.tortie_pattern === null ? null : spritesnameToName[data.tortie_pattern as keyof typeof spritesnameToName];
     catData.tortieColour = data.tortie_color;
     return catData;
   }
