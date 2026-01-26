@@ -112,7 +112,7 @@ function selectByValue(select: HTMLSelectElement, value: string | null, ignoreNu
   }
 }
 
-function setFormFromObject(data: CatData, ignoreNull: boolean = true) {
+function setFormFromObject(data: CatData, ignoreNull: boolean) {
   isTortieCheckbox.checked = data.isTortie;
   shadingCheckbox.checked = data.shading;
   reverseCheckbox.checked = data.reverse;
