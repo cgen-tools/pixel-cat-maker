@@ -112,28 +112,28 @@ function selectByValue(select: HTMLSelectElement, value: string | null, ignoreNu
   }
 }
 
-function setFormFromObject(data: CatData, ignoreNull: boolean) {
+function setFormFromObject(data: CatData) {
   isTortieCheckbox.checked = data.isTortie;
   shadingCheckbox.checked = data.shading;
   reverseCheckbox.checked = data.reverse;
 
-  selectByValue(backgroundColourSelect, data.backgroundColour, ignoreNull);
-  selectByValue(tortieMaskSelect, data.tortieMask, ignoreNull);
-  selectByValue(tortieColourSelect, data.tortieColour, ignoreNull);
-  selectByValue(tortiePatternSelect, data.tortiePattern, ignoreNull);
-  selectByValue(peltNameSelect, data.peltName, ignoreNull);
-  selectByValue(spriteNumberSelect, data.spriteNumber.toString(), ignoreNull);
-  selectByValue(colourSelect, data.colour, ignoreNull);
-  selectByValue(tintSelect, data.tint, ignoreNull);
-  selectByValue(skinColourSelect, data.skinColour, ignoreNull);
-  selectByValue(eyeColourSelect, data.eyeColour, ignoreNull);
-  selectByValue(eyeColour2Select, data.eyeColour2, ignoreNull);
-  selectByValue(whitePatchesSelect, data.whitePatches, ignoreNull);
-  selectByValue(pointsSelect, data.points, ignoreNull);
-  selectByValue(whitePatchesTintSelect, data.whitePatchesTint, ignoreNull);
-  selectByValue(vitiligoSelect, data.vitiligo, ignoreNull);
-  selectByValue(accessorySelect, data.accessory, ignoreNull);
-  selectByValue(scarSelect, data.scar, ignoreNull);
+  selectByValue(backgroundColourSelect, data.backgroundColour, true);
+  selectByValue(tortieMaskSelect, data.tortieMask, false);
+  selectByValue(tortieColourSelect, data.tortieColour, false);
+  selectByValue(tortiePatternSelect, data.tortiePattern, false);
+  selectByValue(peltNameSelect, data.peltName, true);
+  selectByValue(spriteNumberSelect, data.spriteNumber.toString(), true);
+  selectByValue(colourSelect, data.colour, true);
+  selectByValue(tintSelect, data.tint, true);
+  selectByValue(skinColourSelect, data.skinColour, true);
+  selectByValue(eyeColourSelect, data.eyeColour, true);
+  selectByValue(eyeColour2Select, data.eyeColour2, false);
+  selectByValue(whitePatchesSelect, data.whitePatches, false);
+  selectByValue(pointsSelect, data.points, false);
+  selectByValue(whitePatchesTintSelect, data.whitePatchesTint, true);
+  selectByValue(vitiligoSelect, data.vitiligo, false);
+  selectByValue(accessorySelect, data.accessory, false);
+  selectByValue(scarSelect, data.scar, false);
 }
 
 function getDataURL() {
@@ -143,7 +143,7 @@ function getDataURL() {
 
 function applyDataURL() {
   catData = CatData.fromURL(document.location.search);
-  setFormFromObject(catData, true);
+  setFormFromObject(catData);
 
   // don't want to reapply url or it adds to history twice
   redrawCat(false);
@@ -440,7 +440,7 @@ importJSONButton.addEventListener("click", (e) => {
     }
 
     const catData = CatData.fromJSONData(data);
-    setFormFromObject(catData, false);
+    setFormFromObject(catData);
     redrawCat(true);
   }
 })
