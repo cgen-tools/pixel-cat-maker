@@ -12,7 +12,8 @@
   "devDependencies": {
     "sharp": "^0.34.2",
     "typescript": "~5.7.2",
-    "vite": "^6.4.1"
+    "vite": "^6.4.1",
+    "vitest": "^4.0.18"
   },
   "dependencies": {
     "@types/node": "^24.3.0"
