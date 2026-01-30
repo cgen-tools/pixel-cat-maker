@@ -94,9 +94,13 @@ const sharecodeTextArea = getElementByUniqueClassName(
   "sharecode",
 ) as HTMLTextAreaElement;
 
-function selectByValue(select: HTMLSelectElement, value: string | null) {
+function selectByValue(select: HTMLSelectElement, value: string | null, ignoreNull: boolean) {
   if (value === null) {
-    return;
+    if (ignoreNull) {
+      return;
+    } else {
+      value = "";
+    }
   }
 
   const options = select.options;
@@ -113,23 +117,23 @@ function setFormFromObject(data: CatData) {
   shadingCheckbox.checked = data.shading;
   reverseCheckbox.checked = data.reverse;
 
-  selectByValue(backgroundColourSelect, data.backgroundColour);
-  selectByValue(tortieMaskSelect, data.tortieMask);
-  selectByValue(tortieColourSelect, data.tortieColour);
-  selectByValue(tortiePatternSelect, data.tortiePattern);
-  selectByValue(peltNameSelect, data.peltName);
-  selectByValue(spriteNumberSelect, data.spriteNumber.toString());
-  selectByValue(colourSelect, data.colour);
-  selectByValue(tintSelect, data.tint);
-  selectByValue(skinColourSelect, data.skinColour);
-  selectByValue(eyeColourSelect, data.eyeColour);
-  selectByValue(eyeColour2Select, data.eyeColour2);
-  selectByValue(whitePatchesSelect, data.whitePatches);
-  selectByValue(pointsSelect, data.points);
-  selectByValue(whitePatchesTintSelect, data.whitePatchesTint);
-  selectByValue(vitiligoSelect, data.vitiligo);
-  selectByValue(accessorySelect, data.accessory);
-  selectByValue(scarSelect, data.scar);
+  selectByValue(backgroundColourSelect, data.backgroundColour, true);
+  selectByValue(tortieMaskSelect, data.tortieMask, false);
+  selectByValue(tortieColourSelect, data.tortieColour, false);
+  selectByValue(tortiePatternSelect, data.tortiePattern, false);
+  selectByValue(peltNameSelect, data.peltName, true);
+  selectByValue(spriteNumberSelect, data.spriteNumber.toString(), true);
+  selectByValue(colourSelect, data.colour, true);
+  selectByValue(tintSelect, data.tint, true);
+  selectByValue(skinColourSelect, data.skinColour, true);
+  selectByValue(eyeColourSelect, data.eyeColour, true);
+  selectByValue(eyeColour2Select, data.eyeColour2, false);
+  selectByValue(whitePatchesSelect, data.whitePatches, false);
+  selectByValue(pointsSelect, data.points, false);
+  selectByValue(whitePatchesTintSelect, data.whitePatchesTint, true);
+  selectByValue(vitiligoSelect, data.vitiligo, false);
+  selectByValue(accessorySelect, data.accessory, false);
+  selectByValue(scarSelect, data.scar, false);
 }
 
 function getDataURL() {
@@ -420,6 +424,26 @@ if ("clipboard" in navigator) {
 } else {
   copyUrlButton?.classList.add("hidden");
 }
+
+const importJSONButton = getElementByUniqueClassName("import-json-button");
+importJSONButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const input = prompt("Enter data:");
+  let data;
+  if (input !== null) {
+    try {
+      data = JSON.parse(input);
+    } catch (e: any) {
+      alert("JSON parse error - check your syntax\n" + e.toString());
+      return;
+    }
+
+    const catData = CatData.fromJSONData(data);
+    setFormFromObject(catData);
+    redrawCat(true);
+  }
+})
 
 addEventListener("popstate", () => {
   applyDataURL();

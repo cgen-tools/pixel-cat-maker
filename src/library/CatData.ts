@@ -1,4 +1,4 @@
-import { Pelt } from "./types";
+import { Pelt, JSONData } from "./types";
 
 const nameToSpritesname = {
   SingleColour: "single",
@@ -311,6 +311,41 @@ class CatData {
 
       return catData;
     }
+    return catData;
+  }
+
+  static fromJSONData(data: JSONData) {
+    const catData = new CatData();
+
+    if (data.pelt_name === "Tortie" || data.pelt_name === "Calico") {
+      catData.isTortie = true;
+      catData.peltName = 
+        spritesnameToName[data.tortie_base! as keyof typeof spritesnameToName];
+    } else {
+      catData.isTortie = false;
+      catData.peltName = data.pelt_name;
+    }
+    catData.colour = data.pelt_color;
+    catData.skinColour = data.skin;
+    catData.tint = data.tint;
+    catData.eyeColour = data.eye_colour;
+    catData.eyeColour2 = data.eye_colour2;
+
+    catData.whitePatchesTint = data.white_patches_tint;
+    catData.whitePatches = data.white_patches;
+    catData.points = data.points;
+    catData.vitiligo = data.vitiligo;
+    if (Array.isArray(data.accessory)) {
+      catData.accessory = data.accessory.length === 0 ? null : data.accessory[0];
+    } else {
+      catData.accessory = data.accessory;
+    }
+    catData.reverse = data.reverse;
+
+    catData.tortieMask = catData.isTortie ? data.pattern : null;
+    catData.tortiePattern = 
+      data.tortie_pattern === null ? null : spritesnameToName[data.tortie_pattern as keyof typeof spritesnameToName];
+    catData.tortieColour = data.tortie_color;
     return catData;
   }
 }

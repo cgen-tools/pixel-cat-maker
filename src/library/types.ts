@@ -19,4 +19,24 @@ type Pelt = {
   reverse: boolean;
 };
 
-export type { Pelt };
+type JSONData = {
+  pelt_name: string;
+  pelt_color: string;
+  eye_colour: string;
+  eye_colour2: string | null;
+  reverse: boolean;
+  white_patches: string | null;
+  vitiligo: string | null;
+  points: string | null;
+  white_patches_tint: string;
+  pattern: string | null;
+  tortie_base: string | null;
+  tortie_pattern: string | null;
+  tortie_color: string | null;
+  skin: string;
+  tint: string;
+  scars: string | null;
+  accessory: string | string[] | null;
+};
+
+export type { Pelt, JSONData };
