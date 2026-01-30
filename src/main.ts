@@ -429,7 +429,7 @@ const importJSONButton = getElementByUniqueClassName("import-json-button");
 importJSONButton.addEventListener("click", (e) => {
   e.preventDefault();
 
-  const input = prompt("Enter data:");
+  const input = prompt("Enter JSON data:");
   let data;
   if (input !== null) {
     try {
