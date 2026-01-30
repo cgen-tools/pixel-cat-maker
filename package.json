@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && node scripts/build-sprites.js && vite build",
     "postbuild": "rm -r dist/sprites/*.png",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "devDependencies": {
     "sharp": "^0.34.2",
