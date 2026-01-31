@@ -228,7 +228,7 @@ class CatData {
 
   static fromURL(url: string) {
     const catData = new CatData();
-    const params = new URLSearchParams(url);
+    const params = new URL(url).searchParams;
 
     if (params.get("version") === "v1") {
       const scar = params.get("scar");
