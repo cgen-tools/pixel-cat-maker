@@ -142,7 +142,7 @@ function getDataURL() {
 }
 
 function applyDataURL() {
-  catData = CatData.fromURL(document.location.search);
+  catData = CatData.fromURL(document.location.toString());
   setFormFromObject(catData);
 
   // don't want to reapply url or it adds to history twice
