@@ -5,7 +5,6 @@ Dollmaker that uses sprites from ClanGen.
 ## Dev Requirements
 
 - Node.js
-- Git LFS
 
 ## Dev Instructions
 
@@ -38,7 +37,6 @@ The site will be in the `dist` folder. Note that the built site won't run locall
 
 ### Notes For Forks
 * If using GitHub Actions to build and deploy the site, you have to go into `Settings > Pages` and make sure that `Source` under `Build and deployment` is set to `GitHub Actions`. Otherwise, GitHub will deploy the unprocessed HTML files, which won’t work. 
-* This repo uses Git LFS to store images. That unfortunately means that you have to use Git or GitHub Desktop on your computer to edit the images, and they won’t show up when downloading the repo as a zip.
 
 ### Updating JSON Files
 
