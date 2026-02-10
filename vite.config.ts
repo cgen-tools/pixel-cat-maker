@@ -11,7 +11,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        "predict-offspring": resolve(__dirname, "predict-offspring.html"),
       }
     },
     sourcemap: true,
