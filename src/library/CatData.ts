@@ -16,6 +16,13 @@ const nameToSpritesname = {
   Agouti: "agouti",
   Singlestripe: "singlestripe",
   Masked: "masked",
+  Cloud: "cloud",
+  Deer: "deer",
+  Emo: "emo",
+  Fire: "fire",
+  Honey: "honey",
+  Lightning: "lightning",
+  Wave: "wave",
   Tortie: "",
   Calico: "",
 };
@@ -35,6 +42,13 @@ const spritesnameToName = {
   agouti: "Agouti",
   singlestripe: "Singlestripe",
   masked: "Masked",
+  cloud: "Cloud",
+  deer: "Deer",
+  emo: "Emo",
+  fire: "Fire",
+  honey: "Honey",
+  lightning: "Lightning",
+  wave: "Wave",
 };
 
 class CatData {
