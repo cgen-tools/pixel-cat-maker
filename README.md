@@ -2,6 +2,9 @@
 
 Dollmaker that uses sprites from ClanGen.
 
+> [!NOTE]
+> I originally used Git LFS for this project, but I eventually decided against using it. However, you can't remove LFS storage objects from a repository on GitHub without recreating the repository. So I recreated the repository.
+
 ## Dev Requirements
 
 - Node.js
