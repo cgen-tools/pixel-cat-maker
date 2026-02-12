@@ -12,6 +12,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         "predict-offspring": resolve(__dirname, "predict-offspring.html"),
+        "mods": resolve(__dirname, "mods.html"),
       }
     },
     sourcemap: true,
