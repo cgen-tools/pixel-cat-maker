@@ -31,6 +31,11 @@ jobs:
         uses: actions/setup-node@v4.1.0
       - name: Install dependencies
         run: npm install
+      - name: Add Google Search verification
+        if: ${{ vars.GOOGLE_SITE_VERIFICATION_CONTENT && vars.GOOGLE_SITE_VERIFICATION_FILENAME }}
+        run: |
+          touch "public/${{ vars.GOOGLE_SITE_VERIFICATION_FILENAME }}"
+          echo "${{ vars.GOOGLE_SITE_VERIFICATION_CONTENT }}" >> "public/${{ vars.GOOGLE_SITE_VERIFICATION_FILENAME }}"
       - name: Build
         run: npm run build
       - name: Setup Pages
