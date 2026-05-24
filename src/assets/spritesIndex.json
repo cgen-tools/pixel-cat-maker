@@ -1,4 +1,19 @@
 {
+    "aprilfoolslineart": {
+        "spritesheet": "lineart_aprilfools",
+        "xOffset": 0.0,
+        "yOffset": 0.0
+    },
+    "aprilfoolslineartdead": {
+        "spritesheet": "lineart_sc_aprilfools",
+        "xOffset": 0.0,
+        "yOffset": 0.0
+    },
+    "aprilfoolslineartdf": {
+        "spritesheet": "lineart_df_aprilfools",
+        "xOffset": 0.0,
+        "yOffset": 0.0
+    },
     "lineart": {
         "spritesheet": "lineart",
         "xOffset": 0.0,
