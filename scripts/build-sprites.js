@@ -24,7 +24,7 @@ const numSpritesy = poseSpriteData.sheet_layout[1];
 const spriteNumbers = [];
 for (let row = 0; row < numSpritesy; row++) {
   for (let col = 0; col < numSpritesx; col++) {
-    spriteNumbers.push({x: row, y: col});
+    spriteNumbers.push({x: col, y: row});
   }
 }
 
