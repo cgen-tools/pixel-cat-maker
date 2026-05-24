@@ -15,8 +15,8 @@ if (fs.existsSync(OUTPUT_DIR)) {
 }
 fs.mkdirSync(OUTPUT_DIR);
 
-const spritesIndex = JSON.parse(fs.readFileSync("src/assets/spritesIndex.json"));
-const spriteNumbers = JSON.parse(fs.readFileSync("src/assets/spritesOffsetMap.json"));
+import spritesIndex from "../src/assets/spritesIndex.json" with { type: "json" };
+import spriteNumbers from "../src/assets/spritesOffsetMap.json" with { type: "json" };
 
 // group by spritesheet so we aren't constantly opening spritesheets
 const batch = {};
