@@ -205,29 +205,27 @@ function redrawCat(applyURL: boolean = true) {
   }
 
   var isDead: boolean = false;
-  var isDf: boolean = false;
   var aprilFools: boolean = false;
+  var afterlife: "starclan" | "unknown residence" | "dark forest" | undefined;
   if (lineartSelect.value === "regular") {
     isDead = false;
-    isDf = false;
   } else if (lineartSelect.value === "dead") {
     isDead = true;
-    isDf = false;
+    afterlife = "starclan";
   } else if (lineartSelect.value === "dark forest") {
     isDead = true;
-    isDf = true;
+    afterlife = "dark forest";
   } else if (lineartSelect.value === "aprilfools-regular") {
     isDead = false;
-    isDf = false;
     aprilFools = true;
   } else if (lineartSelect.value === "aprilfools-dead") {
     isDead = true;
-    isDf = false;
     aprilFools = true;
+    afterlife = "starclan";
   } else if (lineartSelect.value === "aprilfools-dark forest") {
     isDead = true;
-    isDf = true;
     aprilFools = true;
+    afterlife = "dark forest";
   }
 
   // update share code
@@ -252,7 +250,7 @@ function redrawCat(applyURL: boolean = true) {
     catData.getPelt(),
     catData.spriteNumber,
     isDead,
-    isDf,
+    afterlife,
     catData.shading,
     aprilFools,
   )
