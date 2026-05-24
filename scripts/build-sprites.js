@@ -16,7 +16,17 @@ if (fs.existsSync(OUTPUT_DIR)) {
 fs.mkdirSync(OUTPUT_DIR);
 
 import spritesIndex from "../src/assets/spritesIndex.json" with { type: "json" };
-import spriteNumbers from "../src/assets/spritesOffsetMap.json" with { type: "json" };
+import poseSpriteData from "../src/assets/pose_sprite_data.json" with { type: "json" };
+
+const numSpritesx = poseSpriteData.sheet_layout[0];
+const numSpritesy = poseSpriteData.sheet_layout[1];
+
+const spriteNumbers = [];
+for (let row = 0; row < numSpritesy; row++) {
+  for (let col = 0; col < numSpritesx; col++) {
+    spriteNumbers.push({x: row, y: col});
+  }
+}
 
 // group by spritesheet so we aren't constantly opening spritesheets
 const batch = {};
