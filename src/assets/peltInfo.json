@@ -103,7 +103,16 @@
     "DRY HERBS",
     "DRY CATMINT",
     "DRY NETTLES",
-    "DRY LAURELS"
+    "DRY LAURELS",
+    "WISTERIA",
+    "ROSE MALLOW",
+    "PICKLEWEED",
+    "GOLDEN CREEPING JENNY",
+    "DESERT WILLOW",
+    "CACTUS FLOWER",
+    "PRAIRIE FIRE",
+    "VERBENA EAR",
+    "VERBENA PELT"
   ],
   "wild_accessories": [
     "RED FEATHERS",
@@ -116,7 +125,8 @@
     "MORPHO BUTTERFLY",
     "MONARCH BUTTERFLY",
     "CICADA WINGS",
-    "BLACK CICADA"
+    "BLACK CICADA",
+    "ROAD RUNNER FEATHER"
   ],
 
   "tail_accessories": [
