@@ -45,14 +45,27 @@ for (const [spritesheet, info] of Object.entries(batch)) {
       const spriteXPosition = spriteNumberInfo.x;
       const spriteYPosition = spriteNumberInfo.y;
 
-      sharp(spritesheetImage)
+      let extractedImage = sharp(spritesheetImage)
       .extract({
         left: spriteGroupInfo.xOffset + 50 * spriteXPosition,
         top: spriteGroupInfo.yOffset + 50 * spriteYPosition,
         width: 50,
         height: 50,
       })
-      .toFile(`${OUTPUT_DIR}/${spriteGroupName}_${spriteNumber}.png`);
+
+      if (spritesheet === "acc_collars") {
+        // putImageData is lossy if there are any transparent pixels,
+        // so we have to remove all of them or recolouring will fail.
+        //
+        // since we're going through every pixel anyway, we'll just turn
+        // all the white pixels transparent when drawing
+        extractedImage
+        .removeAlpha()
+        .toFile(`${OUTPUT_DIR}/${spriteGroupName}_${spriteNumber}.png`);
+      } else { // spritesheet !== "acc_collars"
+        extractedImage
+        .toFile(`${OUTPUT_DIR}/${spriteGroupName}_${spriteNumber}.png`);
+      }
     }
   }
 }
