@@ -14,6 +14,9 @@ import whitePatchesLittleData from "../assets/data/white_patches_little_sprite_d
 import whitePatchesMidData from "../assets/data/white_patches_mid_sprite_data.json";
 import whitePatchesMostlyData from "../assets/data/white_patches_mostly_sprite_data.json";
 import whitePatchesHighData from "../assets/data/white_patches_high_sprite_data.json";
+import collarPaletteOrder from "../assets/data/collar_palette_order.json";
+
+type Collar = keyof typeof collarPaletteOrder
 
 function getSpritePosition(spriteName: string, spriteNumber: number) {
   return {
@@ -23,7 +26,7 @@ function getSpritePosition(spriteName: string, spriteNumber: number) {
   };
 }
 
-async function loadImage(url: string) {
+async function loadImage(url: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.src = url;
@@ -77,6 +80,31 @@ async function drawTint(
   ctx.globalCompositeOperation = "source-in";
   ctx.drawImage(tintedLayer, 0, 0);
   ctx.globalCompositeOperation = compositeOperation;
+}
+
+/**
+ * Recolours image. WHITE PIXELS IN `ctx` WILL BE MADE TRANSPARENT!!!
+ * @param paletteMap - Map from original colours to new ones, formatted as "R G B".
+ * @param ctx - The canvas context you are recolouring.
+ */
+async function recolourImage(paletteMap: Record<string, string>, ctx: any) {
+  const imageData = ctx.getImageData(0, 0, 50, 50);
+
+  for (let i = 0; i < imageData.data.length; i+=4) {
+    const spriteColour = `${imageData.data[i]} ${imageData.data[i + 1]} ${imageData.data[i + 2]}`;
+
+    if (spriteColour === "255 255 255") {
+      imageData.data[i + 3] = 0;
+    }
+
+    if (spriteColour in paletteMap) {
+     const newColours = paletteMap[spriteColour].split(" ");
+     imageData.data[i] = newColours[0];
+     imageData.data[i + 1] = newColours[1];
+     imageData.data[i + 2] = newColours[2];
+    }
+  }
+  ctx.putImageData(imageData, 0, 0);
 }
 
 async function drawMaskedSprite(
@@ -307,7 +335,49 @@ async function drawCat(
     } else if (peltInfo.wild_accessories.includes(pelt.accessory)) {
       await drawSprite(`acc_wilds${pelt.accessory}`, catSprite, ctx);
     } else if (peltInfo.collars.includes(pelt.accessory)) {
-      await drawSprite(`acc_collars${pelt.accessory}`, catSprite, ctx);
+      // TODO: maybe just generate the images for this in python?? this is a nightmare.
+      const collarTypes = [
+        "BOW_GRADIENT", "BOW_FOIL", "BOW",
+        "LEATHER_GRADIENT", "LEATHER_SPIKE",
+        "LEATHER_BELL_SPIKE", "LEATHER_BELL", "LEATHER",
+        "NYLON_BELL_GRADIENT", "NYLON_BELL", "NYLON_GRADIENT",
+        "NYLON"
+      ];
+
+      var collar: Collar  | undefined;
+      var colour: string | undefined;
+      for (const collarType of collarTypes) {
+        if (pelt.accessory.startsWith(collarType)) {
+          collar = collarType as Collar;
+          colour = pelt.accessory.substring(collar.length + 1);
+          break;
+        }
+      }
+      if (collar === undefined || colour === undefined) {
+        throw Error(`Can't read collar ${pelt.accessory}!`);
+      }
+      const paletteImage = await loadImage(`/sprites/palettes/acc_collars${collar}_palette.png`);
+      const paletteCanvas = new OffscreenCanvas(paletteImage.width, paletteImage.height);
+      const paletteContext = paletteCanvas.getContext("2d")!
+
+      paletteContext.drawImage(paletteImage, 0, 0);
+      const imageData = paletteContext.getImageData(0, 0, paletteImage.width, paletteImage.height);
+
+      const palette: Record<string, string> = {}
+      for (let i = 0; i < paletteImage.width * 4; i+=4) {
+        const spriteColour = `${imageData.data[i]} ${imageData.data[i + 1]} ${imageData.data[i + 2]}`;
+
+        const offset = i + paletteImage.width * 4 * (collarPaletteOrder[collar].indexOf(colour) + 1);
+        const recolourColours = `${imageData.data[offset]} ${imageData.data[offset + 1]} ${imageData.data[offset + 2]}`;
+
+        palette[spriteColour] = recolourColours;
+      }
+      const offscreen = new OffscreenCanvas(50, 50);
+      const offscreenContext = offscreen.getContext("2d")!;
+
+      await drawSprite(`acc_collars${collar}`, catSprite, offscreenContext);
+      await recolourImage(palette, offscreenContext);
+      ctx.drawImage(offscreen, 0, 0);
     }
   }
 
