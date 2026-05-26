@@ -84,24 +84,41 @@ async function drawTint(
 
 /**
  * Recolours image. WHITE PIXELS IN `ctx` WILL BE MADE TRANSPARENT!!!
+ * 
+ * Has some extra tolerance, because some browsers slightly wiggle canvas values
+ * in order to fight browser fingerprinting.
+ * 
  * @param paletteMap - Map from original colours to new ones, formatted as "R G B".
  * @param ctx - The canvas context you are recolouring.
+ * @param tolerance - Delta for checking colour equalities.
  */
-async function recolourImage(paletteMap: Record<string, string>, ctx: any) {
+async function recolourImage(paletteMap: Record<string, string>, ctx: any, tolerance: number) {
   const imageData = ctx.getImageData(0, 0, 50, 50);
 
   for (let i = 0; i < imageData.data.length; i+=4) {
-    const spriteColour = `${imageData.data[i]} ${imageData.data[i + 1]} ${imageData.data[i + 2]}`;
+    const r = imageData.data[i];
+    const g = imageData.data[i + 1];
+    const b = imageData.data[i + 2];
 
-    if (spriteColour === "255 255 255") {
+    // recolour "white" pixels.
+    if (255 - r <= tolerance && 255 - g <= tolerance && 255 - b <= tolerance) {
       imageData.data[i + 3] = 0;
     }
 
-    if (spriteColour in paletteMap) {
-     const newColours = paletteMap[spriteColour].split(" ");
-     imageData.data[i] = newColours[0];
-     imageData.data[i + 1] = newColours[1];
-     imageData.data[i + 2] = newColours[2];
+    for (const [spriteColour, newColourStr] of Object.entries(paletteMap)) {
+      // read colours
+      const oldColours = spriteColour.split(" ");
+      const [mR, mG, mB] = [Number(oldColours[0]), Number(oldColours[1]), Number(oldColours[2])];
+      const newColours = newColourStr.split(" "); 
+
+      // if they're "close enough" to the correct mapping colour, set the new one
+      if ((Math.abs(r - mR) <= tolerance) &&
+          (Math.abs(g - mG) <= tolerance) && 
+          (Math.abs(b - mB) <= tolerance)) {
+        imageData.data[i] = newColours[0];
+        imageData.data[i + 1] = newColours[1];
+        imageData.data[i + 2] = newColours[2];
+      }
     }
   }
   ctx.putImageData(imageData, 0, 0);
@@ -383,7 +400,7 @@ async function drawCat(
         const offscreen = new OffscreenCanvas(50, 50);
         const offscreenContext = offscreen.getContext("2d")!;
         await drawSprite(`acc_collars${collar}`, catSprite, offscreenContext);
-        await recolourImage(palette, offscreenContext);
+        await recolourImage(palette, offscreenContext, 5);
 
         // add to sprite
         ctx.drawImage(offscreen, 0, 0);
