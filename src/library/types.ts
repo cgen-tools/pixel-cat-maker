@@ -29,7 +29,7 @@ type JSONData = {
   vitiligo: string | null;
   points: string | null;
   white_patches_tint: string;
-  pattern: string | null;
+  tortie_marking: string | null;
   tortie_base: string | null;
   tortie_pattern: string | null;
   tortie_color: string | null;
