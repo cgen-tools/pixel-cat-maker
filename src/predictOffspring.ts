@@ -107,7 +107,7 @@ regenerateButton.addEventListener("click", async () => {
   for (var i = 0; i < numberAmount; i++) {
     const defaultKit = generateChildPelt([parent1Pelt, parent2Pelt]);
     const catData = CatData.fromPelt(defaultKit);
-    catData.spriteNumber = [0, 1, 2][Math.floor(Math.random() * 3)];
+    catData.spriteNumber = [3, 4, 5][Math.floor(Math.random() * 3)];
 
     const link = document.createElement("a");
     link.href = catData
