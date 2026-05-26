@@ -187,7 +187,7 @@ class CatData {
       scars: [],
     };
     if (this.scar) {
-      pelt["scars"] = [this.scar];
+      pelt.scars = [this.scar];
     }
 
     return pelt;
