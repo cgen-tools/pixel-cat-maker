@@ -176,7 +176,7 @@ class CatData {
       points: this.points === null ? undefined : this.points,
       vitiligo: this.vitiligo === null ? undefined : this.vitiligo,
       spritesName: nameToSpritesname[peltName],
-      accessory: this.accessory === null ? undefined : this.accessory,
+      accessory: this.accessory === null ? [] : [this.accessory],
       reverse: this.reverse,
 
       tortieBase: nameToSpritesname[peltName],
@@ -277,7 +277,7 @@ class CatData {
     catData.points = pelt.points === undefined ? null : pelt.points;
     catData.vitiligo = pelt.vitiligo === undefined ? null : pelt.vitiligo;
 
-    catData.accessory = pelt.accessory === undefined ? null : pelt.accessory;
+    catData.accessory = pelt.accessory ? pelt.accessory[0] : null;
     catData.reverse = pelt.reverse;
 
     catData.tortieMask = pelt.pattern === undefined ? null : pelt.pattern;

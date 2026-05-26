@@ -15,7 +15,7 @@ type Pelt = {
   scars?: Array<string> | undefined;
   tint: string;
   whitePatchesTint: string;
-  accessory?: string | undefined;
+  accessory?: Array<string> | undefined;
   reverse: boolean;
 };
 
