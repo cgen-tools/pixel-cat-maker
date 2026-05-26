@@ -336,6 +336,8 @@ async function drawCat(
       await drawSprite(`acc_wilds${pelt.accessory}`, catSprite, ctx);
     } else if (peltInfo.collars.includes(pelt.accessory)) {
       // TODO: maybe just generate the images for this in python?? this is a nightmare.
+
+      // get collar and colour of accessory
       const collarTypes = [
         "BOW_GRADIENT", "BOW_FOIL", "BOW",
         "LEATHER_GRADIENT", "LEATHER_SPIKE",
@@ -343,7 +345,6 @@ async function drawCat(
         "NYLON_BELL_GRADIENT", "NYLON_BELL", "NYLON_GRADIENT",
         "NYLON"
       ];
-
       var collar: Collar  | undefined;
       var colour: string | undefined;
       for (const collarType of collarTypes) {
@@ -356,27 +357,34 @@ async function drawCat(
       if (collar === undefined || colour === undefined) {
         throw Error(`Can't read collar ${pelt.accessory}!`);
       }
+
+      // load collar's palette image and read its data
       const paletteImage = await loadImage(`/sprites/palettes/acc_collars${collar}_palette.png`);
       const paletteCanvas = new OffscreenCanvas(paletteImage.width, paletteImage.height);
       const paletteContext = paletteCanvas.getContext("2d")!
-
       paletteContext.drawImage(paletteImage, 0, 0);
       const imageData = paletteContext.getImageData(0, 0, paletteImage.width, paletteImage.height);
 
+      // build palette map
       const palette: Record<string, string> = {}
-      for (let i = 0; i < paletteImage.width * 4; i+=4) {
+      for (let i = 0; i < paletteImage.width * 4; i+=4) { // for every pixel in the first row
+        // get colour that will be recoloured
         const spriteColour = `${imageData.data[i]} ${imageData.data[i + 1]} ${imageData.data[i + 2]}`;
 
+        // "offset" for the map colour is palette-order rows down
         const offset = i + paletteImage.width * 4 * (collarPaletteOrder[collar].indexOf(colour) + 1);
         const recolourColours = `${imageData.data[offset]} ${imageData.data[offset + 1]} ${imageData.data[offset + 2]}`;
 
+        // assign new colour to map
         palette[spriteColour] = recolourColours;
       }
+      // recolour sprite
       const offscreen = new OffscreenCanvas(50, 50);
       const offscreenContext = offscreen.getContext("2d")!;
-
       await drawSprite(`acc_collars${collar}`, catSprite, offscreenContext);
       await recolourImage(palette, offscreenContext);
+
+      // add to sprite
       ctx.drawImage(offscreen, 0, 0);
     }
   }
