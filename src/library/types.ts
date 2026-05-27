@@ -35,8 +35,8 @@ type JSONData = {
   tortie_color: string | null;
   skin: string;
   tint: string | null;
-  scars: string | null;
-  accessory: string | string[] | null;
+  scars: string[];
+  accessory: string[];
 };
 
 export type { Pelt, JSONData };

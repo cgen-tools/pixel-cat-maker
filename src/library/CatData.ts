@@ -213,8 +213,8 @@ class CatData {
         tortie_color: this.name === "Tortie" ? this.tortieColour : null,
         skin: this.skinColour,
         tint: this.tint === "none" ? null : this.tint,
-        scars: this.scar,
-        accessory: this.accessory === undefined ? [] : [this.accessory],
+        scars: this.scar ? [this.scar] : [],
+        accessory: this.accessory ? [this.accessory] : []
       },
       undefined,
       4,
@@ -410,11 +410,13 @@ class CatData {
     catData.whitePatches = data.white_patches;
     catData.points = data.points;
     catData.vitiligo = data.vitiligo;
+    catData.accessory = data.accessory ? data.accessory[0] : null
     if (Array.isArray(data.accessory)) {
       catData.accessory = data.accessory.length === 0 ? null : data.accessory[0];
     } else {
       catData.accessory = data.accessory;
     }
+    catData.scar = data.scars ? data.scars[0] : null;
     catData.reverse = data.reverse;
 
     catData.tortieMask = catData.isTortie ? data.tortie_marking : null;
