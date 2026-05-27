@@ -136,7 +136,7 @@ class CatData {
     this.tortiePattern = null;
 
     this.peltName = "SingleColour";
-    this.spriteNumber = 0;
+    this.spriteNumber = 3;
     this.colour = "CREAM";
     this.tint = "none";
     this.skinColour = "BLACK";
@@ -354,6 +354,8 @@ class CatData {
     }
     if (spriteNumber) {
       catData.spriteNumber = Number(spriteNumber);
+    } else {
+      catData.spriteNumber = 3;
     }
     if (peltName) {
       catData.peltName = peltName;
