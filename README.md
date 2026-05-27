@@ -101,7 +101,7 @@ You should only replace these files if you added or changed any tints.
 
 These files are the same as in `sprites/dicts`. They define which spritesheet the white patches use.
 
-### colour_palette_order.json
+#### colour_palette_order.json
 
 This file is similar to the data in `sprites/dicts/collar_sprite_data.json`. It defines a colour's position on its palette mapping image.
 
