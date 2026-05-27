@@ -75,19 +75,19 @@ def make_group(...):
 The April Fools' lineart is added to the JSON manually because it's not loaded regularly unless it's April Fools':
 ```json
   "aprilfoolslineart": {
-    "spritesheet": "aprilfoolslineart",
-    "xOffset": 0.0,
-    "yOffset": 0.0
+      "spritesheet": "lineart_aprilfools",
+      "xOffset": 0.0,
+      "yOffset": 0.0
   },
   "aprilfoolslineartdead": {
-    "spritesheet": "aprilfoolslineartdead",
-    "xOffset": 0.0,
-    "yOffset": 0.0
+      "spritesheet": "lineart_sc_aprilfools",
+      "xOffset": 0.0,
+      "yOffset": 0.0
   },
   "aprilfoolslineartdf": {
-    "spritesheet": "aprilfoolslineartdf",
-    "xOffset": 0.0,
-    "yOffset": 0.0
+      "spritesheet": "lineart_df_aprilfools",
+      "xOffset": 0.0,
+      "yOffset": 0.0
   }
 ```
 
@@ -97,9 +97,19 @@ These are the same as the files that can be found in ClanGen under `sprites/dict
 
 You should only replace these files if you added or changed any tints.
 
-#### spritesOffsetMap.json
+#### white_patches_high_sprite_data.json, white_patches_little_sprite_data.json, white_patches_mid_sprite_data.json, white_patches_mostly_sprite_data.json
 
-This file is used to map sprite numbers to their x and y offset in the sprite group.
+These files are the same as in `sprites/dicts`. They define which spritesheet the white patches use.
+
+### colour_palette_order.json
+
+This file is similar to the data in `sprites/dicts/collar_sprite_data.json`. It defines a colour's position on its palette mapping image.
+
+You do not need to touch this unless you change the palette map images, which can be found under `public/sprites/palettes`. Note that you must also update `src/assets/peltInfo.json`.
+
+#### pose_sprite_data.json
+
+This file is the same as the file that can be found in ClanGen under `sprites/dicts`. It's necessary because it maps sprite numbers to their x and y offset in the sprite group.
 
 You probably do not have to touch this.
 
@@ -107,7 +117,7 @@ You probably do not have to touch this.
 
 This represents various data that's necessary to retrieve the correct sprite group.
 
-Mostly, it specifies accessory types and scar type. If you added any new scars and accessories, you have to put them here as well. Otherwise, the site won't be able to find them.
+Mostly, it specifies accessory types and scar type. If you added any new scars and accessories, you have to put them here as well. This includes all collar colour variations. Otherwise, the site won't be able to find them.
 
 ## License
 
