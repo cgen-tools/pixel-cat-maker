@@ -184,11 +184,8 @@ class CatData {
       tortiePattern: nameToSpritesname[tortiePattern],
       tortieColour: this.tortieColour === null ? undefined : this.tortieColour,
 
-      scars: [],
+      scars: this.scar ? [this.scar] : [],
     };
-    if (this.scar) {
-      pelt.scars = [this.scar];
-    }
 
     return pelt;
   }
