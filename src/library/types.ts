@@ -28,13 +28,13 @@ type JSONData = {
   white_patches: string | null;
   vitiligo: string | null;
   points: string | null;
-  white_patches_tint: string;
+  white_patches_tint: string | null;
   tortie_marking: string | null;
   tortie_base: string | null;
   tortie_pattern: string | null;
   tortie_color: string | null;
   skin: string;
-  tint: string;
+  tint: string | null;
   scars: string | null;
   accessory: string | string[] | null;
 };

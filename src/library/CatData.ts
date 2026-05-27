@@ -207,7 +207,7 @@ class CatData {
         white_patches: this.whitePatches,
         vitiligo: this.vitiligo,
         points: this.points,
-        white_patches_tint: this.whitePatchesTint,
+        white_patches_tint: this.whitePatchesTint === "none" ? null : this.whitePatchesTint,
         tortie_marking: this.name === "Tortie" ? this.tortieMask : null,
         tortie_base:
           this.name === "Tortie" ? nameToSpritesname[peltName] : null,
@@ -215,7 +215,7 @@ class CatData {
           this.name === "Tortie" ? nameToSpritesname[tortiePattern] : null,
         tortie_color: this.name === "Tortie" ? this.tortieColour : null,
         skin: this.skinColour,
-        tint: this.tint,
+        tint: this.tint === "none" ? null : this.tint,
         scars: this.scar,
         accessory: this.accessory === undefined ? [] : [this.accessory],
       },
@@ -403,11 +403,11 @@ class CatData {
     }
     catData.colour = data.pelt_color;
     catData.skinColour = data.skin;
-    catData.tint = data.tint;
+    catData.tint = data.tint === null ? "none" : data.tint;
     catData.eyeColour = data.eye_colour;
     catData.eyeColour2 = data.eye_colour2;
 
-    catData.whitePatchesTint = data.white_patches_tint;
+    catData.whitePatchesTint = data.white_patches_tint === null ? "none" : data.white_patches_tint;
     catData.whitePatches = data.white_patches;
     catData.points = data.points;
     catData.vitiligo = data.vitiligo;
