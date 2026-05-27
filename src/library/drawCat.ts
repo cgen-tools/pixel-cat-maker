@@ -20,7 +20,7 @@ type Collar = keyof typeof collarPaletteOrder
 
 function getSpritePosition(spriteName: string, spriteNumber: number) {
   return {
-    url: `/sprites/split/${spriteName}_${spriteNumber}.png`,
+    url: `sprites/split/${spriteName}_${spriteNumber}.png`,
     x: 0,
     y: 0,
   };
@@ -372,7 +372,7 @@ async function drawCat(
         }
 
         // load collar's palette image and read its data
-        const paletteImage = await loadImage(`/sprites/palettes/acc_collars${collar}_palette.png`);
+        const paletteImage = await loadImage(`sprites/palettes/acc_collars${collar}_palette.png`);
         const paletteCanvas = new OffscreenCanvas(paletteImage.width, paletteImage.height);
         const paletteContext = paletteCanvas.getContext("2d")!
         paletteContext.drawImage(paletteImage, 0, 0);
