@@ -83,7 +83,7 @@ async function drawTint(
 }
 
 /**
- * Recolours image. WHITE PIXELS IN `ctx` WILL BE MADE TRANSPARENT!!!
+ * Recolours image.
  * 
  * Has some extra tolerance, because some browsers slightly wiggle canvas values
  * in order to fight browser fingerprinting.
@@ -99,11 +99,6 @@ async function recolourImage(paletteMap: Record<string, string>, ctx: any, toler
     const r = imageData.data[i];
     const g = imageData.data[i + 1];
     const b = imageData.data[i + 2];
-
-    // recolour "white" pixels.
-    if (255 - r <= tolerance && 255 - g <= tolerance && 255 - b <= tolerance) {
-      imageData.data[i + 3] = 0;
-    }
 
     for (const [spriteColour, newColourStr] of Object.entries(paletteMap)) {
       // read colours
