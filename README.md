@@ -88,7 +88,12 @@ The April Fools' lineart is added to the JSON manually because it's not loaded r
       "spritesheet": "lineart_df_aprilfools",
       "xOffset": 0.0,
       "yOffset": 0.0
-  }
+  },
+  "aprilfoolslineartur": {
+      "spritesheet": "lineart_ur_aprilfools",
+      "xOffset": 0.0,
+      "yOffset": 0.0
+  },
 ```
 
 #### white_patches_tint.json and tint.json

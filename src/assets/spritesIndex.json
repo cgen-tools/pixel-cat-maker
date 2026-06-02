@@ -14,6 +14,11 @@
         "xOffset": 0.0,
         "yOffset": 0.0
     },
+    "aprilfoolslineartur": {
+        "spritesheet": "lineart_ur_aprilfools",
+        "xOffset": 0.0,
+        "yOffset": 0.0
+    },
     "lineart": {
         "spritesheet": "lineart",
         "xOffset": 0.0,

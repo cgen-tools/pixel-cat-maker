@@ -229,6 +229,10 @@ function redrawCat(applyURL: boolean = true) {
     isDead = true;
     aprilFools = true;
     afterlife = "dark forest";
+  } else if (lineartSelect.value === "aprilfools-unknown residence") {
+    isDead = true;
+    aprilFools = true;
+    afterlife = "unknown residence";
   }
 
   // update share code

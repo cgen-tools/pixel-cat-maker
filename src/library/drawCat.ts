@@ -323,8 +323,10 @@ async function drawCat(
     if (dead) {
       if (afterlife == "dark forest") {
         await drawSprite("aprilfoolslineartdf", catSprite, ctx);
-      } else {
+      } else if (afterlife === "starclan") {
         await drawSprite("aprilfoolslineartdead", catSprite, ctx);
+      } else if (afterlife === "unknown residence") {
+        await drawSprite("aprilfoolslineartur", catSprite, ctx);
       }
     } else {
       await drawSprite("aprilfoolslineart", catSprite, ctx);
